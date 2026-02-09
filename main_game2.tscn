@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cqhheluob52c3"]
+
+[ext_resource type="Texture2D" uid="uid://j0nhkkwpn30u" path="res://Button_and_book1.png" id="1_irwau"]
+[ext_resource type="Texture2D" uid="uid://dh0t2j6mrs7a7" path="res://Button_and_book2.png" id="2_04edg"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3bsxj"]
+load_path = "res://.godot/imported/Main_game_2.jpg-8628f8590f45c88048d7692c9e02f6be.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tbe35"]
+atlas = ExtResource("1_irwau")
+region = Rect2(51.16327, 339.0225, 671.5437, 232.02219)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ausns"]
+atlas = ExtResource("2_04edg")
+region = Rect2(54.69751, 338.8677, 666.28687, 233.22263)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_irwau"]
+atlas = ExtResource("1_irwau")
+region = Rect2(50.298378, 604.75055, 674.965, 248.01868)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_04edg"]
+atlas = ExtResource("2_04edg")
+region = Rect2(47.06041, 605.6184, 674.804, 246.40814)
+
+[node name="main2" type="Control" unique_id=1422755513]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="main2" type="TextureRect" parent="." unique_id=729842376]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CompressedTexture2D_3bsxj")
+
+[node name="approve" type="TextureButton" parent="." unique_id=1754737044]
+layout_mode = 0
+offset_left = 1530.0
+offset_top = 580.0
+offset_right = 2201.0
+offset_bottom = 812.0
+scale = Vector2(0.55, 0.55)
+texture_normal = SubResource("AtlasTexture_tbe35")
+texture_hover = SubResource("AtlasTexture_ausns")
+
+[node name="reject" type="TextureButton" parent="." unique_id=49555580]
+layout_mode = 0
+offset_left = 1530.0
+offset_top = 780.0
+offset_right = 2204.0
+offset_bottom = 1028.0
+scale = Vector2(0.55, 0.55)
+texture_normal = SubResource("AtlasTexture_irwau")
+texture_hover = SubResource("AtlasTexture_04edg")
