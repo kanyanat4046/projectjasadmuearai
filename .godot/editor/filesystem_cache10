@@ -1,0 +1,14 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1771587941
+button.gd::GDScript::1446198681437669214::1771400019::0::1::::<>Button<><>0<>0<><>::
+Button_and_book2.png::CompressedTexture2D::8569126642110835118::1771433060::1771433061::1::::<><><>0<>0<>5a26c1f08dbcc76772894ee1f378e6ef<>res://.godot/imported/Button_and_book2.png-f2425dcee08854ba7b1f14a16750b766.ctex::
+Button_and_book.png::CompressedTexture2D::8604809171030346932::1771433060::1771433061::1::::<><><>0<>0<>20323be206dd8e0266cda876e64eca66<>res://.godot/imported/Button_and_book.png-274281a290b70e88eaa1a1df93e1d2e5.ctex::
+control.tscn::PackedScene::3567706063778752234::1771400019::0::1::::<><><>0<>0<><>::uid://cfndg4fo04rs::::res://Main_game_2.jpg
+game_menu.tscn::PackedScene::6382904080197025442::1771433129::0::1::::<><><>0<>0<><>::uid://25rg2jf523km::::res://Menu_page.jpg<>uid://duuh7kbvq1wfc::::res://Button_and_book.png<>uid://duc7i78ugnjpe::::res://Button_and_book2.png<>uid://uusxfhw2epny::::res://button.gd
+main_1.tscn::PackedScene::4489564230416886649::1771400019::0::1::::<><><>0<>0<><>::uid://cxwys7plsn2wr::::res://Main_game1.jpg<>uid://drm6d1fg35l4k::::res://main_game_1.gd
+Main_game1.jpg::CompressedTexture2D::5351934262742229177::1771433060::1771433061::1::::<><><>0<>0<>a27ab88c06db8551e0c32a2a657de7a9<>res://.godot/imported/Main_game1.jpg-69a7d470985f0b6c4f56f424de7583e4.ctex::
+main_game_1.gd::GDScript::8379133883774394688::1771400019::0::1::::<>Sprite2D<><>0<>0<><>::
+Main_game_2.jpg::CompressedTexture2D::3904049320190263003::1771433060::1771433061::1::::<><><>0<>0<>072e7a913a7452b9cd0c6cf592d7f63f<>res://.godot/imported/Main_game_2.jpg-8628f8590f45c88048d7692c9e02f6be.ctex::
+Menu_page.jpg::CompressedTexture2D::1958074446791181672::1771433060::1771433061::1::::<><><>0<>0<>313afb87fb62203cdd96cdd7d4c61f68<>res://.godot/imported/Menu_page.jpg-edbb6d5130740924f2c1e12e42e7de5b.ctex::
+setting.gd::GDScript::4446634045037703791::1771400019::0::1::::<>Control<><>0<>0<><>::
+setting.tscn::PackedScene::4104045084721852033::1771400019::0::1::::<><><>0<>0<><>::uid://b4l8obq6qyarn::::res://setting.gd
