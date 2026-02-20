@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cwipptw0o1t7h"]
+
+[ext_resource type="Script" uid="uid://4ikdax4d8x6c" path="res://setting_page.gd" id="1_yj1q4"]
+[ext_resource type="Texture2D" uid="uid://c5m76cxlj2rel" path="res://Setting_page.jpg" id="2_dlgcx"]
+[ext_resource type="AudioStream" uid="uid://cc20nnpci4dbp" path="res://simplesound-horror-trailer-443327.mp3" id="3_opawe"]
+
+[node name="setting page" type="Control" unique_id=1638397277]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_yj1q4")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1627279481]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_dlgcx")
+
+[node name="setting" type="Label" parent="." unique_id=329651511]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 127.0
+offset_right = 414.0
+offset_bottom = 223.0
+theme_override_colors/font_color = Color(0.45927793, 8.001737e-07, 1.4439226e-07, 1)
+theme_override_font_sizes/font_size = 70
+text = "Setting"
+
+[node name="volume" type="HSlider" parent="." unique_id=752779989]
+layout_mode = 0
+offset_left = 505.0
+offset_top = 325.0
+offset_right = 1487.0
+offset_bottom = 357.0
+
+[node name="sound" type="AudioStreamPlayer2D" parent="." unique_id=22327643]
+stream = ExtResource("3_opawe")
+
+[connection signal="value_changed" from="volume" to="." method="_on_volume_value_changed"]
