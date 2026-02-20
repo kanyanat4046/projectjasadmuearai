@@ -1,45 +1,15 @@
-[gd_scene format=3 uid="uid://do3lio43peky7"]
+[gd_scene format=3 uid="uid://bq3huk364skd3"]
 
-[ext_resource type="Script" uid="uid://cgkgxcog8m6ju" path="res://scenes/control.gd" id="1_8n18e"]
-[ext_resource type="Texture2D" uid="uid://c8fi7cgcg4p3j" path="res://Menu_page.jpg" id="1_brbbq"]
-[ext_resource type="Texture2D" uid="uid://j0nhkkwpn30u" path="res://Button_and_book1.png" id="1_r67kn"]
-[ext_resource type="Texture2D" uid="uid://dh0t2j6mrs7a7" path="res://Button_and_book2.png" id="2_brbbq"]
+[ext_resource type="Texture2D" uid="uid://bvvfee60efiox" path="res://Main_game_2.jpg" id="1_0fbet"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_8n18e"]
-atlas = ExtResource("1_r67kn")
-region = Rect2(50.724884, 47.850937, 672.9153, 249.17314)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tjwpk"]
-atlas = ExtResource("2_brbbq")
-region = Rect2(50.593536, 50.277603, 668.4834, 243.64546)
-
-[node name="control" type="Control" unique_id=1832619411]
+[node name="Control" type="Control" unique_id=2045854811]
 layout_mode = 3
-anchor_right = 1.0
-anchor_bottom = 0.96300006
-offset_bottom = 56.95996
-grow_horizontal = 2
-grow_vertical = 2
-script = ExtResource("1_8n18e")
-
-[node name="menu" type="TextureRect" parent="." unique_id=1423232920]
-layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_bottom = -17.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_brbbq")
 
-[node name="Start" type="TextureButton" parent="." unique_id=1427255187]
-layout_mode = 0
-offset_left = 1238.0001
-offset_top = 607.0
-offset_right = 1910.0001
-offset_bottom = 856.0
-scale = Vector2(0.6579373, 0.75376016)
-texture_normal = SubResource("AtlasTexture_8n18e")
-texture_hover = SubResource("AtlasTexture_tjwpk")
-
-[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[node name="MainGame2" type="Sprite2D" parent="." unique_id=1848653488]
+position = Vector2(962, 536)
+texture = ExtResource("1_0fbet")

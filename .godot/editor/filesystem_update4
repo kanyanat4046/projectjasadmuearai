@@ -4,3 +4,4 @@ res://button.gd
 res://book.gd
 res://game_menu.tscn
 res://control.tscn
+res://scenes/book.gd
