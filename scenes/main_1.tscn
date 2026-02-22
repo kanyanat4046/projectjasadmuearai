@@ -1,0 +1,102 @@
+[gd_scene format=3 uid="uid://b471p41wvslqn"]
+
+[ext_resource type="Texture2D" uid="uid://ciirttey8qp4t" path="res://Main_game1.jpg" id="1_g7mqn"]
+[ext_resource type="Script" uid="uid://drm6d1fg35l4k" path="res://main_game_1.gd" id="2_x81v5"]
+[ext_resource type="Texture2D" uid="uid://duuh7kbvq1wfc" path="res://Button_and_book.png" id="3_jihn4"]
+[ext_resource type="Texture2D" uid="uid://duc7i78ugnjpe" path="res://Button_and_book2.png" id="4_5dq20"]
+[ext_resource type="Script" uid="uid://bemx7b41wenuu" path="res://book.gd" id="5_ssoh8"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ssoh8"]
+
+[sub_resource type="Theme" id="Theme_5dq20"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_20v6c"]
+texture = ExtResource("3_jihn4")
+region_rect = Rect2(1004.542, 117.77399, 701.7781, 871.90607)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_st52d"]
+texture = ExtResource("4_5dq20")
+region_rect = Rect2(1011.6461, 114.68009, 677.4741, 877.982)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wcred"]
+texture = ExtResource("4_5dq20")
+region_rect = Rect2(1014.6842, 117.71809, 698.74, 874.94403)
+
+[sub_resource type="Shortcut" id="Shortcut_7aj7g"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7aj7g"]
+texture = ExtResource("3_jihn4")
+region_rect = Rect2(45.562134, 342.5301, 680.51196, 240.00201)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_u21dm"]
+texture = ExtResource("4_5dq20")
+region_rect = Rect2(54.676147, 339.4921, 671.39795, 236.96402)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3iidq"]
+texture = ExtResource("4_5dq20")
+region_rect = Rect2(54.676147, 336.4541, 680.51196, 236.96405)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_o8ufa"]
+texture = ExtResource("3_jihn4")
+region_rect = Rect2(51.638123, 597.7221, 674.436, 261.268)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_s5d4f"]
+texture = ExtResource("4_5dq20")
+region_rect = Rect2(45.562134, 606.8361, 686.588, 246.078)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_21w5h"]
+texture = ExtResource("4_5dq20")
+region_rect = Rect2(45.562134, 600.76013, 683.55005, 252.15399)
+
+[node name="Main 1" type="Control" unique_id=1884147944]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainGame1" type="Sprite2D" parent="." unique_id=1604985921]
+position = Vector2(963, 536)
+texture = ExtResource("1_g7mqn")
+script = ExtResource("2_x81v5")
+
+[node name="Button" type="Button" parent="." unique_id=897037284]
+material = SubResource("CanvasItemMaterial_ssoh8")
+layout_mode = 0
+offset_left = 695.0
+offset_top = 389.0
+offset_right = 1197.0
+offset_bottom = 1069.0
+theme = SubResource("Theme_5dq20")
+theme_override_styles/normal = SubResource("StyleBoxTexture_20v6c")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_st52d")
+theme_override_styles/hover = SubResource("StyleBoxTexture_wcred")
+action_mode = 0
+shortcut = SubResource("Shortcut_7aj7g")
+text_overrun_behavior = 1
+autowrap_trim_flags = 192
+clip_text = true
+script = ExtResource("5_ssoh8")
+
+[node name="Approve" type="Button" parent="." unique_id=1699506003]
+layout_mode = 0
+offset_left = 1397.0
+offset_top = 596.0
+offset_right = 1750.0
+offset_bottom = 709.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_7aj7g")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_u21dm")
+theme_override_styles/hover = SubResource("StyleBoxTexture_3iidq")
+
+[node name="Reject" type="Button" parent="." unique_id=1493019137]
+layout_mode = 0
+offset_left = 1404.0
+offset_top = 779.0
+offset_right = 1752.0
+offset_bottom = 890.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_o8ufa")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_s5d4f")
+theme_override_styles/hover = SubResource("StyleBoxTexture_21w5h")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://cw66q6jrpmfgs"]
+
+[ext_resource type="Texture2D" uid="uid://b4qjtxf1b4s2t" path="res://Menu_page.jpg" id="1_rjxss"]
+[ext_resource type="Texture2D" uid="uid://duuh7kbvq1wfc" path="res://Button_and_book.png" id="2_jprcw"]
+[ext_resource type="Texture2D" uid="uid://ddux0ud01cro6" path="res://Button_and_book2.png" id="3_jprcw"]
+[ext_resource type="Script" uid="uid://uusxfhw2epny" path="res://button.gd" id="4_5rxej"]
+
+[sub_resource type="Theme" id="Theme_rjxss"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5rxej"]
+texture = ExtResource("2_jprcw")
+region_rect = Rect2(49.06598, 57.735992, 674.436, 233.926)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xxfb2"]
+texture = ExtResource("3_jprcw")
+region_rect = Rect2(51.638123, 50.882088, 659.24603, 233.926)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qus6b"]
+texture = ExtResource("3_jprcw")
+region_rect = Rect2(57.77852, 49.06236, 668.1679, 244.22688)
+
+[node name="Maim" type="Control" unique_id=1686741536]
+custom_minimum_size = Vector2(1920, 1080)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_rjxss")
+
+[node name="gameMenu" type="Control" parent="." unique_id=582270674]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 5.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuPage" type="Sprite2D" parent="gameMenu" unique_id=1151763800]
+position = Vector2(4, 3)
+texture = ExtResource("1_rjxss")
+centered = false
+
+[node name="Button" type="Button" parent="." unique_id=1390062809]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1258.0
+offset_top = 635.0
+offset_right = -282.0
+offset_bottom = -297.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_5rxej")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xxfb2")
+theme_override_styles/hover = SubResource("StyleBoxTexture_qus6b")
+script = ExtResource("4_5rxej")
+
+[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

@@ -10,10 +10,11 @@ config_version=5
 
 [application]
 
-config/name="final1"
-run/main_scene="res://scenes/control.tscn"
+config/name="Game Project Main"
+run/main_scene="res://game_menu.tscn"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+<<<<<<<HEADconfig/name="Game Project Main"
 
 [display]
 
