@@ -16,6 +16,10 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 <<<<<<<HEADconfig/name="Game Project Main"
 
+[autoload]
+
+GameManager="*uid://bqgd348mvufr4"
+
 [display]
 
 window/size/viewport_width=1920

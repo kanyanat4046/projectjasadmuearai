@@ -1,5 +1,8 @@
-extends Sprite2D
+extends Resource
+class_name ItemData
 
+@export var item_name: String
+@export var price: float
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
