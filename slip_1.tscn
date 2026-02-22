@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ceh6ox4d6xduh"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_sdt3m"]
+resource_local_to_scene = true
+load_path = "res://.godot/imported/Slip1.png-ac36007eaf4fde0ac8a56609d2ef472d.ctex"
+
+[node name="Slip1" type="Sprite2D" unique_id=511561141]
+scale = Vector2(0.8208333, 0.76714283)
+texture = SubResource("CompressedTexture2D_sdt3m")
+region_rect = Rect2(20, 0, 0, 0)

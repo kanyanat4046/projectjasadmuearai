@@ -2,6 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://j0nhkkwpn30u" path="res://Button_and_book1.png" id="1_irwau"]
 [ext_resource type="Texture2D" uid="uid://dh0t2j6mrs7a7" path="res://Button_and_book2.png" id="2_04edg"]
+[ext_resource type="PackedScene" uid="uid://ceh6ox4d6xduh" path="res://slip_1.tscn" id="3_u60ka"]
+[ext_resource type="PackedScene" uid="uid://dvk54iwyqde3h" path="res://slip_2.tscn" id="4_tjmbt"]
+[ext_resource type="PackedScene" uid="uid://bsumwt50c2f3n" path="res://slip_3.tscn" id="5_xpr8x"]
+[ext_resource type="PackedScene" uid="uid://dxopq121jyl5n" path="res://slip_4.tscn" id="6_xifqn"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3bsxj"]
 load_path = "res://.godot/imported/Main_game_2.jpg-8628f8590f45c88048d7692c9e02f6be.ctex"
@@ -21,6 +25,10 @@ region = Rect2(50.298378, 604.75055, 674.965, 248.01868)
 [sub_resource type="AtlasTexture" id="AtlasTexture_04edg"]
 atlas = ExtResource("2_04edg")
 region = Rect2(47.06041, 605.6184, 674.804, 246.40814)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vaunn"]
+resource_local_to_scene = true
+load_path = "res://.godot/imported/Slip1.png-ac36007eaf4fde0ac8a56609d2ef472d.ctex"
 
 [node name="main2" type="Control" unique_id=1422755513]
 layout_mode = 3
@@ -56,3 +64,29 @@ offset_bottom = 1028.0
 scale = Vector2(0.55, 0.55)
 texture_normal = SubResource("AtlasTexture_irwau")
 texture_hover = SubResource("AtlasTexture_04edg")
+
+[node name="Slip" type="Control" parent="." unique_id=549897623]
+anchors_preset = 0
+offset_right = 1918.0
+offset_bottom = 1082.0
+
+[node name="Slip1" parent="Slip" unique_id=511561141 instance=ExtResource("3_u60ka")]
+position = Vector2(266, 718)
+scale = Vector2(0.875, 0.8064286)
+texture = SubResource("CompressedTexture2D_vaunn")
+
+[node name="Slip2" parent="Slip" unique_id=2084248724 instance=ExtResource("4_tjmbt")]
+position = Vector2(-673, 998.00006)
+
+[node name="Slip3" parent="Slip" unique_id=51521948 instance=ExtResource("5_xpr8x")]
+position = Vector2(-224, 1022)
+
+[node name="Slip4" parent="Slip" unique_id=1995182067 instance=ExtResource("6_xifqn")]
+position = Vector2(-622, 345)
+
+[node name="ContentLabels" type="Control" parent="Slip" unique_id=333054429]
+anchors_preset = 0
+offset_left = 517.0
+offset_top = 308.0
+offset_right = 1452.0
+offset_bottom = 1050.0

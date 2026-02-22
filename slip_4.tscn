@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dxopq121jyl5n"]
+
+[ext_resource type="Texture2D" uid="uid://bgtb8bgmsn3vq" path="res://Slip4.png" id="1_ew5re"]
+
+[node name="Slip4" type="Sprite2D" unique_id=1995182067]
+scale = Vector2(0.82916677, 0.82821643)
+texture = ExtResource("1_ew5re")
