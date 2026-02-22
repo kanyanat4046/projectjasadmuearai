@@ -9,7 +9,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+	
+func _on_pressed():
+	start_game()
 
-
-func _on_volume_value_changed(value: float) -> void:
-	AudioServer.set_bus_volume_db(0,value)
+func start_game():
+	print("Button was clicked!") # This will show up in the Output log
+	get_tree().change_scene_to_file("res://scenes/setting.tscn")

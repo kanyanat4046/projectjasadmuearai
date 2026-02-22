@@ -1,3 +1,2 @@
-res://main_game2.tscn
-res://scenes/Sliplong.gd
-res://scenes/book.gd
+res://scenes/game_menu.tscn
+res://scenes/main_1.tscn

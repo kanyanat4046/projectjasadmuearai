@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://byqba1rrm1kkv"]
 
-[ext_resource type="Script" uid="uid://b4l8obq6qyarn" path="res://setting.gd" id="1_a42w7"]
-[ext_resource type="Texture2D" uid="uid://ciirttey8qp4t" path="res://Main_game1.jpg" id="2_110nh"]
+[ext_resource type="Script" uid="uid://b4l8obq6qyarn" path="res://scenes/setting.gd" id="1_a42w7"]
+[ext_resource type="Texture2D" uid="uid://c5m76cxlj2rel" path="res://Asset/Setting_page.jpg" id="2_u58eq"]
 
 [node name="Setting" type="Control" unique_id=1765774471]
 layout_mode = 3
@@ -32,6 +32,6 @@ layout_mode = 2
 
 [node name="MainGame1" type="Sprite2D" parent="." unique_id=308918268]
 position = Vector2(957, 543)
-texture = ExtResource("2_110nh")
+texture = ExtResource("2_u58eq")
 
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
