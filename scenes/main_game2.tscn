@@ -1,19 +1,11 @@
 [gd_scene format=3 uid="uid://cqhheluob52c3"]
 
 [ext_resource type="Texture2D" uid="uid://j0nhkkwpn30u" path="res://Asset/Button_and_book1.png" id="1_irwau"]
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://ddux0ud01cro6" path="res://Asset/Button_and_book2.png" id="2_04edg"]
-[ext_resource type="PackedScene" uid="uid://ceh6ox4d6xduh" path="res://slip_1.tscn" id="3_u60ka"]
-[ext_resource type="PackedScene" uid="uid://dvk54iwyqde3h" path="res://slip_2.tscn" id="4_tjmbt"]
-[ext_resource type="PackedScene" uid="uid://bsumwt50c2f3n" path="res://slip_3.tscn" id="5_xpr8x"]
-[ext_resource type="PackedScene" uid="uid://dxopq121jyl5n" path="res://slip_4.tscn" id="6_xifqn"]
-=======
 [ext_resource type="Script" uid="uid://xr77bpura035" path="res://scenes/main2.gd" id="1_n7ofh"]
 [ext_resource type="Texture2D" uid="uid://ddux0ud01cro6" path="res://Asset/Button_and_book2.png" id="2_04edg"]
 [ext_resource type="Script" uid="uid://bqfrpsv0b70eq" path="res://scenes/receipt.gd" id="5_swft5"]
 [ext_resource type="Texture2D" uid="uid://dier7ugk12cqp" path="res://Asset/setting-icon-2.png" id="7_i5dgx"]
 [ext_resource type="Script" uid="uid://b4l8obq6qyarn" path="res://scenes/setting.gd" id="8_2s02s"]
->>>>>>> ce23a033a8b7d12afe9845cfdc2cd7ad61663fa2
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3bsxj"]
 load_path = "res://.godot/imported/Main_game_2.jpg-8628f8590f45c88048d7692c9e02f6be.ctex"
