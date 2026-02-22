@@ -1,6 +1,6 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1771771866
-GameManager.gd::GDScript::3522062176363394851::1771771664::0::1::::<>Node<><>0<>0<><>::
+::res://::1771777329
+GameManager.gd::GDScript::3522062176363394851::1771776123::0::1::::<>Node<><>0<>0<><>::
 icon.svg::CompressedTexture2D::2314261738393069656::1771734219::1771734421::1::::<><><>0<>0<>6e3e225139f9e373f44a80413714ced5<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ItemData.gd::GDScript::2233771417939085723::1771766764::0::1::::ItemData<>Resource<><>0<>0<><>::
 Slip1.png::CompressedTexture2D::2499749463347966358::1771734219::1771734422::1::::<><><>0<>0<>c8b1109411be4ca95908f3e24d9a9e36<>res://.godot/imported/Slip1.png-ac36007eaf4fde0ac8a56609d2ef472d.ctex::
@@ -24,7 +24,7 @@ setting-icon-2.png::CompressedTexture2D::7730120705707780335::1771736306::177173
 Setting_page.jpg::CompressedTexture2D::6905277654045569119::1771734219::1771734422::1::::<><><>0<>0<>8fe8cd2085ac8a9460fcaf6fea90eb0a<>res://.godot/imported/Setting_page.jpg-121f8f8bfc26bd014488459ab7c0b93a.ctex::
 setting_page.tscn::PackedScene::6334449524340452323::1771734219::0::1::::<><><>0<>0<><>::uid://4ikdax4d8x6c::::res://setting_page.gd<>uid://c5m76cxlj2rel::::res://Setting_page.jpg<>uid://cc20nnpci4dbp::::res://simplesound-horror-trailer-443327.mp3
 simplesound-horror-trailer-443327.mp3::AudioStreamMP3::4970499100240129061::1771734219::1771734421::1::::<><><>0<>0<>097f21b2b105e4b221a8080ef8d688d9<>res://.godot/imported/simplesound-horror-trailer-443327.mp3-068019c5414c9b41c4ada48fa163a260.mp3str::
-::res://scenes/::1771771866
+::res://scenes/::1771775633
 book.gd::GDScript::2693402326066104816::1771766764::0::1::::<>Button<><>0<>0<><>::
 button.gd::GDScript::1446198681437669214::1771737025::0::1::::<>Button<><>0<>0<><>::
 control.gd::GDScript::5215023708962587122::1771734219::0::1::::<>Control<><>0<>0<><>::
@@ -33,11 +33,11 @@ game_menu.tscn::PackedScene::6382904080197025442::1771770839::0::1::::<><><>0<>0
 main2.gd::GDScript::1651437991294117002::1771766764::0::1::::<>Control<><>0<>0<><>::
 main_1.tscn::PackedScene::4489564230416886649::1771766764::0::1::::<><><>0<>0<><>::uid://n1aofed78lo6::::res://Asset/Main_game1.jpg<>uid://duuh7kbvq1wfc::::res://Asset/Button_and_book.png<>uid://ddux0ud01cro6::::res://Asset/Button_and_book2.png<>uid://bemx7b41wenuu::::res://scenes/book.gd<>uid://dier7ugk12cqp::::res://Asset/setting-icon-2.png<>uid://b4l8obq6qyarn::::res://scenes/setting.gd
 main_game1.tscn::PackedScene::3947238903691112205::1771765551::0::1::::<><><>0<>0<><>::uid://ddux0ud01cro6::::res://Asset/Button_and_book2.png<>uid://bemx7b41wenuu::::res://scenes/book.gd
-main_game2.tscn::PackedScene::5910746281289706124::1771769886::0::1::::<><><>0<>0<><>::uid://j0nhkkwpn30u::::res://Asset/Button_and_book1.png<>uid://xr77bpura035::::res://scenes/main2.gd<>uid://ddux0ud01cro6::::res://Asset/Button_and_book2.png<>uid://bqfrpsv0b70eq::::res://scenes/receipt.gd<>uid://dier7ugk12cqp::::res://Asset/setting-icon-2.png<>uid://b4l8obq6qyarn::::res://scenes/setting.gd
+main_game2.tscn::PackedScene::5910746281289706124::1771773827::0::1::::<><><>0<>0<><>::uid://j0nhkkwpn30u::::res://Asset/Button_and_book1.png<>uid://xr77bpura035::::res://scenes/main2.gd<>uid://ddux0ud01cro6::::res://Asset/Button_and_book2.png<>uid://bqfrpsv0b70eq::::res://scenes/receipt.gd<>uid://dier7ugk12cqp::::res://Asset/setting-icon-2.png<>uid://b4l8obq6qyarn::::res://scenes/setting.gd
 receipt.gd::GDScript::3520824025457225452::1771766764::0::1::::<>Control<><>0<>0<><>::
-you_lose.tscn::PackedScene::5945637941249316966::1771765474::0::1::::<><><>0<>0<><>::uid://cxieewke8mk2m::::res://to_main_lose..gd
 setting.gd::GDScript::4446634045037703791::1771737025::0::1::::<>Control<><>0<>0<><>::
 setting.tscn::PackedScene::4104045084721852033::1771740936::0::1::::<><><>0<>0<><>::uid://b4l8obq6qyarn::::res://scenes/setting.gd<>uid://c5m76cxlj2rel::::res://Asset/Setting_page.jpg
 setting_page.gd::GDScript::2052604051698259220::1771734219::0::1::::<>Control<><>0<>0<><>::
 Sliplong.gd::GDScript::1946355969069300637::1771767154::0::1::::<>Control<><>0<>0<><>::
-you_win.tscn::PackedScene::8267094283304276575::1771765474::0::1::::<><><>0<>0<><>::uid://codb5x6e2fwwp::::res://to_main.gd
+you_lose.tscn::PackedScene::5945637941249316966::1771765474::0::1::::<><><>0<>0<><>::uid://cxieewke8mk2m::::res://to_main_lose..gd
+you_win.tscn::PackedScene::8267094283304276575::1771775633::0::1::::<><><>0<>0<><>::uid://codb5x6e2fwwp::::res://to_main.gd
