@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://dp1v3njf3c6br"]
+
+[ext_resource type="Script" uid="uid://codb5x6e2fwwp" path="res://to_main.gd" id="1_w5032"]
+
+[node name="You win" type="Control" unique_id=855550153]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1578739195]
+layout_mode = 0
+offset_right = 1928.0
+offset_bottom = 1093.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect" unique_id=677584779]
+layout_mode = 0
+offset_left = 521.0
+offset_top = 282.0
+offset_right = 1381.0
+offset_bottom = 499.0
+theme_override_colors/default_color = Color(1, 1, 0.7607843, 1)
+theme_override_colors/font_outline_color = Color(0.33213586, 0.3321359, 0.3321359, 1)
+theme_override_constants/outline_size = 70
+theme_override_font_sizes/normal_font_size = 100
+theme_override_font_sizes/bold_font_size = 16
+bbcode_enabled = true
+text = "Night  Completed"
+tab_size = 24
+
+[node name="to_main" type="Button" parent="." unique_id=1221614927]
+layout_mode = 0
+offset_left = 279.0
+offset_top = 678.0
+offset_right = 715.0
+offset_bottom = 832.0
+theme_override_colors/font_color = Color(0.8745098, 0.1764706, 0.2509804, 1)
+theme_override_font_sizes/font_size = 80
+text = "Go Back "
+script = ExtResource("1_w5032")
+
+[node name="next_night" type="Button" parent="." unique_id=38543008]
+layout_mode = 0
+offset_left = 1294.0
+offset_top = 684.0
+offset_right = 1657.0
+offset_bottom = 844.0
+theme_override_colors/font_color = Color(0.8318216, 0.7514778, 0.6533718, 1)
+theme_override_font_sizes/font_size = 80
+text = "Next Shift"
+
+[connection signal="pressed" from="to_main" to="to_main" method="_on_pressed"]

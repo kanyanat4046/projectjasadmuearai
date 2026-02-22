@@ -1,3 +1,5 @@
 Button
+RichTextLabel
+ColorRect
 TextureButton
 Node2D

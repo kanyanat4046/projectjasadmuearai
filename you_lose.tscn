@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cqyd12gl3vtrq"]
+
+[ext_resource type="Script" uid="uid://cxieewke8mk2m" path="res://to_main_lose..gd" id="1_ft7bt"]
+
+[node name="you_lose" type="Control" unique_id=1576379649]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1932761257]
+layout_mode = 0
+offset_right = 1928.0
+offset_bottom = 1093.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect" unique_id=926417110]
+layout_mode = 0
+offset_left = 759.0
+offset_top = 386.0
+offset_right = 1178.0
+offset_bottom = 603.0
+theme_override_colors/default_color = Color(0.6901961, 0.039215688, 0.06666667, 1)
+theme_override_colors/font_outline_color = Color(0.2296693, 0.03549678, 0.12753886, 1)
+theme_override_constants/outline_size = 70
+theme_override_font_sizes/normal_font_size = 100
+theme_override_font_sizes/bold_font_size = 16
+bbcode_enabled = true
+text = "You lose"
+tab_size = 24
+
+[node name="to_main" type="Button" parent="." unique_id=188347696]
+layout_mode = 0
+offset_left = 762.0
+offset_top = 690.0
+offset_right = 1198.0
+offset_bottom = 844.0
+theme_override_colors/font_color = Color(0.8745098, 0.1764706, 0.2509804, 1)
+theme_override_font_sizes/font_size = 80
+text = "Go Back "
+script = ExtResource("1_ft7bt")
+
+[connection signal="pressed" from="to_main" to="to_main" method="_on_pressed"]

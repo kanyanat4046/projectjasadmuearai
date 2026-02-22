@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bwicph67vineb"]
 
-[ext_resource type="Texture2D" uid="uid://dh0t2j6mrs7a7" path="res://Button_and_book2.png" id="1_sn7k8"]
-[ext_resource type="Script" uid="uid://cirsrc700fcup" path="res://scenes/book.gd" id="2_m4mrb"]
+[ext_resource type="Texture2D" uid="uid://ddux0ud01cro6" path="res://Asset/Button_and_book2.png" id="1_sn7k8"]
+[ext_resource type="Script" uid="uid://bemx7b41wenuu" path="res://scenes/book.gd" id="2_m4mrb"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0u35s"]
 load_path = "res://.godot/imported/Main_game1.jpg-69a7d470985f0b6c4f56f424de7583e4.ctex"
