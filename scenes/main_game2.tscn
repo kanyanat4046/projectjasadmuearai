@@ -1,11 +1,19 @@
 [gd_scene format=3 uid="uid://cqhheluob52c3"]
 
 [ext_resource type="Texture2D" uid="uid://j0nhkkwpn30u" path="res://Asset/Button_and_book1.png" id="1_irwau"]
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://ddux0ud01cro6" path="res://Asset/Button_and_book2.png" id="2_04edg"]
 [ext_resource type="PackedScene" uid="uid://ceh6ox4d6xduh" path="res://slip_1.tscn" id="3_u60ka"]
 [ext_resource type="PackedScene" uid="uid://dvk54iwyqde3h" path="res://slip_2.tscn" id="4_tjmbt"]
 [ext_resource type="PackedScene" uid="uid://bsumwt50c2f3n" path="res://slip_3.tscn" id="5_xpr8x"]
 [ext_resource type="PackedScene" uid="uid://dxopq121jyl5n" path="res://slip_4.tscn" id="6_xifqn"]
+=======
+[ext_resource type="Script" uid="uid://xr77bpura035" path="res://scenes/main2.gd" id="1_n7ofh"]
+[ext_resource type="Texture2D" uid="uid://ddux0ud01cro6" path="res://Asset/Button_and_book2.png" id="2_04edg"]
+[ext_resource type="Script" uid="uid://bqfrpsv0b70eq" path="res://scenes/receipt.gd" id="5_swft5"]
+[ext_resource type="Texture2D" uid="uid://dier7ugk12cqp" path="res://Asset/setting-icon-2.png" id="7_i5dgx"]
+[ext_resource type="Script" uid="uid://b4l8obq6qyarn" path="res://scenes/setting.gd" id="8_2s02s"]
+>>>>>>> ce23a033a8b7d12afe9845cfdc2cd7ad61663fa2
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3bsxj"]
 load_path = "res://.godot/imported/Main_game_2.jpg-8628f8590f45c88048d7692c9e02f6be.ctex"
@@ -26,13 +34,34 @@ region = Rect2(50.298378, 604.75055, 674.965, 248.01868)
 atlas = ExtResource("2_04edg")
 region = Rect2(47.06041, 605.6184, 674.804, 246.40814)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vaunn"]
-resource_local_to_scene = true
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eal2l"]
+texture = ExtResource("7_i5dgx")
+region_rect = Rect2(187.30795, 108.49828, 238.09204, 247.10168)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3611u"]
+texture = ExtResource("7_i5dgx")
+region_rect = Rect2(193.38593, 119.90009, 224.8858, 217.85815)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6kmwy"]
+texture = ExtResource("7_i5dgx")
+region_rect = Rect2(199.3086, 123.41393, 219.02939, 210.83047)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n7ofh"]
 load_path = "res://.godot/imported/Slip1.png-ac36007eaf4fde0ac8a56609d2ef472d.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_osq3w"]
+load_path = "res://.godot/imported/Slip2.png-4863e7fdc5181966473a65aa1b869083.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i5dgx"]
+load_path = "res://.godot/imported/Slip3.png-46ef8cec30a6cebc7cf32c9645ddeacd.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2s02s"]
+load_path = "res://.godot/imported/Slip4.png-d043ab6958cfef6961dfff3b2cc9ab51.ctex"
 
 [node name="main2" type="Control" unique_id=1422755513]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_n7ofh")
 
 [node name="main2" type="TextureRect" parent="." unique_id=729842376]
 layout_mode = 1
@@ -65,28 +94,62 @@ scale = Vector2(0.55, 0.55)
 texture_normal = SubResource("AtlasTexture_irwau")
 texture_hover = SubResource("AtlasTexture_04edg")
 
-[node name="Slip" type="Control" parent="." unique_id=549897623]
+[node name="Setting" type="Button" parent="." unique_id=759116668]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 34.0
+offset_right = 166.0
+offset_bottom = 132.0
+theme_override_colors/font_color = Color(0.65891117, 1.9131974e-06, 5.2943824e-07, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_eal2l")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_3611u")
+theme_override_styles/hover = SubResource("StyleBoxTexture_6kmwy")
+script = ExtResource("8_2s02s")
+
+[node name="ReceiptControl" type="Control" parent="." unique_id=1006523390]
 anchors_preset = 0
-offset_right = 1918.0
-offset_bottom = 1082.0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_swft5")
+texture_normal = SubResource("CompressedTexture2D_n7ofh")
+texture_blood = SubResource("CompressedTexture2D_osq3w")
+texture_veg = SubResource("CompressedTexture2D_i5dgx")
+texture_organ = SubResource("CompressedTexture2D_2s02s")
 
-[node name="Slip1" parent="Slip" unique_id=511561141 instance=ExtResource("3_u60ka")]
-position = Vector2(266, 718)
-scale = Vector2(0.875, 0.8064286)
-texture = SubResource("CompressedTexture2D_vaunn")
+[node name="ReceiptImage" type="TextureRect" parent="ReceiptControl" unique_id=2001347307]
+layout_mode = 0
+offset_left = 109.0
+offset_top = 498.0
+offset_right = 445.0
+offset_bottom = 913.0
 
-[node name="Slip2" parent="Slip" unique_id=2084248724 instance=ExtResource("4_tjmbt")]
-position = Vector2(-673, 998.00006)
+[node name="ContentLabel" type="Label" parent="ReceiptControl" unique_id=1463441839]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 553.0
+offset_right = 425.0
+offset_bottom = 673.0
+theme_override_font_sizes/font_size = 30
 
-[node name="Slip3" parent="Slip" unique_id=51521948 instance=ExtResource("5_xpr8x")]
-position = Vector2(-224, 1022)
+[node name="TotalLabel" type="Label" parent="ReceiptControl" unique_id=621491159]
+layout_mode = 0
+offset_left = 253.0
+offset_top = 774.0
+offset_right = 378.0
+offset_bottom = 827.0
+theme_override_font_sizes/font_size = 32
 
-[node name="Slip4" parent="Slip" unique_id=1995182067 instance=ExtResource("6_xifqn")]
-position = Vector2(-622, 345)
+[node name="TaskLabel" type="Label" parent="." unique_id=729677077]
+layout_mode = 0
+offset_left = 1288.0
+offset_top = 359.0
+offset_right = 1399.0
+offset_bottom = 391.0
+theme_override_font_sizes/font_size = 23
+text = "Task: 0/10"
 
-[node name="ContentLabels" type="Control" parent="Slip" unique_id=333054429]
-anchors_preset = 0
-offset_left = 517.0
-offset_top = 308.0
-offset_right = 1452.0
-offset_bottom = 1050.0
+[node name="GameTimer" type="Timer" parent="." unique_id=1515308993]
+
+[connection signal="pressed" from="approve" to="ReceiptControl" method="_on_approve_pressed"]
+[connection signal="pressed" from="reject" to="ReceiptControl" method="_on_reject_pressed"]
+[connection signal="pressed" from="Setting" to="Setting" method="_on_pressed"]
