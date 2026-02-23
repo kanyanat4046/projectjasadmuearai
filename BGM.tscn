@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cmnilmby4f1ul"]
+
+[ext_resource type="AudioStream" uid="uid://cc20nnpci4dbp" path="res://Asset/simplesound-horror-trailer-443327.mp3" id="1_f8x3a"]
+
+[node name="BGM" type="Node" unique_id=462380156]
+
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=360138754]
+stream = ExtResource("1_f8x3a")
+volume_db = -11.597
+autoplay = true
+bus = &"Music"

@@ -16,9 +16,15 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 <<<<<<<HEADconfig/name="Game Project Main"
 
+[audio]
+
+buses/default_bus_layout="uid://k7vulcy25cw8"
+
 [autoload]
 
 GameManager="*uid://bqgd348mvufr4"
+Bgm="*uid://cmnilmby4f1ul"
+Sfx="*uid://bm8kllnej1tq7"
 
 [display]
 

@@ -1,3 +1,6 @@
+AudioStreamPlayer
+Node
+ColorRect
 Button
 Timer
 Label
@@ -5,6 +8,5 @@ TextureRect
 Control
 CanvasLayer
 RichTextLabel
-ColorRect
 TextureButton
 Node2D
