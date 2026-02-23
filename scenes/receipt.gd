@@ -7,6 +7,7 @@ extends Control
 
 #@onready var receipt_display = $ReceiptImage # ตัว TextureRect ที่ใช้แสดงผล ไม่ใช้ละ
 @onready var label_content = $ContentLabel # แสดงรายการสินค้า
+@onready var label_vat = $VattLabel # แสดงภาษี
 @onready var label_total = $TotalLabel     # แสดงราคารวม
 @onready var receipt_sprite = $ReceiptImage
 @onready var task_label = $"../TaskLabel" # อ้างอิงไปที่ Label นับ Task (ปรับ Path ให้ตรงตาม Scene)
@@ -19,7 +20,7 @@ var items_list = [
 		] # โหลด ItemData เข้ามาที่นี่
 
 var tasks_done: int = 0
-var max_tasks: int = 10
+var max_tasks: int = 7
 var mistakes: int = 0
 func generate_new_receipt():
 	# ถ้าเกมจบแล้ว ไม่ต้องทำอะไรต่อ
@@ -50,7 +51,8 @@ func generate_new_receipt():
 	# 3. สุ่มว่าจะเป็นใบเสร็จหลอก (Fake) หรือไม่
 	is_fake = randf() < 0.4 # โอกาส 40% ที่จะหลอก คืนแรกอาจเริ่มที10%
 	
-	label_content.text = display_text + "\nVAT 7%"
+	label_content.text = display_text
+	label_vat = "VAT 7%"
 	
 	if is_fake:
 		# สุ่มเลขมั่วๆ ให้ไม่ตรงกับความจริง
