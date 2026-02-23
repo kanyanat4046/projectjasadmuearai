@@ -1,7 +1,6 @@
 extends Control
 @onready var game_timer = $GameTimer # ลาก Timer Node มาวาง
-@onready var end_screen = $EndScreen/Background
-@onready var end_label = $EndScreen/Background/Label
+
 
 func _ready():
 	# เริ่มจับเวลา ยังไม่เสร็จดี
@@ -20,15 +19,12 @@ func _on_timer_timeout():
 
 # จัดการหน้าจอตอนจบเกม
 func _on_game_finished(status):
-	game_timer.stop() # หยุดเวลา
-	end_screen.visible = true # โชว์หน้าจอสีดำ
+	game_timer.stop()
 	
 	if status == "win":
-		end_label.text = "Night Complete"
-		end_label.modulate = Color.GREEN # สีเขียว
+		get_tree().change_scene_to_file("res://scenes/you_win.tscn")
 	else:
-		end_label.text = "Game Over"
-		end_label.modulate = Color.RED # สีแดง
+		get_tree().change_scene_to_file("res://scenes/you_lose.tscn")
 
 	# หยุดการสุ่มใบเสร็จ (คุณอาจจะซ่อน Node ใบเสร็จไปเลยก็ได้)
 	$ReceiptControl.visible = false

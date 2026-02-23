@@ -63,12 +63,12 @@ func check_answer(is_correct: bool):
 		tasks_done += 1
 		update_task_ui()
 		if tasks_done >= max_tasks:
-			print("จบด่าน!")
+			get_tree().change_scene_to_file("res://scenes/you_win.tscn")
 	else:
 		mistakes += 1
 		print("ทำพลาดครั้งที่: ", mistakes)
 		if mistakes >= 3:
-			print("GAME OVER")
+			get_tree().change_scene_to_file("res://scenes/you_lose.tscn")
 			# ใส่โค้ดเปลี่ยนไปหน้า Game Over ที่นี่
 	
 	# เล่น Animation เปลี่ยนใบเสร็จ

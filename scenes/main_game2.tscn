@@ -4,8 +4,6 @@
 [ext_resource type="Script" uid="uid://xr77bpura035" path="res://scenes/main2.gd" id="1_n7ofh"]
 [ext_resource type="Texture2D" uid="uid://ddux0ud01cro6" path="res://Asset/Button_and_book2.png" id="2_04edg"]
 [ext_resource type="Script" uid="uid://bqfrpsv0b70eq" path="res://scenes/receipt.gd" id="5_swft5"]
-[ext_resource type="Texture2D" uid="uid://dier7ugk12cqp" path="res://Asset/setting-icon-2.png" id="7_i5dgx"]
-[ext_resource type="Script" uid="uid://b4l8obq6qyarn" path="res://scenes/setting.gd" id="8_2s02s"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3bsxj"]
 load_path = "res://.godot/imported/Main_game_2.jpg-8628f8590f45c88048d7692c9e02f6be.ctex"
@@ -26,18 +24,6 @@ region = Rect2(50.298378, 604.75055, 674.965, 248.01868)
 atlas = ExtResource("2_04edg")
 region = Rect2(47.06041, 605.6184, 674.804, 246.40814)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eal2l"]
-texture = ExtResource("7_i5dgx")
-region_rect = Rect2(187.30795, 108.49828, 238.09204, 247.10168)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3611u"]
-texture = ExtResource("7_i5dgx")
-region_rect = Rect2(193.38593, 119.90009, 224.8858, 217.85815)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6kmwy"]
-texture = ExtResource("7_i5dgx")
-region_rect = Rect2(199.3086, 123.41393, 219.02939, 210.83047)
-
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n7ofh"]
 load_path = "res://.godot/imported/Slip1.png-ac36007eaf4fde0ac8a56609d2ef472d.ctex"
 
@@ -56,6 +42,7 @@ anchors_preset = 0
 script = ExtResource("1_n7ofh")
 
 [node name="main2" type="TextureRect" parent="." unique_id=729842376]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -85,18 +72,6 @@ offset_bottom = 1028.0
 scale = Vector2(0.55, 0.55)
 texture_normal = SubResource("AtlasTexture_irwau")
 texture_hover = SubResource("AtlasTexture_04edg")
-
-[node name="Setting" type="Button" parent="." unique_id=759116668]
-layout_mode = 0
-offset_left = 66.0
-offset_top = 34.0
-offset_right = 166.0
-offset_bottom = 132.0
-theme_override_colors/font_color = Color(0.65891117, 1.9131974e-06, 5.2943824e-07, 1)
-theme_override_styles/normal = SubResource("StyleBoxTexture_eal2l")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_3611u")
-theme_override_styles/hover = SubResource("StyleBoxTexture_6kmwy")
-script = ExtResource("8_2s02s")
 
 [node name="ReceiptControl" type="Control" parent="." unique_id=1006523390]
 anchors_preset = 0
@@ -144,4 +119,3 @@ text = "Task: 0/10"
 
 [connection signal="pressed" from="approve" to="ReceiptControl" method="_on_approve_pressed"]
 [connection signal="pressed" from="reject" to="ReceiptControl" method="_on_reject_pressed"]
-[connection signal="pressed" from="Setting" to="Setting" method="_on_pressed"]

@@ -4,8 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://duuh7kbvq1wfc" path="res://Asset/Button_and_book.png" id="3_jihn4"]
 [ext_resource type="Texture2D" uid="uid://ddux0ud01cro6" path="res://Asset/Button_and_book2.png" id="4_5dq20"]
 [ext_resource type="Script" uid="uid://bemx7b41wenuu" path="res://scenes/book.gd" id="5_ssoh8"]
-[ext_resource type="Texture2D" uid="uid://dier7ugk12cqp" path="res://Asset/setting-icon-2.png" id="6_ayvor"]
-[ext_resource type="Script" uid="uid://b4l8obq6qyarn" path="res://scenes/setting.gd" id="7_d3ax8"]
 
 [sub_resource type="GDScript" id="GDScript_m23dm"]
 script/source = "extends Sprite2D
@@ -63,18 +61,6 @@ region_rect = Rect2(45.562134, 606.8361, 686.588, 246.078)
 texture = ExtResource("4_5dq20")
 region_rect = Rect2(45.562134, 600.76013, 683.55005, 252.15399)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ctogb"]
-texture = ExtResource("6_ayvor")
-region_rect = Rect2(187.30795, 108.49828, 238.09204, 247.10168)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ikp2r"]
-texture = ExtResource("6_ayvor")
-region_rect = Rect2(193.38593, 119.90009, 224.8858, 217.85815)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r5k66"]
-texture = ExtResource("6_ayvor")
-region_rect = Rect2(199.3086, 123.41393, 219.02939, 210.83047)
-
 [node name="Main 1" type="Control" unique_id=1884147944]
 layout_mode = 3
 anchors_preset = 15
@@ -128,17 +114,4 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_o8ufa")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_s5d4f")
 theme_override_styles/hover = SubResource("StyleBoxTexture_21w5h")
 
-[node name="Setting" type="Button" parent="." unique_id=1496036775]
-layout_mode = 0
-offset_left = 66.0
-offset_top = 34.0
-offset_right = 166.0
-offset_bottom = 132.0
-theme_override_colors/font_color = Color(0.65891117, 1.9131974e-06, 5.2943824e-07, 1)
-theme_override_styles/normal = SubResource("StyleBoxTexture_ctogb")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_ikp2r")
-theme_override_styles/hover = SubResource("StyleBoxTexture_r5k66")
-script = ExtResource("7_d3ax8")
-
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
-[connection signal="pressed" from="Setting" to="Setting" method="_on_pressed"]

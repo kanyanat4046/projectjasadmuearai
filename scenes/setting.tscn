@@ -1,7 +1,18 @@
 [gd_scene format=3 uid="uid://byqba1rrm1kkv"]
 
 [ext_resource type="Script" uid="uid://b4l8obq6qyarn" path="res://scenes/setting.gd" id="1_a42w7"]
-[ext_resource type="Texture2D" uid="uid://c5m76cxlj2rel" path="res://Asset/Setting_page.jpg" id="2_u58eq"]
+[ext_resource type="Texture2D" uid="uid://n1aofed78lo6" path="res://Asset/Main_game1.jpg" id="2_scrng"]
+[ext_resource type="Texture2D" uid="uid://cxc0tgha7q84c" path="res://arrow-back.png" id="3_31ui4"]
+[ext_resource type="Script" uid="uid://djx3kcwwbmm1q" path="res://scenes/goBack.gd" id="4_o8tsb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ikx14"]
+texture = ExtResource("3_31ui4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_scrng"]
+texture = ExtResource("3_31ui4")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_31ui4"]
+texture = ExtResource("3_31ui4")
 
 [node name="Setting" type="Control" unique_id=1765774471]
 layout_mode = 3
@@ -21,6 +32,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=550946524]
+visible = false
 layout_mode = 2
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=682818252]
@@ -31,7 +43,19 @@ text = "Volume"
 layout_mode = 2
 
 [node name="MainGame1" type="Sprite2D" parent="." unique_id=308918268]
-position = Vector2(957, 543)
-texture = ExtResource("2_u58eq")
+position = Vector2(960, 542)
+texture = ExtResource("2_scrng")
+
+[node name="goBack" type="Button" parent="." unique_id=776587080]
+layout_mode = 0
+offset_left = 61.0
+offset_top = 45.0
+offset_right = 226.0
+offset_bottom = 174.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_ikx14")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_scrng")
+theme_override_styles/hover = SubResource("StyleBoxTexture_31ui4")
+script = ExtResource("4_o8tsb")
 
 [connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
+[connection signal="pressed" from="goBack" to="goBack" method="_on_pressed"]

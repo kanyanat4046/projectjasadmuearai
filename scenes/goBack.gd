@@ -1,4 +1,4 @@
-extends Control
+extends Button
 
 
 # Called when the node enters the scene tree for the first time.
@@ -10,14 +10,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-	
 func _on_pressed():
 	start_game()
 
 func start_game():
 	print("Button was clicked!") # This will show up in the Output log
-	get_tree().change_scene_to_file("res://scenes/setting.tscn")
-
-
-func _on_go_back_pressed() -> void:
-	pass # Replace with function body.
+	get_tree().change_scene_to_file("res://scenes/game_menu.tscn")
