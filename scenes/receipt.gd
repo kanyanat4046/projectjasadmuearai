@@ -7,21 +7,42 @@ extends Control
 
 #@onready var receipt_display = $ReceiptImage # ตัว TextureRect ที่ใช้แสดงผล ไม่ใช้ละ
 @onready var label_content = $ContentLabel # แสดงรายการสินค้า
-@onready var label_vat = $VattLabel # แสดงภาษี
+@onready var label_vat = $VatLabel # แสดงภาษี
 @onready var label_total = $TotalLabel     # แสดงราคารวม
 @onready var receipt_sprite = $ReceiptImage
 @onready var task_label = $"../TaskLabel" # อ้างอิงไปที่ Label นับ Task (ปรับ Path ให้ตรงตาม Scene)
+@export var record_row_scene: PackedScene
+@onready var record_list = $ScrollContainer/RecordList
 
 var is_fake: bool = false
 var items_list = [
-			{"name": "Tomato", "price": 100.0},
-			{"name": "Meat", "price": 250.0},
-			{"name": "Onion", "price": 50.0}
+			{"name": "Tomato", "price": 60.00},
+			{"name": "Pork", "price": 180.00},
+			{"name": "Onion", "price": 50.00},
+			{"name": "Potato", "price": 56.00},
+			{"name": "Shrimp", "price": 280.00},
+			{"name": "Crab", "price": 250.00},
+			{"name": "carrot", "price": 30.00},
+			{"name": "Corn", "price": 20.00},
+			{"name": "broccoli", "price": 40.00},
+			{"name": "cucumber", "price": 35.00},
+			{"name": "garlic", "price": 45.00},
+			{"name": "mushroom", "price": 100.00},
+			{"name": "bean", "price": 25.00},
+			{"name": "beef", "price": 270.00},
+			{"name": "chicken", "price": 135.00},
+			{"name": "fish", "price": 90.00},
+			{"name": "sausage", "price": 140.00},
+			{"name": "bacon", "price": 120.00},
+			{"name": "egg", "price": 120.00}
 		] # โหลด ItemData เข้ามาที่นี่
 
 var tasks_done: int = 0
 var max_tasks: int = 7
 var mistakes: int = 0
+var actual_total = 0.0
+var display_text = ""
+var final_correct_total
 func generate_new_receipt():
 	# ถ้าเกมจบแล้ว ไม่ต้องทำอะไรต่อ
 	if GameManager.is_game_over:
@@ -35,8 +56,9 @@ func generate_new_receipt():
 		3: receipt_sprite.texture = texture_organ
 
 	# 2. สุ่มข้อมูลสินค้า
-	var actual_total = 0.0
-	var display_text = ""
+	actual_total = 0.0
+	final_correct_total = 0.0
+	display_text = ""
 	
 	# สุ่มรายการ 1-3 อย่าง
 	for i in range(randi_range(1, 3)):
@@ -46,7 +68,7 @@ func generate_new_receipt():
 	
 	# คำนวณ VAT 7%
 	var vat = actual_total * 0.07
-	var final_correct_total = actual_total + vat
+	final_correct_total = actual_total + vat
 	
 	# 3. สุ่มว่าจะเป็นใบเสร็จหลอก (Fake) หรือไม่
 	is_fake = randf() < 0.4 # โอกาส 40% ที่จะหลอก คืนแรกอาจเริ่มที10%
@@ -104,14 +126,30 @@ func _ready() -> void:
 	# เริ่มต้นโดยการดึงใบเสร็จเข้ามาในจอ
 	setup_initial_position()
 	generate_new_receipt()
-
+# เอาข้อมูลโชว์บนหนังสือ
+func add_record_to_book():
+	# สร้างแถวข้อมูล
+	var new_row = record_row_scene.instantiate()
+	record_list.add_child(new_row)
+	# เอาข้อมูลมา
+	var current_date = "Day 1"
+	var current_description =  "Ingredients"
+	var current_actual_total =  actual_total
+	var current_vat = "VAT 7%"
+	var current_final_total = final_correct_total
+	new_row.set_data(
+		current_date,
+		current_description,
+		actual_total,
+		current_vat,
+		final_correct_total
+	)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 
 func _on_approve_pressed() -> void:
+	add_record_to_book()
 	check_answer(not is_fake) # Replace with function body.
 
 

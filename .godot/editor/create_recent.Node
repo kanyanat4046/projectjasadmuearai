@@ -1,7 +1,10 @@
 Label
+TextureRect
+VBoxContainer
+ScrollContainer
+HBoxContainer
 Button
 Timer
-TextureRect
 Control
 CanvasLayer
 RichTextLabel

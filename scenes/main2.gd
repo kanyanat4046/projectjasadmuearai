@@ -28,10 +28,3 @@ func _on_game_finished(status):
 
 	# หยุดการสุ่มใบเสร็จ (คุณอาจจะซ่อน Node ใบเสร็จไปเลยก็ได้)
 	$ReceiptControl.visible = false
-
-# Called when the node enters the scene tree for the first time
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
