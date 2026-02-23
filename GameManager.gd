@@ -2,7 +2,7 @@ extends Node
 signal task_updated(current, total)
 signal game_finished(status) # status: "win" หรือ "lose"
 
-var total_tasks_goal: int = 10
+var total_tasks_goal: int = 7
 var current_tasks_done: int = 0
 var mistakes: int = 0
 var max_mistakes: int = 3

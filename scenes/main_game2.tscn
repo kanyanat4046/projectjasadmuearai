@@ -92,19 +92,28 @@ offset_bottom = 913.0
 
 [node name="ContentLabel" type="Label" parent="ReceiptControl" unique_id=1463441839]
 layout_mode = 0
-offset_left = 211.0
-offset_top = 553.0
-offset_right = 425.0
-offset_bottom = 673.0
+offset_left = 201.0
+offset_top = 533.0
+offset_right = 415.0
+offset_bottom = 653.0
 theme_override_font_sizes/font_size = 30
 
 [node name="TotalLabel" type="Label" parent="ReceiptControl" unique_id=621491159]
 layout_mode = 0
-offset_left = 253.0
-offset_top = 774.0
-offset_right = 378.0
-offset_bottom = 827.0
+offset_left = 288.0
+offset_top = 825.0
+offset_right = 413.0
+offset_bottom = 878.0
 theme_override_font_sizes/font_size = 32
+
+[node name="VatLabel" type="Label" parent="ReceiptControl" unique_id=1974135791]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 731.0
+offset_right = 420.0
+offset_bottom = 776.0
+theme_override_font_sizes/font_size = 32
+text = "Vat 7%"
 
 [node name="TaskLabel" type="Label" parent="." unique_id=729677077]
 layout_mode = 0
@@ -113,7 +122,7 @@ offset_top = 359.0
 offset_right = 1399.0
 offset_bottom = 391.0
 theme_override_font_sizes/font_size = 23
-text = "Task: 0/10"
+text = "Task: 0/7"
 
 [node name="GameTimer" type="Timer" parent="." unique_id=1515308993]
 
