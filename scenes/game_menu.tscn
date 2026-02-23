@@ -62,7 +62,7 @@ position = Vector2(0, -7)
 texture = ExtResource("1_rjxss")
 centered = false
 
-[node name="Button" type="Button" parent="." unique_id=1390062809]
+[node name="Start" type="Button" parent="." unique_id=1390062809]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -90,5 +90,5 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_aru3y")
 theme_override_styles/hover = SubResource("StyleBoxTexture_0b27c")
 script = ExtResource("6_0b27c")
 
-[connection signal="pressed" from="Button" to="Button" method="_on_pressed"]
+[connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
 [connection signal="pressed" from="Setting" to="Setting" method="_on_pressed"]

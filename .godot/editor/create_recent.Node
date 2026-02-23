@@ -1,13 +1,21 @@
+<<<<<<< HEAD
+AudioStreamPlayer
+Node
+ColorRect
+=======
 Label
+<<<<<<< HEAD
 TextureRect
 VBoxContainer
 ScrollContainer
 HBoxContainer
+=======
+>>>>>>> 13e1b8b10f675cae5bdef58df3cde1acc4aea9c4
+>>>>>>> 7ebbd26ce8a080c3fb7e5beb87b3a3b7b41054e1
 Button
 Timer
 Control
 CanvasLayer
 RichTextLabel
-ColorRect
 TextureButton
 Node2D

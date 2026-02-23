@@ -23,39 +23,27 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_a42w7")
 
-[node name="MarginContainer" type="MarginContainer" parent="." unique_id=759595840]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=550946524]
-visible = false
-layout_mode = 2
-
-[node name="Label" type="Label" parent="MarginContainer/VBoxContainer" unique_id=682818252]
-layout_mode = 2
-text = "Volume"
-
-[node name="Volume" type="HSlider" parent="MarginContainer/VBoxContainer" unique_id=2106482449]
-layout_mode = 2
-
 [node name="MainGame1" type="Sprite2D" parent="." unique_id=308918268]
 position = Vector2(960, 542)
 texture = ExtResource("2_scrng")
 
 [node name="goBack" type="Button" parent="." unique_id=776587080]
 layout_mode = 0
-offset_left = 61.0
-offset_top = 45.0
-offset_right = 226.0
-offset_bottom = 174.0
+offset_left = 51.0
+offset_top = 931.0
+offset_right = 216.0
+offset_bottom = 1060.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_ikx14")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_scrng")
 theme_override_styles/hover = SubResource("StyleBoxTexture_31ui4")
 script = ExtResource("4_o8tsb")
 
-[connection signal="value_changed" from="MarginContainer/VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1099506360]
+layout_mode = 0
+offset_left = 62.0
+offset_top = 82.0
+offset_right = 1857.0
+offset_bottom = 926.0
+color = Color(0.5441052, 0.4070637, 0.22145608, 0.3372549)
+
 [connection signal="pressed" from="goBack" to="goBack" method="_on_pressed"]

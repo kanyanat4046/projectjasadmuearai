@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bm8kllnej1tq7"]
+
+[ext_resource type="Script" uid="uid://b36c7b1c5s2he" path="res://sfx.gd" id="1_7ftl1"]
+[ext_resource type="AudioStream" uid="uid://blvaxbbbq167t" path="res://Asset/mouse-click.mp3" id="2_7ftl1"]
+
+[node name="SFX" type="Node" unique_id=577135344]
+script = ExtResource("1_7ftl1")
+
+[node name="ClickPlayer" type="AudioStreamPlayer" parent="." unique_id=1512816373]
+stream = ExtResource("2_7ftl1")
+volume_db = -16.146
+bus = &"SFX"
