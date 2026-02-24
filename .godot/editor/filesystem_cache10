@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1771909876
+::res://::1771911114
 BGM.tscn::PackedScene::5642450414474890707::1771860422::0::1::::<><><>0<>0<><>::uid://cc20nnpci4dbp::::res://Asset/simplesound-horror-trailer-443327.mp3
 default_bus_layout.tres::AudioBusLayout::769259879210604213::1771857281::0::1::::<><><>0<>0<><>::
 GameManager.gd::GDScript::3522062176363394851::1771861463::0::1::::<>Node<><>0<>0<><>::
@@ -18,12 +18,13 @@ slip_3.tscn::PackedScene::3691876361065396209::1771734219::0::1::::<><><>0<>0<><
 slip_4.tscn::PackedScene::8803447479415988229::1771734219::0::1::::<><><>0<>0<><>::uid://bgtb8bgmsn3vq::::res://Slip4.png
 to_main.gd::GDScript::5761793858534783851::1771765446::0::1::::<>Button<><>0<>0<><>::
 to_main_lose..gd::GDScript::6403950975428182842::1771765519::0::1::::<>Button<><>0<>0<><>::
-::res://Asset/::1771909876
+::res://Asset/::1771911114
 arrow-back.png::CompressedTexture2D::6392865707469583648::1771830914::1771909871::1::::<><><>0<>0<>8c867914cd2315359fba1aa1d031a8e8<>res://.godot/imported/arrow-back.png-32c35e15e9fcfd50f360983d103aaa15.ctex::
 Button_and_book1.png::CompressedTexture2D::684111399758798318::1771734219::1771734422::1::::<><><>0<>0<>0fe7ffb3f59de5fed3c79433f89c1d23<>res://.godot/imported/Button_and_book1.png-584cdda556027c8ddc3279e72da2b598.ctex::
 Button_and_book2.png::CompressedTexture2D::7412558329027992143::1771734219::1771734422::1::::<><><>0<>0<>8f4d3277c245563d2b946ba4c3169118<>res://.godot/imported/Button_and_book2.png-1e9ba815148287789968a8dbe432d047.ctex::
 Button_and_book.png::CompressedTexture2D::8604809171030346932::1771734219::1771734422::1::::<><><>0<>0<>ce4de42b82fafdae4e963735202c5953<>res://.godot/imported/Button_and_book.png-cfa15de0243e209bcad91e629ccd0c45.ctex::
 Car.png::CompressedTexture2D::5336856687253886636::1771909858::1771909877::1::::<><><>0<>0<>448211de0900581a60f735b96979cb65<>res://.godot/imported/Car.png-ca9681c504abeff2760972f1a4010547.ctex::
+Door.png::CompressedTexture2D::5956417645153212569::1771911108::1771911115::1::::<><><>0<>0<>5f7afb17fcd000258f9285bc84eef4fe<>res://.godot/imported/Door.png-bc90da302bc8c9eed5e17fabcee026ee.ctex::
 Main_game1.jpg::CompressedTexture2D::966154058990991375::1771734219::1771734422::1::::<><><>0<>0<>14aa075111cc75fe9569704517f7a639<>res://.godot/imported/Main_game1.jpg-72f9ff37c32f4c3377ca53a05ff76e0e.ctex::
 Main_game_2.jpg::CompressedTexture2D::107897548415205399::1771734219::1771734422::1::::<><><>0<>0<>f952e4ee20be4c7b85e736bcb417a391<>res://.godot/imported/Main_game_2.jpg-a575c53ee455647047c1ca43537d446b.ctex::
 Menu_page.jpg::CompressedTexture2D::4455508793224982121::1771734219::1771734422::1::::<><><>0<>0<>99bd9b1e4ef6ae6410000dab2f1db8a5<>res://.godot/imported/Menu_page.jpg-10bc1523346c654309f0dc46a28eb6ca.ctex::
@@ -34,11 +35,12 @@ setting_page.tscn::PackedScene::6334449524340452323::1771734219::0::1::::<><><>0
 simplesound-horror-trailer-443327.mp3::AudioStreamMP3::4970499100240129061::1771734219::1771864703::1::::<><><>0<>0<>216d6f28e9ebe13bd3ed6e734dc06012<>res://.godot/imported/simplesound-horror-trailer-443327.mp3-068019c5414c9b41c4ada48fa163a260.mp3str::
 ::res://Asset/Fonts/::1771909214
 Caveat-VariableFont_wght.ttf::FontFile::4649733231335341410::1771909157::1771909214::1::::<><><>0<>0<>f17d91d8fec7d839645ee98fa42330e8<>res://.godot/imported/Caveat-VariableFont_wght.ttf-547c7daa1d42cd5a1622e4606ad46a39.fontdata::
-::res://scenes/::1771909871
+::res://scenes/::1771910215
 book.gd::GDScript::2693402326066104816::1771766764::0::1::::<>Button<><>0<>0<><>::
 button.gd::GDScript::1446198681437669214::1771737025::0::1::::<>Button<><>0<>0<><>::
 control.gd::GDScript::5215023708962587122::1771734219::0::1::::<>Control<><>0<>0<><>::
 control.tscn::PackedScene::3567706063778752234::1771769047::0::1::::<><><>0<>0<><>::uid://bsjb6y05east::::res://Asset/Main_game_2.jpg
+exit.gd::GDScript::6919997595606527248::1771910215::0::1::::<>Button<><>0<>0<><>::
 game_menu.tscn::PackedScene::6382904080197025442::1771859341::0::1::::<><><>0<>0<><>::uid://b4qjtxf1b4s2t::::res://Asset/Menu_page.jpg<>uid://duuh7kbvq1wfc::::res://Asset/Button_and_book.png<>uid://ddux0ud01cro6::::res://Asset/Button_and_book2.png<>uid://uusxfhw2epny::::res://scenes/button.gd<>uid://dier7ugk12cqp::::res://Asset/setting-icon-2.png<>uid://b4l8obq6qyarn::::res://scenes/setting.gd
 goBack.gd::GDScript::7840160405935278948::1771831664::0::1::::<>Button<><>0<>0<><>::
 main2.gd::GDScript::1651437991294117002::1771909157::0::1::::<>Control<><>0<>0<><>::
@@ -50,7 +52,7 @@ music.gd::GDScript::3472950170104022217::1771908761::0::1::::<>HSlider<><>0<>0<>
 receipt.gd::GDScript::3520824025457225452::1771909157::0::1::::<>Control<><>0<>0<><>::
 record_row.tscn::PackedScene::3708004153376808289::1771909214::0::1::::<><><>0<>0<><>::uid://c8c8mt5c7k57j::::res://record_row.gd<>uid://b7imoruigicyk::::res://Asset/Fonts/Caveat-VariableFont_wght.ttf
 setting.gd::GDScript::4446634045037703791::1771866731::0::1::::<>Control<><>0<>0<><>::
-setting.tscn::PackedScene::4104045084721852033::1771909871::0::1::::<><><>0<>0<><>::uid://b4l8obq6qyarn::::res://scenes/setting.gd<>uid://n1aofed78lo6::::res://Asset/Main_game1.jpg<>uid://cxc0tgha7q84c::::res://Asset/arrow-back.png<>uid://djx3kcwwbmm1q::::res://scenes/goBack.gd<>uid://bc0gy55jrwnob::::res://scenes/master.gd<>uid://bpqk8ncqvtnmv::::res://scenes/music.gd<>uid://tacd2q7s6ltn::::res://scenes/sound_effect.gd
+setting.tscn::PackedScene::4104045084721852033::1771909977::0::1::::<><><>0<>0<><>::uid://b4l8obq6qyarn::::res://scenes/setting.gd<>uid://n1aofed78lo6::::res://Asset/Main_game1.jpg<>uid://cibhiq5v2unls::::res://Asset/Car.png<>uid://djx3kcwwbmm1q::::res://scenes/goBack.gd<>uid://bc0gy55jrwnob::::res://scenes/master.gd<>uid://bpqk8ncqvtnmv::::res://scenes/music.gd<>uid://tacd2q7s6ltn::::res://scenes/sound_effect.gd
 setting_page.gd::GDScript::2052604051698259220::1771734219::0::1::::<>Control<><>0<>0<><>::
 Sliplong.gd::GDScript::1946355969069300637::1771767154::0::1::::<>Control<><>0<>0<><>::
 sound_effect.gd::GDScript::1333716264816406871::1771908974::0::1::::<>HSlider<><>0<>0<><>::
