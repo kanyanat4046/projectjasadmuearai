@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://ddux0ud01cro6" path="res://Asset/Button_and_book2.png" id="2_04edg"]
 [ext_resource type="PackedScene" uid="uid://bs3gj0m48ovg8" path="res://scenes/record_row.tscn" id="5_n7ofh"]
 [ext_resource type="Script" uid="uid://bqfrpsv0b70eq" path="res://scenes/receipt.gd" id="5_swft5"]
+[ext_resource type="FontFile" uid="uid://b7imoruigicyk" path="res://Asset/Fonts/Caveat-VariableFont_wght.ttf" id="6_n7ofh"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3bsxj"]
 load_path = "res://.godot/imported/Main_game_2.jpg-8628f8590f45c88048d7692c9e02f6be.ctex"
@@ -94,11 +95,13 @@ offset_bottom = 913.0
 
 [node name="ContentLabel" type="Label" parent="ReceiptControl" unique_id=1463441839]
 layout_mode = 0
-offset_left = 201.0
+offset_left = 217.0
 offset_top = 533.0
-offset_right = 415.0
+offset_right = 431.0
 offset_bottom = 653.0
-theme_override_font_sizes/font_size = 30
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_n7ofh")
+theme_override_font_sizes/font_size = 31
 
 [node name="TotalLabel" type="Label" parent="ReceiptControl" unique_id=621491159]
 layout_mode = 0
@@ -106,7 +109,9 @@ offset_left = 288.0
 offset_top = 825.0
 offset_right = 413.0
 offset_bottom = 878.0
-theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_n7ofh")
+theme_override_font_sizes/font_size = 34
 
 [node name="VatLabel" type="Label" parent="ReceiptControl" unique_id=1974135791]
 layout_mode = 0
@@ -114,7 +119,9 @@ offset_left = 192.0
 offset_top = 731.0
 offset_right = 420.0
 offset_bottom = 776.0
-theme_override_font_sizes/font_size = 32
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("6_n7ofh")
+theme_override_font_sizes/font_size = 34
 text = "VAT 7%"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="ReceiptControl" unique_id=1906600916]

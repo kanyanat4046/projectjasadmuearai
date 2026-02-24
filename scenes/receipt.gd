@@ -22,38 +22,61 @@ var items_list = [
 			{"name": "Potato", "price": 56.00},
 			{"name": "Shrimp", "price": 280.00},
 			{"name": "Crab", "price": 250.00},
-			{"name": "carrot", "price": 30.00},
+			{"name": "Carrot", "price": 30.00},
 			{"name": "Corn", "price": 20.00},
-			{"name": "broccoli", "price": 40.00},
-			{"name": "cucumber", "price": 35.00},
-			{"name": "garlic", "price": 45.00},
-			{"name": "mushroom", "price": 100.00},
-			{"name": "bean", "price": 25.00},
-			{"name": "beef", "price": 270.00},
-			{"name": "chicken", "price": 135.00},
-			{"name": "fish", "price": 90.00},
-			{"name": "sausage", "price": 140.00},
-			{"name": "bacon", "price": 120.00},
-			{"name": "egg", "price": 120.00}
+			{"name": "Broccoli", "price": 40.00},
+			{"name": "Cucumber", "price": 35.00},
+			{"name": "Garlic", "price": 45.00},
+			{"name": "Mushroom", "price": 100.00},
+			{"name": "Bean", "price": 25.00},
+			{"name": "Beef", "price": 270.00},
+			{"name": "Chicken", "price": 135.00},
+			{"name": "Fish", "price": 90.00},
+			{"name": "Sausage", "price": 140.00},
+			{"name": "Bacon", "price": 120.00},
+			{"name": "Egg", "price": 120.00}
 		] # โหลด ItemData เข้ามาที่นี่
 
 var tasks_done: int = 0
 var max_tasks: int = 7
 var mistakes: int = 0
-var actual_total = 0.0
+var actual_total = 0.00
 var display_text = ""
 var final_correct_total
 func generate_new_receipt():
 	# ถ้าเกมจบแล้ว ไม่ต้องทำอะไรต่อ
 	if GameManager.is_game_over:
 		return
-	# 1. สุ่มรูปแบบใบเสร็จ (สลับรูปภาพ)
-	var visual_type = randi() % 4
-	match visual_type:
-		0: receipt_sprite.texture = texture_normal
-		1: receipt_sprite.texture = texture_blood
-		2: receipt_sprite.texture = texture_veg
-		3: receipt_sprite.texture = texture_organ
+	# 1. สุ่มรูปแบบใบเสร็จ (สลับรูปภาพ) เพิ่มโอกาสเจอ
+	# ตั้งค่าน้ำหนักเริ่มแรก
+	var weight_normal = 40.0
+	var weight_veg = 0.0
+	var weight_blood = 0.0
+	var weight_organ = 0.0
+	
+	# ปรับน้ำหนักตามความผิดพลาด
+	weight_blood = mistakes * 6.0 
+	weight_veg = mistakes * 4.0
+	weight_organ = mistakes * 2.0
+	
+	var total_weight = weight_normal + weight_veg + weight_blood + weight_organ
+	var roll = randf() * total_weight
+	
+	if roll < weight_normal:
+		receipt_sprite.texture = texture_normal
+	elif roll < weight_normal + weight_veg:
+		receipt_sprite.texture = texture_veg
+	elif roll < weight_normal + weight_veg + weight_blood:
+		receipt_sprite.texture = texture_blood
+	else:
+		receipt_sprite.texture = texture_organ
+	#OLD CODE
+	#var visual_type = randi() % 4
+	#match visual_type:
+	#	0: receipt_sprite.texture = texture_normal
+	#	1: receipt_sprite.texture = texture_blood
+	#	2: receipt_sprite.texture = texture_veg
+	#	3: receipt_sprite.texture = texture_organ
 
 	# 2. สุ่มข้อมูลสินค้า
 	actual_total = 0.0
@@ -72,6 +95,9 @@ func generate_new_receipt():
 	
 	# 3. สุ่มว่าจะเป็นใบเสร็จหลอก (Fake) หรือไม่
 	is_fake = randf() < 0.4 # โอกาส 40% ที่จะหลอก คืนแรกอาจเริ่มที10%
+	# เริ่มต้นที่ 10% (0.1) และเพิ่มขึ้นครั้งละ 15% ตามจำนวนความผิดพลาด(ข้อดูอีกที)
+	#var fake_chance = 0.1 + (mistakes * 0.15) 
+	#is_fake = randf() < fake_chance
 	
 	label_content.text = display_text
 	label_vat = "VAT 7%"
