@@ -4,6 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://n1aofed78lo6" path="res://Asset/Main_game1.jpg" id="2_scrng"]
 [ext_resource type="Texture2D" uid="uid://cxc0tgha7q84c" path="res://arrow-back.png" id="3_31ui4"]
 [ext_resource type="Script" uid="uid://djx3kcwwbmm1q" path="res://scenes/goBack.gd" id="4_o8tsb"]
+[ext_resource type="Script" uid="uid://bc0gy55jrwnob" path="res://scenes/master.gd" id="5_31ui4"]
+[ext_resource type="Script" uid="uid://bpqk8ncqvtnmv" path="res://scenes/music.gd" id="6_ikx14"]
+[ext_resource type="Script" uid="uid://tacd2q7s6ltn" path="res://scenes/sound_effect.gd" id="7_50131"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ikx14"]
 texture = ExtResource("3_31ui4")
@@ -46,4 +49,64 @@ offset_right = 1857.0
 offset_bottom = 926.0
 color = Color(0.5441052, 0.4070637, 0.22145608, 0.3372549)
 
+[node name="master" type="HSlider" parent="ColorRect" unique_id=375984705]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 78.0
+offset_right = 1731.0
+offset_bottom = 165.0
+max_value = 1.0
+step = 0.01
+script = ExtResource("5_31ui4")
+
+[node name="music" type="HSlider" parent="ColorRect" unique_id=1124639223]
+layout_mode = 0
+offset_left = 37.0
+offset_top = 264.0
+offset_right = 1728.0
+offset_bottom = 280.0
+max_value = 1.0
+step = 0.01
+script = ExtResource("6_ikx14")
+
+[node name="sound effect" type="HSlider" parent="ColorRect" unique_id=1173612031]
+layout_mode = 0
+offset_left = 42.0
+offset_top = 419.0
+offset_right = 1737.0
+offset_bottom = 466.0
+max_value = 0.1
+step = 0.01
+script = ExtResource("7_50131")
+
+[node name="master" type="Label" parent="." unique_id=1069691012]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 119.0
+offset_right = 316.0
+offset_bottom = 209.0
+theme_override_font_sizes/font_size = 44
+text = "Master"
+
+[node name="BGM" type="Label" parent="." unique_id=1941328142]
+layout_mode = 0
+offset_left = 94.0
+offset_top = 272.0
+offset_right = 298.0
+offset_bottom = 352.0
+theme_override_font_sizes/font_size = 44
+text = "BGM"
+
+[node name="SFX" type="Label" parent="." unique_id=19674010]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 440.0
+offset_right = 302.0
+offset_bottom = 520.0
+theme_override_font_sizes/font_size = 44
+text = "SFX"
+
 [connection signal="pressed" from="goBack" to="goBack" method="_on_pressed"]
+[connection signal="value_changed" from="ColorRect/master" to="ColorRect/master" method="_on_value_changed"]
+[connection signal="value_changed" from="ColorRect/music" to="ColorRect/music" method="_on_value_changed"]
+[connection signal="value_changed" from="ColorRect/sound effect" to="ColorRect/sound effect" method="_on_value_changed"]

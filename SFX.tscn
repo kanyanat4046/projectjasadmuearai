@@ -8,5 +8,5 @@ script = ExtResource("1_7ftl1")
 
 [node name="ClickPlayer" type="AudioStreamPlayer" parent="." unique_id=1512816373]
 stream = ExtResource("2_7ftl1")
-volume_db = -16.146
+volume_db = 9.26
 bus = &"SFX"

@@ -18,6 +18,5 @@ func start_game():
 	print("Button was clicked!") # This will show up in the Output log
 	get_tree().change_scene_to_file("res://scenes/setting.tscn")
 
-
 func _on_go_back_pressed() -> void:
 	pass # Replace with function body.

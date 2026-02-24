@@ -1,10 +1,8 @@
-<<<<<<< HEAD
+Label
+HSlider
 AudioStreamPlayer
 Node
 ColorRect
-=======
-Label
->>>>>>> 13e1b8b10f675cae5bdef58df3cde1acc4aea9c4
 Button
 Timer
 TextureRect
