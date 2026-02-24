@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://j0nhkkwpn30u" path="res://Asset/Button_and_book1.png" id="1_irwau"]
 [ext_resource type="Script" uid="uid://xr77bpura035" path="res://scenes/main2.gd" id="1_n7ofh"]
 [ext_resource type="Texture2D" uid="uid://ddux0ud01cro6" path="res://Asset/Button_and_book2.png" id="2_04edg"]
+[ext_resource type="PackedScene" uid="uid://bs3gj0m48ovg8" path="res://scenes/record_row.tscn" id="5_n7ofh"]
 [ext_resource type="Script" uid="uid://bqfrpsv0b70eq" path="res://scenes/receipt.gd" id="5_swft5"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3bsxj"]
@@ -82,6 +83,7 @@ texture_normal = SubResource("CompressedTexture2D_n7ofh")
 texture_blood = SubResource("CompressedTexture2D_osq3w")
 texture_veg = SubResource("CompressedTexture2D_i5dgx")
 texture_organ = SubResource("CompressedTexture2D_2s02s")
+record_row_scene = ExtResource("5_n7ofh")
 
 [node name="ReceiptImage" type="TextureRect" parent="ReceiptControl" unique_id=2001347307]
 layout_mode = 0
@@ -113,7 +115,18 @@ offset_top = 731.0
 offset_right = 420.0
 offset_bottom = 776.0
 theme_override_font_sizes/font_size = 32
-text = "Vat 7%"
+text = "VAT 7%"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ReceiptControl" unique_id=1906600916]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 448.0
+offset_right = 1418.0
+offset_bottom = 952.0
+
+[node name="RecordList" type="VBoxContainer" parent="ReceiptControl/ScrollContainer" unique_id=1383555243]
+layout_mode = 2
+theme_override_constants/separation = 25
 
 [node name="TaskLabel" type="Label" parent="." unique_id=729677077]
 layout_mode = 0

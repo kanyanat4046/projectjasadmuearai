@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bs3gj0m48ovg8"]
+
+[ext_resource type="Script" uid="uid://c8c8mt5c7k57j" path="res://record_row.gd" id="1_4qydq"]
+[ext_resource type="FontFile" uid="uid://b7imoruigicyk" path="res://Asset/Fonts/Caveat-VariableFont_wght.ttf" id="2_ua834"]
+
+[node name="RecordRow" type="HBoxContainer" unique_id=2073033637]
+custom_minimum_size = Vector2(15, 40)
+offset_left = 715.0
+offset_top = 296.0
+offset_right = 1708.0
+offset_bottom = 961.0
+script = ExtResource("1_4qydq")
+
+[node name="DateLabel" type="Label" parent="." unique_id=402086220]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.17254902, 0.17254902, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("2_ua834")
+theme_override_font_sizes/font_size = 28
+
+[node name="DescriptionLabel" type="Label" parent="." unique_id=1120635088]
+custom_minimum_size = Vector2(210, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.17254902, 0.17254902, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("2_ua834")
+theme_override_font_sizes/font_size = 28
+
+[node name="PriceLabel" type="Label" parent="." unique_id=304674969]
+custom_minimum_size = Vector2(105, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.17254902, 0.17254902, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("2_ua834")
+theme_override_font_sizes/font_size = 28
+
+[node name="VATLabel" type="Label" parent="." unique_id=407999837]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.17254902, 0.17254902, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("2_ua834")
+theme_override_font_sizes/font_size = 28
+
+[node name="TotalLabel" type="Label" parent="." unique_id=2014479368]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.17254902, 0.17254902, 0.17254902, 1)
+theme_override_fonts/font = ExtResource("2_ua834")
+theme_override_font_sizes/font_size = 28

@@ -3,9 +3,21 @@ HSlider
 AudioStreamPlayer
 Node
 ColorRect
+<<<<<<< HEAD
+=======
+=======
+Label
+<<<<<<< HEAD
+TextureRect
+VBoxContainer
+ScrollContainer
+HBoxContainer
+=======
+>>>>>>> 13e1b8b10f675cae5bdef58df3cde1acc4aea9c4
+>>>>>>> 7ebbd26ce8a080c3fb7e5beb87b3a3b7b41054e1
+>>>>>>> 0f2f06164b12f8ae5e74fcece544e8f8ad870c3d
 Button
 Timer
-TextureRect
 Control
 CanvasLayer
 RichTextLabel
