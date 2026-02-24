@@ -6,6 +6,8 @@
 [ext_resource type="Script" uid="uid://uusxfhw2epny" path="res://scenes/button.gd" id="4_5rxej"]
 [ext_resource type="Texture2D" uid="uid://dier7ugk12cqp" path="res://Asset/setting-icon-2.png" id="5_aru3y"]
 [ext_resource type="Script" uid="uid://b4l8obq6qyarn" path="res://scenes/setting.gd" id="6_0b27c"]
+[ext_resource type="Texture2D" uid="uid://cq4llfulsrt3n" path="res://Asset/Door.png" id="7_yr8n5"]
+[ext_resource type="Script" uid="uid://c5udl4433uxto" path="res://scenes/exit.gd" id="8_u3xmg"]
 
 [sub_resource type="Theme" id="Theme_rjxss"]
 
@@ -33,6 +35,18 @@ region_rect = Rect2(193.38593, 119.90009, 224.8858, 217.85815)
 texture = ExtResource("5_aru3y")
 region_rect = Rect2(199.3086, 123.41393, 219.02939, 210.83047)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qoecg"]
+texture = ExtResource("7_yr8n5")
+region_rect = Rect2(1289, 138, 432, 758)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p30b5"]
+texture = ExtResource("7_yr8n5")
+region_rect = Rect2(1289, 138, 432, 758)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v7bbo"]
+texture = ExtResource("7_yr8n5")
+region_rect = Rect2(1289, 138, 432, 758)
+
 [node name="Maim" type="Control" unique_id=1686741536]
 custom_minimum_size = Vector2(1920, 1080)
 layout_mode = 3
@@ -44,6 +58,7 @@ grow_vertical = 2
 size_flags_horizontal = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_rjxss")
+metadata/_edit_horizontal_guides_ = [-73.0]
 
 [node name="gameMenu" type="Control" parent="." unique_id=582270674]
 layout_mode = 1
@@ -58,7 +73,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MenuPage" type="Sprite2D" parent="gameMenu" unique_id=1151763800]
-position = Vector2(0, -7)
+position = Vector2(-7, -7)
 texture = ExtResource("1_rjxss")
 centered = false
 
@@ -90,5 +105,17 @@ theme_override_styles/pressed = SubResource("StyleBoxTexture_aru3y")
 theme_override_styles/hover = SubResource("StyleBoxTexture_0b27c")
 script = ExtResource("6_0b27c")
 
+[node name="Exit" type="Button" parent="." unique_id=783429730]
+layout_mode = 0
+offset_left = 1778.0
+offset_top = 879.0
+offset_right = 1897.0
+offset_bottom = 1070.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_qoecg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_p30b5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_v7bbo")
+script = ExtResource("8_u3xmg")
+
 [connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
 [connection signal="pressed" from="Setting" to="Setting" method="_on_pressed"]
+[connection signal="pressed" from="Exit" to="Exit" method="_on_pressed"]
