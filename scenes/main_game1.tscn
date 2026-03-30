@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bwicph67vineb"]
 
-[ext_resource type="Texture2D" uid="uid://j0nhkkwpn30u" path="res://Asset/Button_and_book1.png" id="1_c6kci"]
-[ext_resource type="Texture2D" uid="uid://ddux0ud01cro6" path="res://Asset/Button_and_book2.png" id="1_sn7k8"]
+[ext_resource type="Texture2D" uid="uid://c44higs0dbr1u" path="res://Asset/Book3 normal.png" id="1_7n76i"]
+[ext_resource type="Texture2D" uid="uid://bg4johg6o2js3" path="res://Asset/Book3 bright .png" id="2_fv1uf"]
 [ext_resource type="Script" uid="uid://bemx7b41wenuu" path="res://scenes/book.gd" id="2_m4mrb"]
 [ext_resource type="Texture2D" uid="uid://dier7ugk12cqp" path="res://Asset/setting-icon-2.png" id="4_7n76i"]
 [ext_resource type="Script" uid="uid://b4l8obq6qyarn" path="res://scenes/setting.gd" id="5_fv1uf"]
@@ -10,14 +10,14 @@
 load_path = "res://.godot/imported/Main_game1.jpg-69a7d470985f0b6c4f56f424de7583e4.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7h0cx"]
-atlas = ExtResource("1_c6kci")
+atlas = ExtResource("1_7n76i")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_isuyx"]
 atlas = SubResource("AtlasTexture_7h0cx")
 region = Rect2(1011.31494, 120.2135, 696.61426, 868.03784)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m4mrb"]
-atlas = ExtResource("1_sn7k8")
+atlas = ExtResource("2_fv1uf")
 region = Rect2(1011.35583, 123.44504, 696.16077, 867.3478)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fhr2e"]
@@ -50,10 +50,11 @@ stretch_mode = 6
 
 [node name="book" type="TextureButton" parent="." unique_id=1396651624]
 layout_mode = 0
-offset_left = 623.0
-offset_top = 526.0
-offset_right = 1319.0
-offset_bottom = 1394.0
+offset_left = 701.0
+offset_top = 476.0
+offset_right = 1397.0
+offset_bottom = 1344.0
+scale = Vector2(0.8, 0.8)
 texture_normal = SubResource("AtlasTexture_isuyx")
 texture_hover = SubResource("AtlasTexture_m4mrb")
 script = ExtResource("2_m4mrb")
