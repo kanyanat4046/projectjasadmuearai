@@ -11,8 +11,7 @@ func _process(delta: float) -> void:
 	pass
 	
 func _on_pressed():
-	start_game()
-
-func start_game():
-	print("Button was clicked!") # This will show up in the Output log
-	get_tree().change_scene_to_file("res://scenes/game_menu.tscn")
+	_on_back_pressed()
+	
+func _on_back_pressed():
+		get_tree().change_scene_to_file(SaveManager.last_scene_path)

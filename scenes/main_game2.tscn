@@ -5,6 +5,8 @@
 [ext_resource type="Texture2D" uid="uid://ddux0ud01cro6" path="res://Asset/Button_and_book2.png" id="2_04edg"]
 [ext_resource type="PackedScene" uid="uid://bs3gj0m48ovg8" path="res://scenes/record_row.tscn" id="5_n7ofh"]
 [ext_resource type="Script" uid="uid://bqfrpsv0b70eq" path="res://scenes/receipt.gd" id="5_swft5"]
+[ext_resource type="Texture2D" uid="uid://cibhiq5v2unls" path="res://Asset/Car.png" id="6_osq3w"]
+[ext_resource type="Script" uid="uid://341wgq1w3x15" path="res://scenes/pause.gd" id="7_i5dgx"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3bsxj"]
 load_path = "res://.godot/imported/Main_game_2.jpg-8628f8590f45c88048d7692c9e02f6be.ctex"
@@ -36,6 +38,17 @@ load_path = "res://.godot/imported/Slip3.png-46ef8cec30a6cebc7cf32c9645ddeacd.ct
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2s02s"]
 load_path = "res://.godot/imported/Slip4.png-d043ab6958cfef6961dfff3b2cc9ab51.ctex"
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i5dgx"]
+texture = ExtResource("6_osq3w")
+region_rect = Rect2(317.70544, 55.04367, 1253.1246, 976.4093)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2s02s"]
+texture = ExtResource("6_osq3w")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eal2l"]
+texture = ExtResource("6_osq3w")
+region_rect = Rect2(442.14758, 124.927704, 980.3624, 845.9579)
 
 [node name="main2" type="Control" unique_id=1422755513]
 layout_mode = 3
@@ -139,5 +152,18 @@ text = "Task: 0/7"
 
 [node name="GameTimer" type="Timer" parent="." unique_id=1515308993]
 
+[node name="Pause" type="Button" parent="." unique_id=1276068223]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 17.0
+offset_right = 206.0
+offset_bottom = 115.0
+theme_override_colors/font_color = Color(0.65891117, 1.9131974e-06, 5.2943824e-07, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_i5dgx")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2s02s")
+theme_override_styles/hover = SubResource("StyleBoxTexture_eal2l")
+script = ExtResource("7_i5dgx")
+
 [connection signal="pressed" from="approve" to="ReceiptControl" method="_on_approve_pressed"]
 [connection signal="pressed" from="reject" to="ReceiptControl" method="_on_reject_pressed"]
+[connection signal="pressed" from="Pause" to="Pause" method="_on_pressed"]

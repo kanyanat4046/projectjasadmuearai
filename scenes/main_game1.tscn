@@ -1,21 +1,36 @@
 [gd_scene format=3 uid="uid://bwicph67vineb"]
 
+[ext_resource type="Texture2D" uid="uid://j0nhkkwpn30u" path="res://Asset/Button_and_book1.png" id="1_c6kci"]
 [ext_resource type="Texture2D" uid="uid://ddux0ud01cro6" path="res://Asset/Button_and_book2.png" id="1_sn7k8"]
 [ext_resource type="Script" uid="uid://bemx7b41wenuu" path="res://scenes/book.gd" id="2_m4mrb"]
+[ext_resource type="Texture2D" uid="uid://dier7ugk12cqp" path="res://Asset/setting-icon-2.png" id="4_7n76i"]
+[ext_resource type="Script" uid="uid://b4l8obq6qyarn" path="res://scenes/setting.gd" id="5_fv1uf"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0u35s"]
 load_path = "res://.godot/imported/Main_game1.jpg-69a7d470985f0b6c4f56f424de7583e4.ctex"
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_m4mrb"]
-load_path = "res://.godot/imported/Button_and_book1.png-123ed8180c2a6aa6f2b2622371cccad0.ctex"
+[sub_resource type="AtlasTexture" id="AtlasTexture_7h0cx"]
+atlas = ExtResource("1_c6kci")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_isuyx"]
-atlas = SubResource("CompressedTexture2D_m4mrb")
+atlas = SubResource("AtlasTexture_7h0cx")
 region = Rect2(1011.31494, 120.2135, 696.61426, 868.03784)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_m4mrb"]
 atlas = ExtResource("1_sn7k8")
 region = Rect2(1011.35583, 123.44504, 696.16077, 867.3478)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fhr2e"]
+texture = ExtResource("4_7n76i")
+region_rect = Rect2(187.30795, 108.49828, 238.09204, 247.10168)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fwb8x"]
+texture = ExtResource("4_7n76i")
+region_rect = Rect2(193.38593, 119.90009, 224.8858, 217.85815)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xva0j"]
+texture = ExtResource("4_7n76i")
+region_rect = Rect2(199.3086, 123.41393, 219.02939, 210.83047)
 
 [node name="main1" type="Control" unique_id=433361342]
 layout_mode = 3
@@ -43,4 +58,17 @@ texture_normal = SubResource("AtlasTexture_isuyx")
 texture_hover = SubResource("AtlasTexture_m4mrb")
 script = ExtResource("2_m4mrb")
 
+[node name="Setting" type="Button" parent="." unique_id=722508274]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 34.0
+offset_right = 186.0
+offset_bottom = 151.0
+theme_override_colors/font_color = Color(0.65891117, 1.9131974e-06, 5.2943824e-07, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_fhr2e")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fwb8x")
+theme_override_styles/hover = SubResource("StyleBoxTexture_xva0j")
+script = ExtResource("5_fv1uf")
+
 [connection signal="pressed" from="book" to="book" method="_on_pressed"]
+[connection signal="pressed" from="Setting" to="Setting" method="_on_pressed"]

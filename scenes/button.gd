@@ -5,8 +5,6 @@ func _ready():
 	self.pressed.connect(_on_pressed)
 
 func _on_pressed():
-	start_game()
-
-func start_game():
-	print("Button was clicked!") # This will show up in the Output log
+	SaveManager.current_night = 1
+	SaveManager.save_game() # สร้างเซฟใหม่ทับของเดิม
 	get_tree().change_scene_to_file("res://scenes/main_1.tscn")

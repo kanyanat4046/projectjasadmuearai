@@ -15,4 +15,4 @@ func _on_pressed():
 
 func start_game():
 	print("Button was clicked!") # This will show up in the Output log
-	get_tree().change_scene_to_file("res://scenes/game_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/main+continue.tscn")

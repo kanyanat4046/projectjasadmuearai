@@ -1,50 +1,51 @@
-[gd_scene format=3 uid="uid://cw66q6jrpmfgs"]
+[gd_scene format=3 uid="uid://c5fxnh4bmbks1"]
 
-[ext_resource type="Texture2D" uid="uid://b4qjtxf1b4s2t" path="res://Asset/Menu_page.jpg" id="1_rjxss"]
-[ext_resource type="Texture2D" uid="uid://duuh7kbvq1wfc" path="res://Asset/Button_and_book.png" id="2_jprcw"]
-[ext_resource type="Texture2D" uid="uid://ddux0ud01cro6" path="res://Asset/Button_and_book2.png" id="3_jprcw"]
-[ext_resource type="Script" uid="uid://uusxfhw2epny" path="res://scenes/button.gd" id="4_5rxej"]
-[ext_resource type="Texture2D" uid="uid://dier7ugk12cqp" path="res://Asset/setting-icon-2.png" id="5_aru3y"]
-[ext_resource type="Script" uid="uid://b4l8obq6qyarn" path="res://scenes/setting.gd" id="6_0b27c"]
-[ext_resource type="Texture2D" uid="uid://cq4llfulsrt3n" path="res://Asset/Door.png" id="7_yr8n5"]
-[ext_resource type="Script" uid="uid://c5udl4433uxto" path="res://scenes/exit.gd" id="8_u3xmg"]
+[ext_resource type="Script" uid="uid://cy3a0mo3lhc1q" path="res://scenes/game_menu.gd" id="1_8gc03"]
+[ext_resource type="Texture2D" uid="uid://b4qjtxf1b4s2t" path="res://Asset/Menu_page.jpg" id="1_bwiap"]
+[ext_resource type="Texture2D" uid="uid://duuh7kbvq1wfc" path="res://Asset/Button_and_book.png" id="2_8gc03"]
+[ext_resource type="Texture2D" uid="uid://ddux0ud01cro6" path="res://Asset/Button_and_book2.png" id="3_dx6l7"]
+[ext_resource type="Script" uid="uid://uusxfhw2epny" path="res://scenes/button.gd" id="4_m0coj"]
+[ext_resource type="Texture2D" uid="uid://dier7ugk12cqp" path="res://Asset/setting-icon-2.png" id="5_retfc"]
+[ext_resource type="Script" uid="uid://b4l8obq6qyarn" path="res://scenes/setting.gd" id="6_u50s4"]
+[ext_resource type="Texture2D" uid="uid://cq4llfulsrt3n" path="res://Asset/Door.png" id="7_rutdf"]
+[ext_resource type="Script" uid="uid://c5udl4433uxto" path="res://scenes/exit.gd" id="8_ik204"]
 
 [sub_resource type="Theme" id="Theme_rjxss"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5rxej"]
-texture = ExtResource("2_jprcw")
+texture = ExtResource("2_8gc03")
 region_rect = Rect2(49.06598, 57.735992, 674.436, 233.926)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xxfb2"]
-texture = ExtResource("3_jprcw")
+texture = ExtResource("3_dx6l7")
 region_rect = Rect2(51.638123, 50.882088, 659.24603, 233.926)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qus6b"]
-texture = ExtResource("3_jprcw")
+texture = ExtResource("3_dx6l7")
 region_rect = Rect2(57.77852, 49.06236, 668.1679, 244.22688)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mw6r2"]
-texture = ExtResource("5_aru3y")
+texture = ExtResource("5_retfc")
 region_rect = Rect2(187.30795, 108.49828, 238.09204, 247.10168)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aru3y"]
-texture = ExtResource("5_aru3y")
+texture = ExtResource("5_retfc")
 region_rect = Rect2(193.38593, 119.90009, 224.8858, 217.85815)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0b27c"]
-texture = ExtResource("5_aru3y")
+texture = ExtResource("5_retfc")
 region_rect = Rect2(199.3086, 123.41393, 219.02939, 210.83047)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qoecg"]
-texture = ExtResource("7_yr8n5")
+texture = ExtResource("7_rutdf")
 region_rect = Rect2(1289, 138, 432, 758)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p30b5"]
-texture = ExtResource("7_yr8n5")
+texture = ExtResource("7_rutdf")
 region_rect = Rect2(1289, 138, 432, 758)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v7bbo"]
-texture = ExtResource("7_yr8n5")
+texture = ExtResource("7_rutdf")
 region_rect = Rect2(1289, 138, 432, 758)
 
 [node name="Maim" type="Control" unique_id=1686741536]
@@ -71,10 +72,11 @@ offset_right = 5.0
 offset_bottom = 10.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_8gc03")
 
 [node name="MenuPage" type="Sprite2D" parent="gameMenu" unique_id=1151763800]
 position = Vector2(-7, -7)
-texture = ExtResource("1_rjxss")
+texture = ExtResource("1_bwiap")
 centered = false
 
 [node name="Start" type="Button" parent="." unique_id=1390062809]
@@ -91,7 +93,7 @@ grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_5rxej")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_xxfb2")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qus6b")
-script = ExtResource("4_5rxej")
+script = ExtResource("4_m0coj")
 
 [node name="Setting" type="Button" parent="." unique_id=2130855399]
 layout_mode = 0
@@ -103,7 +105,7 @@ theme_override_colors/font_color = Color(0.65891117, 1.9131974e-06, 5.2943824e-0
 theme_override_styles/normal = SubResource("StyleBoxTexture_mw6r2")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_aru3y")
 theme_override_styles/hover = SubResource("StyleBoxTexture_0b27c")
-script = ExtResource("6_0b27c")
+script = ExtResource("6_u50s4")
 
 [node name="Exit" type="Button" parent="." unique_id=783429730]
 layout_mode = 0
@@ -114,7 +116,7 @@ offset_bottom = 1027.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_qoecg")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_p30b5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_v7bbo")
-script = ExtResource("8_u3xmg")
+script = ExtResource("8_ik204")
 
 [connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
 [connection signal="pressed" from="Setting" to="Setting" method="_on_pressed"]
