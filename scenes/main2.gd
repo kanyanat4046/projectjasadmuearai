@@ -4,7 +4,7 @@ extends Control
 
 func _ready():
 	# เริ่มจับเวลา ยังไม่เสร็จดี
-	game_timer.wait_time = 120.0 
+	game_timer.wait_time = 300.0 
 	game_timer.one_shot = true
 	game_timer.start()
 	
