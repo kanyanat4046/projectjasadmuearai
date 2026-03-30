@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fxpht0keantx"
-valid=false
+uid="uid://cnp54rv5t420a"
+path="res://.godot/imported/Loose page1.jpg-1acb8e39ac9c19da978221ce6dc7b4fb.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Asset/Loose page1.PNG"
+source_file="res://Asset/Loose page1.jpg"
+dest_files=["res://.godot/imported/Loose page1.jpg-1acb8e39ac9c19da978221ce6dc7b4fb.ctex"]
 
 [params]
 

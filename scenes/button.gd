@@ -7,4 +7,4 @@ func _ready():
 func _on_pressed():
 	SaveManager.current_night = 1
 	SaveManager.save_game() # สร้างเซฟใหม่ทับของเดิม
-	get_tree().change_scene_to_file("res://scenes/main_1.tscn")
+	get_tree().change_scene_to_file("res://scenes/main_game1.tscn")
