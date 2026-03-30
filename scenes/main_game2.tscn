@@ -8,9 +8,13 @@
 
 [ext_resource type="Texture2D" uid="uid://cibhiq5v2unls" path="res://Asset/Car.png" id="6_osq3w"]
 [ext_resource type="Script" uid="uid://341wgq1w3x15" path="res://scenes/pause.gd" id="7_i5dgx"]
+<<<<<<< HEAD
 
 [ext_resource type="FontFile" uid="uid://b7imoruigicyk" path="res://Asset/Fonts/Caveat-VariableFont_wght.ttf" id="6_n7ofh"]
 
+=======
+[ext_resource type="FontFile" uid="uid://b7imoruigicyk" path="res://Asset/Fonts/Caveat-VariableFont_wght.ttf" id="6_n7ofh"]
+>>>>>>> 5891576bfd86de1a6b643326c43220758388c856
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3bsxj"]
 load_path = "res://.godot/imported/Main_game_2.jpg-8628f8590f45c88048d7692c9e02f6be.ctex"
