@@ -20,6 +20,14 @@ extends Control
 @export var record_row_scene: PackedScene
 @onready var record_list = $ScrollContainer/RecordList
 
+# --- ตัวแปรสำหรับจำตำแหน่งเริ่มต้น ---
+var pos_receipt_default: float
+var pos_parcel_default: float
+var pos_label_content_default: float
+var pos_label_vat_default: float
+var pos_label_total_default: float
+var pos_parcel_label_default: float
+
 var is_fake: bool = false
 var items_list = [
 			{"name": "Tomato", "price": 60.00},
@@ -112,6 +120,7 @@ func show_receipt_ui(active: bool):
 	label_total.visible = active
 	
 	parcel_control.visible = !active
+	parcel_label.visible = !active
 	
 func generate_new_receipt():
 	# ถ้าเกมจบแล้ว ไม่ต้องทำอะไรต่อ
@@ -202,32 +211,111 @@ func setup_initial_position():
 func update_task_ui():
 	task_label.text = "Task: " + str(tasks_done) + "/" + str(max_tasks)
 
-# --- ฟังก์ชัน Animation เลื่อนใบเสร็จ ---
+# --- ฟังก์ชันช่วยเปิด/ปิด UI ทั้งหมด (เพื่อความคลีนในช่วงรอยต่อ) ---
+func show_all_ui(active: bool):
+	receipt_sprite.visible = active
+	label_content.visible = active
+	label_vat.visible = active
+	label_total.visible = active
+	parcel_control.visible = active
+	parcel_label.visible = active
+# --- ฟังก์ชัน Animation เลื่อนพร้อมช่วงหยุดรอ ---
 func slide_receipt():
-	var tween = create_tween()
+	# 1. เตรียม Node ชุดปัจจุบันที่จะสไลด์ออก
+	var current_node: Control
+	var current_labels: Array = []
+	
+	if current_task_type == "receipt":
+		current_node = receipt_sprite
+		current_labels = [label_content, label_vat, label_total]
+	else:
+		current_node = parcel_control
+		current_labels = [parcel_label]
+	
+	# สไลด์ออกทางซ้าย (-700)
+	var tween_out = create_tween().set_parallel(true)
+	tween_out.tween_property(current_node, "position:x", -700, 0.4).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	for lbl in current_labels:
+		tween_out.tween_property(lbl, "position:x", -700, 0.4).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	
+	# 2. รอให้สไลด์ออกเสร็จ
+	await tween_out.finished
+	
+	# ซ่อนทุกอย่าง และหยุดรอ 1.5 วินาที
+	show_all_ui(false)
+	await get_tree().create_timer(1.5).timeout
+	
+	# 3. สุ่ม Task ใหม่
+	generate_new_task()
+	
+	# 4. เตรียมข้อมูลสำหรับสไลด์เข้า
+	var next_node: Control
+	var target_x: float
+	var labels_to_slide: Array = [] # เก็บเป็น [ [node, target], ... ]
+	
+	if current_task_type == "receipt":
+		next_node = receipt_sprite
+		target_x = pos_receipt_default
+		labels_to_slide = [
+			[label_content, pos_label_content_default],
+			[label_vat, pos_label_vat_default],
+			[label_total, pos_label_total_default]
+		]
+		show_receipt_ui(true)
+	else:
+		next_node = parcel_control
+		target_x = pos_parcel_default
+		labels_to_slide = [
+			[parcel_label, pos_parcel_label_default]
+		]
+		show_receipt_ui(false)
+
+	# เซ็ตไปรอที่ตำแหน่ง 900
+	next_node.position.x = 900
+	for item in labels_to_slide:
+		item[0].position.x = 900
+		item[0].visible = true
+	
+	# 5. สไลด์เข้า (สร้าง Tween ใหม่ตรงนี้เลย จะไม่ติด Scope error)
+	var tween_in = create_tween().set_parallel(true)
+	tween_in.tween_property(next_node, "position:x", target_x, 0.6).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
+	
+	for item in labels_to_slide:
+		var lbl_node = item[0]
+		var lbl_target = item[1]
+		# ประกาศ tween_in ไว้ในฟังก์ชันเดียวกัน เย้! ตรงนี้จะไม่เออเร่อแล้ว
+		tween_in.tween_property(lbl_node, "position:x", lbl_target, 0.6).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
+	#old code
+	#var tween = create_tween()
 	# เลือกตัวที่จะเลื่อนออก (ตัวที่กำลังโชว์อยู่)
-	var current_node = receipt_sprite if current_task_type == "receipt" else parcel_control
+	#var current_node = receipt_sprite if current_task_type == "receipt" else parcel_control
 	
 	# 1. เลื่อนออกทางซ้าย
-	tween.tween_property(current_node, "position:x", -700, 0.3).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	#tween.tween_property(current_node, "position:x", -700, 0.3).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
 	
 	# 2. เมื่อเลื่อนออกเสร็จ
-	tween.tween_callback(func():
+	#tween.tween_callback(func():
 		# สุ่ม Task ใหม่ก่อน
-		generate_new_task()
+		#generate_new_task()
 		
 		# รีเซ็ตตำแหน่ง Node ทั้งสองอย่างให้ไปรอทางขวา (ข้างนอกจอ)
-		receipt_sprite.position.x = 800
-		parcel_control.position.x = 800
+		#receipt_sprite.position.x = 800
+		#parcel_control.position.x = 800
 		
 		# เลือก Node ตัวใหม่ที่จะเลื่อนเข้า
-		var next_node = receipt_sprite if current_task_type == "receipt" else parcel_control
+		#var next_node = receipt_sprite if current_task_type == "receipt" else parcel_control
 		
 		# 3. เลื่อนกลับเข้ามาที่ตำแหน่งเดิม (x = 80)
-		var tween_in = create_tween()
-		tween_in.tween_property(next_node, "position:x", 80, 0.5).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
-	)
+		#var tween_in = create_tween()
+		#tween_in.tween_property(next_node, "position:x", 80, 0.5).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
 func _ready() -> void:
+	# จดตำแหน่งที่วางไว้ใน Editor เก็บใส่ตัวแปรไว้
+	pos_receipt_default = receipt_sprite.position.x
+	pos_parcel_default = parcel_control.position.x
+	pos_label_content_default = label_content.position.x
+	pos_label_vat_default = label_vat.position.x
+	pos_label_total_default = label_total.position.x
+	pos_parcel_label_default = parcel_label.position.x
 	# เริ่มต้นโดยการดึงใบเสร็จเข้ามาในจอ
 	update_task_ui()
 	setup_initial_position()

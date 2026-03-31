@@ -211,10 +211,10 @@ expand_mode = 1
 
 [node name="PacelLabel" type="Label" parent="ReceiptControl" unique_id=78611348]
 layout_mode = 0
-offset_left = 159.0
+offset_left = 120.0
 offset_top = 844.0
-offset_right = 396.0
-offset_bottom = 937.0
+offset_right = 357.0
+offset_bottom = 910.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.7529412)
 theme_override_fonts/font = ExtResource("6_n7ofh")
