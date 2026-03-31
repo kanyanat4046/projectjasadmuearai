@@ -1,12 +1,6 @@
 extends Button
 
 func _on_night_cleared():
-	# เพิ่มค่าคืนถัดไป
-	SaveManager.current_night += 1
-	
-	# ทำการบันทึกทันที
-	SaveManager.save_game()
-
 	get_tree().change_scene_to_file("res://scenes/main+continue.tscn")
 
 # Called when the node enters the scene tree for the first time.

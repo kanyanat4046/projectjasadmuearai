@@ -10,7 +10,7 @@ func next_night():
 		get_tree().change_scene_to_file("res://scenes/victory_screen.tscn")
 	else:
 		# ส่งไปหน้าเริ่มคืนใหม่ ไปแก้พาส
-		get_tree().change_scene_to_file("res://scenes/main_game.tscn")
+		get_tree().change_scene_to_file("res://scenes/main+continue.tscn")
 
 func reset_game():
 	current_night = 1
@@ -38,6 +38,12 @@ func record_fail():
 	if is_game_over: return
 	
 	mistakes += 1
+	
+	# 1. สั่งให้ Jumpscare ทำงาน (ผ่าน Autoload ชื่อ Jump)
+	if Jump:
+		await Jump.trigger_jumpscare() 
+	
+	# 2. หลังจาก Jumpscare เล่นจบแล้ว ค่อยเช็คว่าแพ้หรือยัง
 	if mistakes >= max_mistakes:
 		finish_game("lose")
 

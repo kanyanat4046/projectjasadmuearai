@@ -16,7 +16,7 @@ func _on_button_pressed():
 		get_tree().change_scene_to_file("res://scenes/main+continue.tscn")
 	else:
 		# ถ้ายังไม่ Save ไปหน้าเตือน หรือหน้าแก้ไขข้อมูล
-		get_tree().change_scene_to_file("res://scenes/maim.tscn")
+		get_tree().change_scene_to_file("res://scenes/game_menu.tscn")
 		
 
 

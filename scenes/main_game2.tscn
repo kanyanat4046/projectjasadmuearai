@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://j0nhkkwpn30u" path="res://Asset/Button_and_book1.png" id="1_irwau"]
 [ext_resource type="Script" uid="uid://xr77bpura035" path="res://scenes/main2.gd" id="1_n7ofh"]
 [ext_resource type="Texture2D" uid="uid://ddux0ud01cro6" path="res://Asset/Button_and_book2.png" id="2_04edg"]
+[ext_resource type="Texture2D" uid="uid://cr6htmb40hq41" path="res://Asset/Main_game_2.jpg" id="2_3611u"]
 [ext_resource type="Texture2D" uid="uid://cibhiq5v2unls" path="res://Asset/Car.png" id="2_eal2l"]
 [ext_resource type="Texture2D" uid="uid://dnsjieueonejq" path="res://Asset/Car&door bright.png" id="3_3611u"]
 [ext_resource type="Script" uid="uid://341wgq1w3x15" path="res://scenes/pause.gd" id="4_6kmwy"]
@@ -61,6 +62,10 @@ load_path = "res://.godot/imported/Boxnor.png-f632e205dbd0c057d14da4f6048900f9.c
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_n7ofh")
+
+[node name="MainGame2" type="Sprite2D" parent="." unique_id=101558043]
+position = Vector2(961, 541)
+texture = ExtResource("2_3611u")
 
 [node name="main2" type="TextureRect" parent="." unique_id=729842376]
 unique_name_in_owner = true

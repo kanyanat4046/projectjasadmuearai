@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bwicph67vineb"]
 
 [ext_resource type="Texture2D" uid="uid://c44higs0dbr1u" path="res://Asset/Book3 normal.png" id="1_7n76i"]
+[ext_resource type="Texture2D" uid="uid://dyvruxlaiuaix" path="res://Asset/Main_game1.jpg" id="1_xva0j"]
 [ext_resource type="Texture2D" uid="uid://bg4johg6o2js3" path="res://Asset/Book3 bright .png" id="2_fv1uf"]
 [ext_resource type="Script" uid="uid://bemx7b41wenuu" path="res://scenes/book.gd" id="2_m4mrb"]
 [ext_resource type="Texture2D" uid="uid://dier7ugk12cqp" path="res://Asset/setting-icon-2.png" id="4_7n76i"]
@@ -61,6 +62,10 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("CompressedTexture2D_0u35s")
 stretch_mode = 6
+
+[node name="MainGame1" type="Sprite2D" parent="." unique_id=154888023]
+position = Vector2(961, 538)
+texture = ExtResource("1_xva0j")
 
 [node name="book" type="TextureButton" parent="." unique_id=1396651624]
 layout_mode = 0
