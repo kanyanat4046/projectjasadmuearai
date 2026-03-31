@@ -28,3 +28,7 @@ func _on_game_finished(status):
 
 	# หยุดการสุ่มใบเสร็จ (คุณอาจจะซ่อน Node ใบเสร็จไปเลยก็ได้)
 	$ReceiptControl.visible = false
+
+
+func _on_button_pressed() -> void:
+	pass # Replace with function body.

@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://j0nhkkwpn30u" path="res://Asset/Button_and_book1.png" id="1_irwau"]
 [ext_resource type="Script" uid="uid://xr77bpura035" path="res://scenes/main2.gd" id="1_n7ofh"]
 [ext_resource type="Texture2D" uid="uid://ddux0ud01cro6" path="res://Asset/Button_and_book2.png" id="2_04edg"]
+[ext_resource type="Texture2D" uid="uid://cibhiq5v2unls" path="res://Asset/Car.png" id="2_eal2l"]
+[ext_resource type="Texture2D" uid="uid://dnsjieueonejq" path="res://Asset/Car&door bright.png" id="3_3611u"]
+[ext_resource type="Script" uid="uid://341wgq1w3x15" path="res://scenes/pause.gd" id="4_6kmwy"]
 [ext_resource type="PackedScene" uid="uid://bs3gj0m48ovg8" path="res://scenes/record_row.tscn" id="5_n7ofh"]
 [ext_resource type="Script" uid="uid://bqfrpsv0b70eq" path="res://scenes/receipt.gd" id="5_swft5"]
 [ext_resource type="FontFile" uid="uid://b7imoruigicyk" path="res://Asset/Fonts/Caveat-VariableFont_wght.ttf" id="6_n7ofh"]
@@ -27,6 +30,18 @@ region = Rect2(50.298378, 604.75055, 674.965, 248.01868)
 [sub_resource type="AtlasTexture" id="AtlasTexture_04edg"]
 atlas = ExtResource("2_04edg")
 region = Rect2(47.06041, 605.6184, 674.804, 246.40814)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_idtt3"]
+texture = ExtResource("2_eal2l")
+region_rect = Rect2(396.33704, 125.48266, 1109.4779, 875.5519)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_uoxjt"]
+texture = ExtResource("3_3611u")
+region_rect = Rect2(7.586548, 132.29988, 781.9815, 808.71594)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ti564"]
+texture = ExtResource("3_3611u")
+region_rect = Rect2(47.68817, 68.805664, 768.61426, 949.0715)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_n7ofh"]
 load_path = "res://.godot/imported/Slip1.png-ac36007eaf4fde0ac8a56609d2ef472d.ctex"
@@ -80,10 +95,23 @@ scale = Vector2(0.55, 0.55)
 texture_normal = SubResource("AtlasTexture_irwau")
 texture_hover = SubResource("AtlasTexture_04edg")
 
+[node name="pause" type="Button" parent="." unique_id=666933880]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 11.0
+offset_right = 102.0
+offset_bottom = 90.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_idtt3")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_uoxjt")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ti564")
+script = ExtResource("4_6kmwy")
+
 [node name="ReceiptControl" type="Control" parent="." unique_id=1006523390]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 15.0
+offset_top = 6.0
+offset_right = 55.0
+offset_bottom = 46.0
 script = ExtResource("5_swft5")
 texture_normal = SubResource("CompressedTexture2D_n7ofh")
 texture_blood = SubResource("CompressedTexture2D_osq3w")
@@ -145,8 +173,10 @@ theme_override_constants/separation = 25
 
 [node name="ParcelControl" type="Control" parent="ReceiptControl" unique_id=1910601128]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 33.0
+offset_top = 27.0
+offset_right = 73.0
+offset_bottom = 67.0
 
 [node name="PacelLabel" type="Label" parent="ReceiptControl/ParcelControl" unique_id=78611348]
 layout_mode = 0
@@ -198,3 +228,4 @@ text = "Task: 0/7"
 
 [connection signal="pressed" from="approve" to="ReceiptControl" method="_on_approve_pressed"]
 [connection signal="pressed" from="reject" to="ReceiptControl" method="_on_reject_pressed"]
+[connection signal="pressed" from="pause" to="pause" method="_on_pressed"]
