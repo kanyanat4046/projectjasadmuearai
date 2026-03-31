@@ -55,7 +55,9 @@ var parcel_correct_list = [{"address": "341A Malaron Senfilent Street"}]
 var parcel_fake_list = [{"address":"340A Malaron Senfilent Street"}, 
 						{"address":"341A Malaron Senfilant Street"}, 
 						{"address":"666A Malaron Hellfilent Street"}, 
-						{"address":"013A 131313 131313131 131313"}
+						{"address":"013A 131313 131313131"},
+						{"address":"ARE YOU HAPPY? :) "},
+						{"address":"Hello :) "},
 						]
 var current_task_type: String = "receipt" # "receipt" หรือ "parcel"
 var tasks_done: int = 0
