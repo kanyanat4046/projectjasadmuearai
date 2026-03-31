@@ -25,6 +25,7 @@ buses/default_bus_layout="uid://k7vulcy25cw8"
 GameManager="*uid://bqgd348mvufr4"
 Bgm="*uid://cmnilmby4f1ul"
 Sfx="*uid://bm8kllnej1tq7"
+SaveManager="*uid://dio8gmylfkc2g"
 
 [display]
 

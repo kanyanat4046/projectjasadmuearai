@@ -1,52 +1,66 @@
-[gd_scene format=3 uid="uid://cw66q6jrpmfgs"]
+[gd_scene format=3 uid="uid://bn61n8w83ch4p"]
 
-[ext_resource type="Texture2D" uid="uid://b4qjtxf1b4s2t" path="res://Asset/Menu_page.jpg" id="1_rjxss"]
-[ext_resource type="Texture2D" uid="uid://duuh7kbvq1wfc" path="res://Asset/Button_and_book.png" id="2_jprcw"]
-[ext_resource type="Texture2D" uid="uid://ddux0ud01cro6" path="res://Asset/Button_and_book2.png" id="3_jprcw"]
-[ext_resource type="Script" uid="uid://uusxfhw2epny" path="res://scenes/button.gd" id="4_5rxej"]
-[ext_resource type="Texture2D" uid="uid://dier7ugk12cqp" path="res://Asset/setting-icon-2.png" id="5_aru3y"]
-[ext_resource type="Script" uid="uid://b4l8obq6qyarn" path="res://scenes/setting.gd" id="6_0b27c"]
-[ext_resource type="Texture2D" uid="uid://cq4llfulsrt3n" path="res://Asset/Door.png" id="7_yr8n5"]
-[ext_resource type="Texture2D" uid="uid://dnsjieueonejq" path="res://Asset/Car&door bright.png" id="8_qoecg"]
-[ext_resource type="Script" uid="uid://c5udl4433uxto" path="res://scenes/exit.gd" id="8_u3xmg"]
+[ext_resource type="Texture2D" uid="uid://b4qjtxf1b4s2t" path="res://Asset/Menu_page.jpg" id="1_hyhdx"]
+[ext_resource type="Texture2D" uid="uid://duuh7kbvq1wfc" path="res://Asset/Button_and_book.png" id="2_qmiig"]
+[ext_resource type="Texture2D" uid="uid://ddux0ud01cro6" path="res://Asset/Button_and_book2.png" id="3_75h04"]
+[ext_resource type="Script" uid="uid://uusxfhw2epny" path="res://scenes/button.gd" id="4_poj5n"]
+[ext_resource type="Texture2D" uid="uid://dier7ugk12cqp" path="res://Asset/setting-icon-2.png" id="5_m6383"]
+[ext_resource type="Script" uid="uid://b4l8obq6qyarn" path="res://scenes/setting.gd" id="6_famqq"]
+[ext_resource type="Texture2D" uid="uid://cq4llfulsrt3n" path="res://Asset/Door.png" id="7_q3bex"]
+[ext_resource type="Script" uid="uid://c5udl4433uxto" path="res://scenes/exit.gd" id="8_5jlij"]
+[ext_resource type="Texture2D" uid="uid://egcdeq6vdvwi" path="res://Asset/NextNight1.PNG" id="9_75h04"]
+[ext_resource type="Texture2D" uid="uid://cvljhbanvdvm5" path="res://Asset/NextNight2.PNG" id="10_poj5n"]
+[ext_resource type="Script" uid="uid://cd3nc2s4tldx5" path="res://scenes/continue.gd" id="11_poj5n"]
 
 [sub_resource type="Theme" id="Theme_rjxss"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5rxej"]
-texture = ExtResource("2_jprcw")
+texture = ExtResource("2_qmiig")
 region_rect = Rect2(49.06598, 57.735992, 674.436, 233.926)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xxfb2"]
-texture = ExtResource("3_jprcw")
+texture = ExtResource("3_75h04")
 region_rect = Rect2(51.638123, 50.882088, 659.24603, 233.926)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qus6b"]
-texture = ExtResource("3_jprcw")
+texture = ExtResource("3_75h04")
 region_rect = Rect2(57.77852, 49.06236, 668.1679, 244.22688)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mw6r2"]
-texture = ExtResource("5_aru3y")
+texture = ExtResource("5_m6383")
 region_rect = Rect2(187.30795, 108.49828, 238.09204, 247.10168)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aru3y"]
-texture = ExtResource("5_aru3y")
+texture = ExtResource("5_m6383")
 region_rect = Rect2(193.38593, 119.90009, 224.8858, 217.85815)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0b27c"]
-texture = ExtResource("5_aru3y")
+texture = ExtResource("5_m6383")
 region_rect = Rect2(199.3086, 123.41393, 219.02939, 210.83047)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qoecg"]
-texture = ExtResource("7_yr8n5")
+texture = ExtResource("7_q3bex")
 region_rect = Rect2(1289, 138, 432, 758)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p30b5"]
-texture = ExtResource("8_qoecg")
-region_rect = Rect2(1281.3223, 129.344, 451.3894, 769.4221)
+texture = ExtResource("7_q3bex")
+region_rect = Rect2(1289, 138, 432, 758)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_v7bbo"]
-texture = ExtResource("8_qoecg")
-region_rect = Rect2(1280.8121, 128.95837, 451.14307, 767.48)
+texture = ExtResource("7_q3bex")
+region_rect = Rect2(1289, 138, 432, 758)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_m6383"]
+texture = ExtResource("9_75h04")
+region_rect = Rect2(62.5968, 51.24301, 661.24146, 234.78864)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_famqq"]
+texture = ExtResource("10_poj5n")
+region_rect = Rect2(50.909607, 49.545837, 672.5461, 247.9093)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q3bex"]
+texture = ExtResource("10_poj5n")
+region_rect = Rect2(52.00049, 44.091156, 670.09155, 260.18204)
 
 [node name="Maim" type="Control" unique_id=1686741536]
 custom_minimum_size = Vector2(1920, 1080)
@@ -74,8 +88,8 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MenuPage" type="Sprite2D" parent="gameMenu" unique_id=1151763800]
-position = Vector2(-5, -82)
-texture = ExtResource("1_rjxss")
+position = Vector2(-7, -7)
+texture = ExtResource("1_hyhdx")
 centered = false
 
 [node name="Start" type="Button" parent="." unique_id=1390062809]
@@ -92,7 +106,7 @@ grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxTexture_5rxej")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_xxfb2")
 theme_override_styles/hover = SubResource("StyleBoxTexture_qus6b")
-script = ExtResource("4_5rxej")
+script = ExtResource("4_poj5n")
 
 [node name="Setting" type="Button" parent="." unique_id=2130855399]
 layout_mode = 0
@@ -104,7 +118,7 @@ theme_override_colors/font_color = Color(0.65891117, 1.9131974e-06, 5.2943824e-0
 theme_override_styles/normal = SubResource("StyleBoxTexture_mw6r2")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_aru3y")
 theme_override_styles/hover = SubResource("StyleBoxTexture_0b27c")
-script = ExtResource("6_0b27c")
+script = ExtResource("6_famqq")
 
 [node name="Exit" type="Button" parent="." unique_id=783429730]
 layout_mode = 0
@@ -115,8 +129,25 @@ offset_bottom = 1027.0
 theme_override_styles/normal = SubResource("StyleBoxTexture_qoecg")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_p30b5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_v7bbo")
-script = ExtResource("8_u3xmg")
+script = ExtResource("8_5jlij")
+
+[node name="Continue" type="Button" parent="." unique_id=957992131]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1269.0
+offset_top = 825.0
+offset_right = -286.0
+offset_bottom = -95.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_m6383")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_famqq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_q3bex")
+script = ExtResource("11_poj5n")
 
 [connection signal="pressed" from="Start" to="Start" method="_on_pressed"]
 [connection signal="pressed" from="Setting" to="Setting" method="_on_pressed"]
 [connection signal="pressed" from="Exit" to="Exit" method="_on_pressed"]
+[connection signal="pressed" from="Continue" to="Continue" method="_on_pressed"]

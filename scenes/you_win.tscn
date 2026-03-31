@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dp1v3njf3c6br"]
 
 [ext_resource type="Script" uid="uid://codb5x6e2fwwp" path="res://to_main.gd" id="1_w5032"]
+[ext_resource type="Script" uid="uid://371praukrhx4" path="res://scenes/next_night.gd" id="2_ibln8"]
 
 [node name="You win" type="Control" unique_id=855550153]
 layout_mode = 3
@@ -51,5 +52,7 @@ offset_bottom = 844.0
 theme_override_colors/font_color = Color(0.8318216, 0.7514778, 0.6533718, 1)
 theme_override_font_sizes/font_size = 80
 text = "Next Shift"
+script = ExtResource("2_ibln8")
 
 [connection signal="pressed" from="to_main" to="to_main" method="_on_pressed"]
+[connection signal="pressed" from="next_night" to="next_night" method="_on_pressed"]
