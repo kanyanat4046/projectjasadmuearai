@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1774918440
+::res://::1774924271
 BGM.tscn::PackedScene::5642450414474890707::1771869783::0::1::::<><><>0<>0<><>::uid://cc20nnpci4dbp::::res://Asset/simplesound-horror-trailer-443327.mp3
 default_bus_layout.tres::AudioBusLayout::769259879210604213::1771869783::0::1::::<><><>0<>0<><>::
 GameManager.gd::GDScript::3522062176363394851::1774892681::0::1::::<>Node<><>0<>0<><>::
@@ -47,7 +47,7 @@ setting_page.tscn::PackedScene::6334449524340452323::1771837613::0::1::::<><><>0
 simplesound-horror-trailer-443327.mp3::AudioStreamMP3::4970499100240129061::1771837613::1771909992::1::::<><><>0<>0<>216d6f28e9ebe13bd3ed6e734dc06012<>res://.godot/imported/simplesound-horror-trailer-443327.mp3-068019c5414c9b41c4ada48fa163a260.mp3str::
 ::res://Asset/Fonts/::1771868482
 Caveat-VariableFont_wght.ttf::FontFile::4649733231335341410::1771868329::1771868482::1::::<><><>0<>0<>f17d91d8fec7d839645ee98fa42330e8<>res://.godot/imported/Caveat-VariableFont_wght.ttf-547c7daa1d42cd5a1622e4606ad46a39.fontdata::
-::res://scenes/::1774918418
+::res://scenes/::1774919335
 book.gd::GDScript::2693402326066104816::1774916619::0::1::::<>BaseButton<><>0<>0<><>::
 button.gd::GDScript::1446198681437669214::1774916619::0::1::::<>Button<><>0<>0<><>::
 continue.gd::GDScript::5042004815188134496::1774916619::0::1::::<>Button<><>0<>0<><>::
@@ -62,7 +62,7 @@ main2.gd::GDScript::1651437991294117002::1771911593::0::1::::<>Control<><>0<>0<>
 main+continue.tscn::PackedScene::3364474987289192821::1774916619::0::1::::<><><>0<>0<><>::uid://b4qjtxf1b4s2t::::res://Asset/Menu_page.jpg<>uid://duuh7kbvq1wfc::::res://Asset/Button_and_book.png<>uid://ddux0ud01cro6::::res://Asset/Button_and_book2.png<>uid://uusxfhw2epny::::res://scenes/button.gd<>uid://dier7ugk12cqp::::res://Asset/setting-icon-2.png<>uid://b4l8obq6qyarn::::res://scenes/setting.gd<>uid://cq4llfulsrt3n::::res://Asset/Door.png<>uid://c5udl4433uxto::::res://scenes/exit.gd<>uid://egcdeq6vdvwi::::res://Asset/NextNight1.PNG<>uid://cvljhbanvdvm5::::res://Asset/NextNight2.PNG<>uid://cd3nc2s4tldx5::::res://scenes/continue.gd
 main_1.tscn::PackedScene::4489564230416886649::1771837613::0::1::::<><><>0<>0<><>::uid://n1aofed78lo6::::res://Asset/Main_game1.jpg<>uid://duuh7kbvq1wfc::::res://Asset/Button_and_book.png<>uid://ddux0ud01cro6::::res://Asset/Button_and_book2.png<>uid://bemx7b41wenuu::::res://scenes/book.gd
 main_game1.tscn::PackedScene::3947238903691112205::1774916619::0::1::::<><><>0<>0<><>::uid://c44higs0dbr1u::::res://Asset/Book3 normal.png<>uid://bg4johg6o2js3::::res://Asset/Book3 bright .png<>uid://bemx7b41wenuu::::res://scenes/book.gd<>uid://dier7ugk12cqp::::res://Asset/setting-icon-2.png<>uid://b4l8obq6qyarn::::res://scenes/setting.gd
-main_game2.tscn::PackedScene::5910746281289706124::1774916619::0::1::::<><><>0<>0<><>::uid://j0nhkkwpn30u::::res://Asset/Button_and_book1.png<>uid://xr77bpura035::::res://scenes/main2.gd<>uid://ddux0ud01cro6::::res://Asset/Button_and_book2.png<>uid://bs3gj0m48ovg8::::res://scenes/record_row.tscn<>uid://bqfrpsv0b70eq::::res://scenes/receipt.gd<>uid://cibhiq5v2unls::::res://Asset/Car.png<>uid://341wgq1w3x15::::res://scenes/pause.gd
+main_game2.tscn::PackedScene::5910746281289706124::1774919335::0::1::::<><><>0<>0<><>::uid://j0nhkkwpn30u::::res://Asset/Button_and_book1.png<>uid://xr77bpura035::::res://scenes/main2.gd<>uid://ddux0ud01cro6::::res://Asset/Button_and_book2.png<>uid://bs3gj0m48ovg8::::res://scenes/record_row.tscn<>uid://bqfrpsv0b70eq::::res://scenes/receipt.gd<>uid://b7imoruigicyk::::res://Asset/Fonts/Caveat-VariableFont_wght.ttf<>uid://bvvg0vmd6rhbu::::res://Asset/Dark event box2.png<>uid://cvoflp5wo5ms7::::res://Asset/Dark event box1.png
 master.gd::GDScript::2578816598308130033::1771909920::0::1::::<>HSlider<><>0<>0<><>::
 music.gd::GDScript::3472950170104022217::1771909920::0::1::::<>HSlider<><>0<>0<><>::
 next_night.gd::GDScript::2032954032535022447::1774916619::0::1::::<>Button<><>0<>0<><>::

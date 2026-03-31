@@ -74,7 +74,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="MenuPage" type="Sprite2D" parent="gameMenu" unique_id=1151763800]
-position = Vector2(-5, -82)
+position = Vector2(-5, -7)
 texture = ExtResource("1_rjxss")
 centered = false
 
