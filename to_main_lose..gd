@@ -2,8 +2,8 @@ extends Button
 
 	
 func _on_button_pressed():
-	if SaveManager.save_game():
-		# ถ้า Save แล้ว ไปหน้า Map หรือ Level ถัดไป
+	if SaveManager.save_game() and SaveManager.current_night != 1:
+
 		get_tree().change_scene_to_file("res://scenes/main+continue.tscn")
 	else:
 		# ถ้ายังไม่ Save ไปหน้าเตือน หรือหน้าแก้ไขข้อมูล

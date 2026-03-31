@@ -5,7 +5,7 @@ const SAVE_PATH = "user://save_game.dat"
 var current_night = 1
 
 
-func save_game():
+func save_game()-> bool:
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	var data = {
 		"current_night": current_night
@@ -13,6 +13,7 @@ func save_game():
 	file.store_var(data)
 	file.close()
 	print("Game Saved at Night: ", current_night)
+	return true
 
 
 func load_game():

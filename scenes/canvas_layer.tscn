@@ -9,23 +9,30 @@
 script = ExtResource("1_ghj5q")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1022762055]
-offset_right = 275.0
-offset_bottom = 183.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
-color = Color(0.99986964, 0.9812556, 0.97945446, 1)
+color = Color(0.37254903, 0, 0.15686275, 1)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1269111481]
-offset_right = 275.0
-offset_bottom = 183.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 texture = ExtResource("2_ek3oe")
+expand_mode = 1
 
 [node name="Jump2" type="AudioStreamPlayer" parent="." unique_id=1275284704]
 stream = ExtResource("3_mg525")
-volume_db = -24.448
+volume_db = 0.388
 bus = &"SFX"
 
 [node name="Jump1" type="AudioStreamPlayer" parent="." unique_id=531217633]
 stream = ExtResource("4_kfwc7")
-volume_db = -13.582
+volume_db = -0.776
 bus = &"SFX"

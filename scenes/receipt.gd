@@ -186,19 +186,31 @@ func generate_new_receipt():
 		label_total.text = "Total: " + str(final_correct_total + randi_range(10, 100))
 	else:
 		label_total.text = "Total: " + str(final_correct_total)
-
+@onready var jump_1 = $Jump1 
+@onready var jump_2 = $Jump2
 func check_answer(is_correct: bool):
 	if is_correct:
 		tasks_done += 1
 		update_task_ui()
 		if tasks_done >= max_tasks:
+			# ใช้ call_deferred เพื่อความปลอดภัยในการเปลี่ยนฉาก
 			get_tree().change_scene_to_file("res://scenes/you_win.tscn")
 	else:
 		mistakes += 1
 		print("ทำพลาดครั้งที่: ", mistakes)
-		if mistakes >= 3:
+		if mistakes == 1:
+			Jumpscare.jump_1.play()
+			await Jumpscare.apply_shake()
+			
+		elif mistakes == 2:
+			Jumpscare.jump_2.play()
+			await Jumpscare.apply_horror_flash()
+			
+		elif mistakes >= 3:
+			Jumpscare.jump_2.play()
+			await Jumpscare.apply_death()
+			# เปลี่ยนไปหน้า Lose ทันทีหลังจากทำ Death Animation เสร็จ
 			get_tree().change_scene_to_file("res://scenes/you_lose.tscn")
-			# ใส่โค้ดเปลี่ยนไปหน้า Game Over ที่นี่
 	
 	# เล่น Animation เปลี่ยนใบเสร็จ
 	slide_receipt()
