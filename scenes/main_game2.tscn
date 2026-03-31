@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://cvoflp5wo5ms7" path="res://Asset/Dark event box1.png" id="8_2s02s"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3bsxj"]
-load_path = "res://.godot/imported/Main_game_2.jpg-8628f8590f45c88048d7692c9e02f6be.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tbe35"]
 atlas = ExtResource("1_irwau")

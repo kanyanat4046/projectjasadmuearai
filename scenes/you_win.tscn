@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dp1v3njf3c6br"]
 
+[ext_resource type="Texture2D" uid="uid://b4riuvufy54wl" path="res://Asset/NextNight.jpg" id="1_4bphb"]
 [ext_resource type="Script" uid="uid://codb5x6e2fwwp" path="res://to_main.gd" id="1_w5032"]
 [ext_resource type="Script" uid="uid://371praukrhx4" path="res://scenes/next_night.gd" id="2_ibln8"]
 
@@ -17,12 +18,16 @@ offset_right = 1928.0
 offset_bottom = 1093.0
 color = Color(0, 0, 0, 1)
 
+[node name="NextNight" type="Sprite2D" parent="ColorRect" unique_id=899529944]
+position = Vector2(963, 545)
+texture = ExtResource("1_4bphb")
+
 [node name="RichTextLabel" type="RichTextLabel" parent="ColorRect" unique_id=677584779]
 layout_mode = 0
-offset_left = 521.0
-offset_top = 282.0
-offset_right = 1381.0
-offset_bottom = 499.0
+offset_left = 566.0
+offset_top = 371.0
+offset_right = 1426.0
+offset_bottom = 588.0
 theme_override_colors/default_color = Color(1, 1, 0.7607843, 1)
 theme_override_colors/font_outline_color = Color(0.33213586, 0.3321359, 0.3321359, 1)
 theme_override_constants/outline_size = 70

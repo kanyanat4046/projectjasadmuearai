@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr6htmb40hq41"
-path="res://.godot/imported/Main_game_2.jpg-a575c53ee455647047c1ca43537d446b.ctex"
+uid="uid://b4riuvufy54wl"
+path="res://.godot/imported/NextNight.jpg-8e59a814fce964211c44d33845f5f00c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Asset/Main_game_2.jpg"
-dest_files=["res://.godot/imported/Main_game_2.jpg-a575c53ee455647047c1ca43537d446b.ctex"]
+source_file="res://Asset/NextNight.jpg"
+dest_files=["res://.godot/imported/NextNight.jpg-8e59a814fce964211c44d33845f5f00c.ctex"]
 
 [params]
 

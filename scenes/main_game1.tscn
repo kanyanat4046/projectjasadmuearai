@@ -10,7 +10,6 @@
 [ext_resource type="Script" uid="uid://e75twd6j3ldd" path="res://scenes/to_main_menu.gd" id="6_turw3"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0u35s"]
-load_path = "res://.godot/imported/Main_game1.jpg-69a7d470985f0b6c4f56f424de7583e4.ctex"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7h0cx"]
 atlas = ExtResource("1_7n76i")
