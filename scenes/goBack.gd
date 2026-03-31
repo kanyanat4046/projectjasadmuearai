@@ -14,4 +14,4 @@ func _on_pressed():
 	_on_back_pressed()
 	
 func _on_back_pressed():
-		get_tree().change_scene_to_file(SaveManager.last_scene_path)
+	get_tree().change_scene_to_file(SaveManager.last_scene_path)
