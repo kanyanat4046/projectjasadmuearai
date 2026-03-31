@@ -3,16 +3,6 @@ extends Node
 var current_night: int = 1
 var is_game_over: bool = false
 
-
-func next_night():
-	current_night += 1
-	if current_night > 3:
-		# ส่งไปหน้าจบเกมแบบ Win ไปแก้พาส
-		get_tree().change_scene_to_file("res://scenes/victory.tscn")
-	else:
-		# ส่งไปหน้าเริ่มคืนใหม่ ไปแก้พาส
-		get_tree().change_scene_to_file("res://scenes/main+continue.tscn")
-
 func reset_game():
 	current_night = 1
 	is_game_over = false

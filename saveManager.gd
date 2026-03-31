@@ -6,6 +6,7 @@ var current_night = 1
 
 
 func save_game()-> bool:
+	current_night += 1
 	var file = FileAccess.open(SAVE_PATH, FileAccess.WRITE)
 	var data = {
 		"current_night": current_night

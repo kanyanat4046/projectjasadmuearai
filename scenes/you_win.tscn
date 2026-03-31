@@ -3,6 +3,32 @@
 [ext_resource type="Texture2D" uid="uid://b4riuvufy54wl" path="res://Asset/NextNight.jpg" id="1_4bphb"]
 [ext_resource type="Script" uid="uid://codb5x6e2fwwp" path="res://to_main.gd" id="1_w5032"]
 [ext_resource type="Script" uid="uid://371praukrhx4" path="res://scenes/next_night.gd" id="2_ibln8"]
+[ext_resource type="Texture2D" uid="uid://btdcn60787r3q" path="res://Button2.png" id="2_nw31f"]
+[ext_resource type="Texture2D" uid="uid://6vinqn8ig8e5" path="res://Button2Bright.png" id="3_0qell"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_077re"]
+texture = ExtResource("2_nw31f")
+region_rect = Rect2(56.229797, 326.07938, 675.3902, 246.05295)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rfojx"]
+texture = ExtResource("3_0qell")
+region_rect = Rect2(43.577957, 336.62927, 692.9654, 243.54218)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sdx3b"]
+texture = ExtResource("3_0qell")
+region_rect = Rect2(20.981277, 336.62927, 715.5621, 243.54218)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cj0xg"]
+texture = ExtResource("2_nw31f")
+region_rect = Rect2(43.577957, 602.7681, 700.4976, 230.98846)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ktrfn"]
+texture = ExtResource("3_0qell")
+region_rect = Rect2(51.110214, 612.8111, 687.94385, 236.00995)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lx35p"]
+texture = ExtResource("3_0qell")
+region_rect = Rect2(61.153183, 602.7681, 675.39014, 246.05292)
 
 [node name="You win" type="Control" unique_id=855550153]
 layout_mode = 3
@@ -45,18 +71,22 @@ offset_right = 715.0
 offset_bottom = 832.0
 theme_override_colors/font_color = Color(0.8745098, 0.1764706, 0.2509804, 1)
 theme_override_font_sizes/font_size = 80
-text = "Go Back "
+theme_override_styles/normal = SubResource("StyleBoxTexture_077re")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_rfojx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sdx3b")
 script = ExtResource("1_w5032")
 
 [node name="next_night" type="Button" parent="." unique_id=38543008]
 layout_mode = 0
 offset_left = 1294.0
 offset_top = 684.0
-offset_right = 1657.0
-offset_bottom = 844.0
+offset_right = 1707.0
+offset_bottom = 841.0
 theme_override_colors/font_color = Color(0.8318216, 0.7514778, 0.6533718, 1)
 theme_override_font_sizes/font_size = 80
-text = "Next Shift"
+theme_override_styles/normal = SubResource("StyleBoxTexture_cj0xg")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ktrfn")
+theme_override_styles/hover = SubResource("StyleBoxTexture_lx35p")
 script = ExtResource("2_ibln8")
 
 [connection signal="pressed" from="to_main" to="to_main" method="_on_pressed"]

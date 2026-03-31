@@ -186,8 +186,7 @@ func generate_new_receipt():
 		label_total.text = "Total: " + str(final_correct_total + randi_range(10, 100))
 	else:
 		label_total.text = "Total: " + str(final_correct_total)
-@onready var jump_1 = $Jump1 
-@onready var jump_2 = $Jump2
+
 func check_answer(is_correct: bool):
 	if is_correct:
 		tasks_done += 1
@@ -318,11 +317,8 @@ func add_record_to_book():
 	var new_row = record_row_scene.instantiate()
 	record_list.add_child(new_row)
 	
-	# 2. สร้างข้อความ "Day X" โดยดึงตัวเลขมาจาก GameManager
-	# (สมมติว่า GameManager.current_night เก็บค่าเป็น 1, 2, 3)
-	var night_text = "Day " + str(GameManager.current_night)
-	# 3.เอาข้อมูลมา
-	new_row.set_data(night_text, "Ingredients", actual_total, "VAT 7%", final_correct_total)
+	# 2.เอาข้อมูลมา
+	new_row.set_data("Date XX", "Ingredients", actual_total, "VAT 7%", final_correct_total)
 
 func _on_approve_pressed() -> void:
 	if current_task_type == "receipt":

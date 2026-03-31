@@ -1,6 +1,6 @@
 extends Control
 @onready var game_timer = $GameTimer # ลาก Timer Node มาวาง
-
+var current_night: int = 1
 
 func _ready():
 	# เริ่มจับเวลา ยังไม่เสร็จดี
@@ -28,6 +28,7 @@ func _on_game_finished(status):
 
 	# หยุดการสุ่มใบเสร็จ (คุณอาจจะซ่อน Node ใบเสร็จไปเลยก็ได้)
 	$ReceiptControl.visible = false
+	
 
 
 func _on_button_pressed() -> void:
