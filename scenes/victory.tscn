@@ -2,8 +2,25 @@
 
 [ext_resource type="Texture2D" uid="uid://crsbqpsi4d26k" path="res://Asset/Final win page.jpg" id="1_le47n"]
 [ext_resource type="Script" uid="uid://cxieewke8mk2m" path="res://to_main_lose..gd" id="2_faxov"]
+[ext_resource type="Texture2D" uid="uid://btdcn60787r3q" path="res://Button2.png" id="2_g6lwx"]
+[ext_resource type="Texture2D" uid="uid://6vinqn8ig8e5" path="res://Button2Bright.png" id="3_5hn41"]
+[ext_resource type="Texture2D" uid="uid://n6csjh2cddyq" path="res://WinLose.png" id="5_n2k88"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hl81x"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eaoty"]
+texture = ExtResource("2_g6lwx")
+region_rect = Rect2(51.464294, 328.1991, 673.3358, 248.79187)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_04qlw"]
+texture = ExtResource("3_5hn41")
+region_rect = Rect2(44.720062, 343.7052, 680.18335, 237.37946)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aeqvq"]
+texture = ExtResource("3_5hn41")
+region_rect = Rect2(44.720062, 334.57526, 682.4658, 246.5094)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rlw0o"]
+texture = ExtResource("5_n2k88")
+region_rect = Rect2(126.22766, 499.54602, 1054.161, 475.9292)
 
 [node name="Control" type="Control" unique_id=1710110215]
 layout_mode = 3
@@ -14,31 +31,30 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="FinalWinPage" type="Sprite2D" parent="." unique_id=1647853350]
-position = Vector2(962, 537)
+position = Vector2(954, 537)
 texture = ExtResource("1_le47n")
 
 [node name="to_main" type="Button" parent="FinalWinPage" unique_id=479998193]
-offset_left = -849.0
-offset_top = 334.0
-offset_right = -413.0
-offset_bottom = 488.0
-theme_override_colors/font_color = Color(0.8745098, 0.1764706, 0.2509804, 1)
-theme_override_font_sizes/font_size = 80
-text = "Go Back "
+offset_left = -847.0
+offset_top = 100.0
+offset_right = -411.0
+offset_bottom = 254.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_eaoty")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_04qlw")
+theme_override_styles/hover = SubResource("StyleBoxTexture_aeqvq")
 script = ExtResource("2_faxov")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1834779393]
 layout_mode = 0
-offset_left = 738.0
-offset_top = 16.0
-offset_right = 1397.0
-offset_bottom = 211.0
+offset_left = 94.0
+offset_top = -80.0
+offset_right = 1109.0
+offset_bottom = 435.0
 theme_override_colors/default_color = Color(0.95019346, 0.82251936, 0.68909085, 1)
 theme_override_colors/font_outline_color = Color(0.06766269, 0.027058477, 0.0026906098, 1)
 theme_override_colors/font_shadow_color = Color(0.73350203, 0.43456256, 0.6759515, 0)
 theme_override_constants/outline_size = 22
 theme_override_font_sizes/normal_font_size = 145
-theme_override_styles/normal = SubResource("StyleBoxEmpty_hl81x")
-text = "VICTORY"
+theme_override_styles/normal = SubResource("StyleBoxTexture_rlw0o")
 
 [connection signal="pressed" from="FinalWinPage/to_main" to="FinalWinPage/to_main" method="_on_pressed"]

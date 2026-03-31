@@ -186,8 +186,7 @@ func generate_new_receipt():
 		label_total.text = "Total: " + str(final_correct_total + randi_range(10, 100))
 	else:
 		label_total.text = "Total: " + str(final_correct_total)
-@onready var jump_1 = $Jump1 
-@onready var jump_2 = $Jump2
+
 func check_answer(is_correct: bool):
 	if is_correct:
 		tasks_done += 1
