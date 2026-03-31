@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://byqba1rrm1kkv"]
 
 [ext_resource type="Script" uid="uid://b4l8obq6qyarn" path="res://scenes/setting.gd" id="1_a42w7"]
-[ext_resource type="Texture2D" uid="uid://n1aofed78lo6" path="res://Asset/Main_game1.jpg" id="2_scrng"]
+[ext_resource type="Texture2D" uid="uid://dyvruxlaiuaix" path="res://Asset/Main_game1.jpg" id="2_scrng"]
 [ext_resource type="Texture2D" uid="uid://cibhiq5v2unls" path="res://Asset/Car.png" id="3_ikx14"]
 [ext_resource type="Script" uid="uid://djx3kcwwbmm1q" path="res://scenes/goBack.gd" id="4_o8tsb"]
 [ext_resource type="Script" uid="uid://bc0gy55jrwnob" path="res://scenes/master.gd" id="5_31ui4"]
@@ -104,7 +104,7 @@ offset_top = 440.0
 offset_right = 302.0
 offset_bottom = 520.0
 theme_override_font_sizes/font_size = 44
-text = "SFX"
+text = "Sound Effect"
 
 [connection signal="pressed" from="goBack" to="goBack" method="_on_pressed"]
 [connection signal="value_changed" from="ColorRect/master" to="ColorRect/master" method="_on_value_changed"]

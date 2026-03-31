@@ -22,3 +22,7 @@ func _on_button_pressed():
 
 func _on_next_night_pressed() -> void:
 	pass # Replace with function body.
+
+
+func _on_pressed() -> void:
+	_on_button_pressed()

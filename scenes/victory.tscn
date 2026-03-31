@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://nnr7x0wcmrbp"]
 
 [ext_resource type="Texture2D" uid="uid://crsbqpsi4d26k" path="res://Asset/Final win page.jpg" id="1_le47n"]
+[ext_resource type="Script" uid="uid://cxieewke8mk2m" path="res://to_main_lose..gd" id="2_faxov"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hl81x"]
 
 [node name="Control" type="Control" unique_id=1710110215]
 layout_mode = 3
@@ -11,5 +14,31 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="FinalWinPage" type="Sprite2D" parent="." unique_id=1647853350]
-position = Vector2(965, 542)
+position = Vector2(962, 537)
 texture = ExtResource("1_le47n")
+
+[node name="to_main" type="Button" parent="FinalWinPage" unique_id=479998193]
+offset_left = -849.0
+offset_top = 334.0
+offset_right = -413.0
+offset_bottom = 488.0
+theme_override_colors/font_color = Color(0.8745098, 0.1764706, 0.2509804, 1)
+theme_override_font_sizes/font_size = 80
+text = "Go Back "
+script = ExtResource("2_faxov")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1834779393]
+layout_mode = 0
+offset_left = 738.0
+offset_top = 16.0
+offset_right = 1397.0
+offset_bottom = 211.0
+theme_override_colors/default_color = Color(0.95019346, 0.82251936, 0.68909085, 1)
+theme_override_colors/font_outline_color = Color(0.06766269, 0.027058477, 0.0026906098, 1)
+theme_override_colors/font_shadow_color = Color(0.73350203, 0.43456256, 0.6759515, 0)
+theme_override_constants/outline_size = 22
+theme_override_font_sizes/normal_font_size = 145
+theme_override_styles/normal = SubResource("StyleBoxEmpty_hl81x")
+text = "VICTORY"
+
+[connection signal="pressed" from="FinalWinPage/to_main" to="FinalWinPage/to_main" method="_on_pressed"]

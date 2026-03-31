@@ -3,6 +3,7 @@ extends Node
 var current_night: int = 1
 var is_game_over: bool = false
 
+
 func next_night():
 	current_night += 1
 	if current_night > 3:
@@ -24,7 +25,14 @@ var mistakes: int = 0
 var max_mistakes: int = 3
 #var is_game_over: bool = false
 
-
+func _process(_delta):
+	if Input.is_action_just_pressed("ui_accept"): # ลองกด Spacebar ตอนรันเกม
+		print("--- Manual Test: Calling Jump ---")
+		if Jumpscare:
+			Jumpscare.trigger_jumpscare()
+		else:
+			print("--- Jump is NULL! ---")
+			
 func record_success():
 	if is_game_over: return
 	
@@ -35,16 +43,19 @@ func record_success():
 		finish_game("win")
 
 func record_fail():
-	if is_game_over: return
-	
-	mistakes += 1
-	Jump.test_jump()
-	await Jump.trigger_jumpscare() 
-	
-	# 2. หลังจาก Jumpscare เล่นจบแล้ว ค่อยเช็คว่าแพ้หรือยัง
+	if is_game_over:
+		return
+		 
+	mistakes += 1 
+	var scaring = get_tree().root.get_node_or_null("Jumpscare")
+	if scaring:
+		print("เจอโหนด Jump แล้ว! กำลังสั่งรัน...")
+		scaring.trigger_jumpscare()
+	else:
+		print("หาโหนดชื่อ Jump ใน Root ไม่เจอเลย (เช็คตัวพิมพ์ใหญ่-เล็กด้วย)")
 	if mistakes >= max_mistakes:
 		finish_game("lose")
-
+		
 func finish_game(status):
 	if is_game_over: return # ถ้าจบไปแล้ว ไม่ต้องทำข้างล่างซ้ำ
 	is_game_over = true
