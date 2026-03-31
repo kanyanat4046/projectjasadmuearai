@@ -2,7 +2,7 @@ extends Button
 
 	
 func _on_button_pressed():
-	if SaveManager.save_game() and SaveManager.current_night != 1:
+	if SaveManager.current_night != 1:
 
 		get_tree().change_scene_to_file("res://scenes/main+continue.tscn")
 	else:

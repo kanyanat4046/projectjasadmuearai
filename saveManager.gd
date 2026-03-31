@@ -12,7 +12,6 @@ func save_game()-> bool:
 	}
 	file.store_var(data)
 	file.close()
-
 	print("Game Saved at Night: ", current_night)
 	current_night += 1
 	return true
