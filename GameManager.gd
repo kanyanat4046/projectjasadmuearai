@@ -35,16 +35,15 @@ func record_success():
 		finish_game("win")
 
 func record_fail():
+
 	if is_game_over: return
-	
 	mistakes += 1
-	Jump.test_jump()
-	await Jump.trigger_jumpscare() 
-	
-	# 2. หลังจาก Jumpscare เล่นจบแล้ว ค่อยเช็คว่าแพ้หรือยัง
+	print("ทำพลาดครั้งที่: ", mistakes)
+	ScareManager.trigger_jumpscare() 
+
 	if mistakes >= max_mistakes:
 		finish_game("lose")
-
+		
 func finish_game(status):
 	if is_game_over: return # ถ้าจบไปแล้ว ไม่ต้องทำข้างล่างซ้ำ
 	is_game_over = true

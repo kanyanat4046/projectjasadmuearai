@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://bgsbq82728ntb" path="res://scenes/Jumpscare.gd" id="1_ghj5q"]
 [ext_resource type="Texture2D" uid="uid://bdu3yu2cuoa1w" path="res://Asset/ghost1.jpg" id="2_ek3oe"]
+[ext_resource type="AudioStream" uid="uid://dw8pxq021vjom" path="res://Asset/Jump 2.mp3" id="3_mg525"]
+[ext_resource type="AudioStream" uid="uid://cc6iql8xmu52t" path="res://Asset/Jump 1.mp3" id="4_kfwc7"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=841950902]
 script = ExtResource("1_ghj5q")
@@ -17,3 +19,13 @@ offset_right = 275.0
 offset_bottom = 183.0
 mouse_filter = 2
 texture = ExtResource("2_ek3oe")
+
+[node name="Jump2" type="AudioStreamPlayer" parent="." unique_id=1275284704]
+stream = ExtResource("3_mg525")
+volume_db = -24.448
+bus = &"SFX"
+
+[node name="Jump1" type="AudioStreamPlayer" parent="." unique_id=531217633]
+stream = ExtResource("4_kfwc7")
+volume_db = -13.582
+bus = &"SFX"

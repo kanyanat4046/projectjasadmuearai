@@ -1,7 +1,7 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1774945974
+::res://::1774949698
 BGM.tscn::PackedScene::5642450414474890707::1774927105::0::1::::<><><>0<>0<><>::uid://cc20nnpci4dbp::::res://Asset/simplesound-horror-trailer-443327.mp3
-default_bus_layout.tres::AudioBusLayout::769259879210604213::1774945338::0::1::::<><><>0<>0<><>::
+default_bus_layout.tres::AudioBusLayout::769259879210604213::1774949191::0::1::::<><><>0<>0<><>::
 GameManager.gd::GDScript::3522062176363394851::1774945864::0::1::::<>Node<><>0<>0<><>::
 icon.svg::CompressedTexture2D::2314261738393069656::1774927105::1774930260::1::::<><><>0<>0<>6e3e225139f9e373f44a80413714ced5<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 ItemData.gd::GDScript::2233771417939085723::1774927105::0::1::::ItemData<>Resource<><>0<>0<><>::
@@ -22,8 +22,9 @@ slip_4.tscn::PackedScene::8803447479415988229::1774927105::0::1::::<><><>0<>0<><
 to_main.gd::GDScript::5761793858534783851::1774939540::0::1::::<>Button<><>0<>0<><>::
 to_main_lose..gd::GDScript::6403950975428182842::1774940434::0::1::::<>Button<><>0<>0<><>::
 To_nextnight.gd::GDScript::2722000357461442407::1774927105::0::1::::<>Node<><>0<>0<><>::
-::res://Asset/::1774941220
+::res://Asset/::1774949698
 arrow-back.png::CompressedTexture2D::6392865707469583648::1774927105::1774930261::1::::<><><>0<>0<>8c867914cd2315359fba1aa1d031a8e8<>res://.godot/imported/arrow-back.png-32c35e15e9fcfd50f360983d103aaa15.ctex::
+blood.png::CompressedTexture2D::7061060403667546895::1774947968::1774947964::1::::<><><>0<>0<>46cbe58c2c3e56332a9bd51d15f3873c<>res://.godot/imported/blood.png-b8ca013d52791343f645f36570b8d59c.ctex::
 Book3 bright .png::CompressedTexture2D::2867992532799152188::1774927105::1774930262::1::::<><><>0<>0<>d5a67c8b98ed4af46469518d394f53e1<>res://.godot/imported/Book3 bright .png-231513cdd34dc809cbc1ea5be8e53c03.ctex::
 Book3 normal.png::CompressedTexture2D::6868624437144013988::1774927105::1774930262::1::::<><><>0<>0<>e898983c9879d7fdd6060eaa1cbf263a<>res://.godot/imported/Book3 normal.png-b4d1a6dfb8f45a5201698838c016d21d.ctex::
 Boxnor.png::CompressedTexture2D::4891178395801490931::1774927105::1774930261::1::::<><><>0<>0<>e3660342cdafbd52421998db4beab67c<>res://.godot/imported/Boxnor.png-f632e205dbd0c057d14da4f6048900f9.ctex::
@@ -37,6 +38,8 @@ Dark event box2.png::CompressedTexture2D::3904148401437672618::1774927105::17749
 Door.png::CompressedTexture2D::5956417645153212569::1774927105::1774930261::1::::<><><>0<>0<>5f7afb17fcd000258f9285bc84eef4fe<>res://.godot/imported/Door.png-bc90da302bc8c9eed5e17fabcee026ee.ctex::
 Final win page.jpg::CompressedTexture2D::6003300614560192380::1774927105::1774930261::1::::<><><>0<>0<>9b65b9dd8bbafeb951221a7cb8d21782<>res://.godot/imported/Final win page.jpg-6bbbc7fa8af063a9f3d6582cc0c2ccf7.ctex::
 ghost1.jpg::CompressedTexture2D::2640018796834443066::1774941220::1774941220::1::::<><><>0<>0<>38f21aa7e127eb943bff2a9182d9ccb4<>res://.godot/imported/ghost1.jpg-9c0da87a07accdaa780eb87caf6c6b09.ctex::
+Jump 1.mp3::AudioStreamMP3::4977729703479999777::1774949649::1774949672::1::::<><><>0<>0<>cc3977e945093c25ebf09804e4793188<>res://.godot/imported/Jump 1.mp3-e256258c573c8cb3424f2d0710e2d7e9.mp3str::
+Jump 2.mp3::AudioStreamMP3::8772493785407347956::1774949649::1774949698::1::::<><><>0<>0<>ec5f5766a58058a71580acef18ed289a<>res://.godot/imported/Jump 2.mp3-c1922282d90f2528d9b9278401b5d352.mp3str::
 Loose page1.jpg::CompressedTexture2D::5718136225525225814::1774927105::1774930261::1::::<><><>0<>0<>8791d0c696e9d788efc3993040b4cc4b<>res://.godot/imported/Loose page1.jpg-1acb8e39ac9c19da978221ce6dc7b4fb.ctex::
 Main_game1.jpg::CompressedTexture2D::8888215361023842439::1774927105::1774930957::1::::<><><>0<>0<>a89ba9df67f70cdd1a0395838f2751f1<>res://.godot/imported/Main_game1.jpg-72f9ff37c32f4c3377ca53a05ff76e0e.ctex::
 Main_game_2.jpg::CompressedTexture2D::6030507001818500444::1774927105::1774930957::1::::<><><>0<>0<>760e45ddf190bdeadaeaadfd51029553<>res://.godot/imported/Main_game_2.jpg-a575c53ee455647047c1ca43537d446b.ctex::
@@ -52,11 +55,11 @@ setting_page.tscn::PackedScene::6334449524340452323::1774927105::0::1::::<><><>0
 simplesound-horror-trailer-443327.mp3::AudioStreamMP3::4970499100240129061::1774927105::1774930260::1::::<><><>0<>0<>216d6f28e9ebe13bd3ed6e734dc06012<>res://.godot/imported/simplesound-horror-trailer-443327.mp3-068019c5414c9b41c4ada48fa163a260.mp3str::
 ::res://Asset/Fonts/::1774941092
 Caveat-VariableFont_wght.ttf::FontFile::4649733231335341410::1774927105::1774930260::1::::<><><>0<>0<>f17d91d8fec7d839645ee98fa42330e8<>res://.godot/imported/Caveat-VariableFont_wght.ttf-547c7daa1d42cd5a1622e4606ad46a39.fontdata::
-::res://scenes/::1774945864
+::res://scenes/::1774946408
 book.gd::GDScript::2693402326066104816::1774927105::0::1::::<>BaseButton<><>0<>0<><>::
 button.gd::GDScript::1446198681437669214::1774927105::0::1::::<>Button<><>0<>0<><>::
 camera_2d.gd::GDScript::580051218204960763::1774942001::0::1::::<>Camera2D<><>0<>0<><>::
-canvas_layer.tscn::PackedScene::3289379781719351337::1774945339::0::1::::<><><>0<>0<><>::uid://bgsbq82728ntb::::res://scenes/Jumpscare.gd<>uid://bdu3yu2cuoa1w::::res://Asset/ghost1.jpg
+canvas_layer.tscn::PackedScene::3289379781719351337::1774946408::0::1::::<><><>0<>0<><>::uid://bgsbq82728ntb::::res://scenes/Jumpscare.gd<>uid://bdu3yu2cuoa1w::::res://Asset/ghost1.jpg
 continue.gd::GDScript::5042004815188134496::1774927105::0::1::::<>Button<><>0<>0<><>::
 control.gd::GDScript::5215023708962587122::1774927105::0::1::::<>Control<><>0<>0<><>::
 control.tscn::PackedScene::3567706063778752234::1774927105::0::1::::<><><>0<>0<><>::uid://bsjb6y05east::::res://Asset/Main_game_2.jpg
