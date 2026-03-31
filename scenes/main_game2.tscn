@@ -216,9 +216,9 @@ offset_top = 844.0
 offset_right = 357.0
 offset_bottom = 910.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.7529412)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9882353)
 theme_override_fonts/font = ExtResource("6_n7ofh")
-theme_override_font_sizes/font_size = 23
+theme_override_font_sizes/font_size = 25
 
 [node name="TaskLabel" type="Label" parent="." unique_id=729677077]
 layout_mode = 0

@@ -46,10 +46,10 @@ script = ExtResource("2_faxov")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1834779393]
 layout_mode = 0
-offset_left = 94.0
-offset_top = -80.0
-offset_right = 1109.0
-offset_bottom = 435.0
+offset_left = 943.0
+offset_top = 373.0
+offset_right = 1958.0
+offset_bottom = 888.0
 theme_override_colors/default_color = Color(0.95019346, 0.82251936, 0.68909085, 1)
 theme_override_colors/font_outline_color = Color(0.06766269, 0.027058477, 0.0026906098, 1)
 theme_override_colors/font_shadow_color = Color(0.73350203, 0.43456256, 0.6759515, 0)

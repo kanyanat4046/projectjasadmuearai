@@ -55,7 +55,9 @@ var parcel_correct_list = [{"address": "341A Malaron Senfilent Street"}]
 var parcel_fake_list = [{"address":"340A Malaron Senfilent Street"}, 
 						{"address":"341A Malaron Senfilant Street"}, 
 						{"address":"666A Malaron Hellfilent Street"}, 
-						{"address":"013A 131313 131313131 131313"}
+						{"address":"013A 131313 131313131"},
+						{"address":"ARE YOU HAPPY? :) "},
+						{"address":"Hello :) "},
 						]
 var current_task_type: String = "receipt" # "receipt" หรือ "parcel"
 var tasks_done: int = 0
@@ -296,29 +298,7 @@ func slide_receipt():
 		var lbl_target = item[1]
 		# ประกาศ tween_in ไว้ในฟังก์ชันเดียวกัน เย้! ตรงนี้จะไม่เออเร่อแล้ว
 		tween_in.tween_property(lbl_node, "position:x", lbl_target, 0.6).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
-	#old code
-	#var tween = create_tween()
-	# เลือกตัวที่จะเลื่อนออก (ตัวที่กำลังโชว์อยู่)
-	#var current_node = receipt_sprite if current_task_type == "receipt" else parcel_control
 	
-	# 1. เลื่อนออกทางซ้าย
-	#tween.tween_property(current_node, "position:x", -700, 0.3).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
-	
-	# 2. เมื่อเลื่อนออกเสร็จ
-	#tween.tween_callback(func():
-		# สุ่ม Task ใหม่ก่อน
-		#generate_new_task()
-		
-		# รีเซ็ตตำแหน่ง Node ทั้งสองอย่างให้ไปรอทางขวา (ข้างนอกจอ)
-		#receipt_sprite.position.x = 800
-		#parcel_control.position.x = 800
-		
-		# เลือก Node ตัวใหม่ที่จะเลื่อนเข้า
-		#var next_node = receipt_sprite if current_task_type == "receipt" else parcel_control
-		
-		# 3. เลื่อนกลับเข้ามาที่ตำแหน่งเดิม (x = 80)
-		#var tween_in = create_tween()
-		#tween_in.tween_property(next_node, "position:x", 80, 0.5).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
 func _ready() -> void:
 	# จดตำแหน่งที่วางไว้ใน Editor เก็บใส่ตัวแปรไว้
 	pos_receipt_default = receipt_sprite.position.x
@@ -335,11 +315,12 @@ func _ready() -> void:
 
 # เอาข้อมูลโชว์บนหนังสือ
 func add_record_to_book():
-	# สร้างแถวข้อมูล
+	# 1.สร้างแถวข้อมูล
 	var new_row = record_row_scene.instantiate()
 	record_list.add_child(new_row)
-	# เอาข้อมูลมา
-	new_row.set_data("Day 1", "Ingredients", actual_total, "VAT 7%", final_correct_total)
+	
+	# 2.เอาข้อมูลมา
+	new_row.set_data("Date XX", "Ingredients", actual_total, "VAT 7%", final_correct_total)
 
 func _on_approve_pressed() -> void:
 	if current_task_type == "receipt":
