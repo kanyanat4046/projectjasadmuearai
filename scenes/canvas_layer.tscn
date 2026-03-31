@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bm4nusye5p6n2"]
+
+[ext_resource type="Script" uid="uid://bgsbq82728ntb" path="res://scenes/Jumpscare.gd" id="1_ghj5q"]
+[ext_resource type="Texture2D" uid="uid://bdu3yu2cuoa1w" path="res://Asset/ghost1.jpg" id="2_ek3oe"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=841950902]
+script = ExtResource("1_ghj5q")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1022762055]
+offset_right = 275.0
+offset_bottom = 183.0
+mouse_filter = 2
+color = Color(0.99986964, 0.9812556, 0.97945446, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1269111481]
+offset_right = 275.0
+offset_bottom = 183.0
+mouse_filter = 2
+texture = ExtResource("2_ek3oe")

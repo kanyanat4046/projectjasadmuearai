@@ -61,6 +61,10 @@ grow_vertical = 2
 texture = ExtResource("1_xva0j")
 stretch_mode = 6
 
+[node name="MainGame1" type="Sprite2D" parent="." unique_id=154888023]
+position = Vector2(961, 538)
+texture = ExtResource("1_xva0j")
+
 [node name="book" type="TextureButton" parent="." unique_id=1396651624]
 layout_mode = 0
 offset_left = 701.0

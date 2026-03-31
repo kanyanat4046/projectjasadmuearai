@@ -1,4 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
+<<<<<<< HEAD
 ::res://::1774934052
 BGM.tscn::PackedScene::5642450414474890707::1771869783::0::1::::<><><>0<>0<><>::uid://cc20nnpci4dbp::::res://Asset/simplesound-horror-trailer-443327.mp3
 default_bus_layout.tres::AudioBusLayout::769259879210604213::1771869783::0::1::::<><><>0<>0<><>::
@@ -81,3 +82,93 @@ to_main.gd::GDScript::3775423154391678806::1774933877::0::1::::<>Button<><>0<>0<
 to_main_menu.gd::GDScript::348672064118984229::1774933877::0::1::::<>Button<><>0<>0<><>::
 you_lose.tscn::PackedScene::5945637941249316966::1774916619::0::1::::<><><>0<>0<><>::uid://cxieewke8mk2m::::res://to_main_lose..gd<>uid://cnp54rv5t420a::::res://Asset/Loose page1.jpg
 you_win.tscn::PackedScene::8267094283304276575::1774933877::0::1::::<><><>0<>0<><>::uid://b4riuvufy54wl::::res://Asset/NextNight.jpg<>uid://codb5x6e2fwwp::::res://to_main.gd<>uid://371praukrhx4::::res://scenes/next_night.gd
+=======
+::res://::1774945974
+BGM.tscn::PackedScene::5642450414474890707::1774927105::0::1::::<><><>0<>0<><>::uid://cc20nnpci4dbp::::res://Asset/simplesound-horror-trailer-443327.mp3
+default_bus_layout.tres::AudioBusLayout::769259879210604213::1774945338::0::1::::<><><>0<>0<><>::
+GameManager.gd::GDScript::3522062176363394851::1774945864::0::1::::<>Node<><>0<>0<><>::
+icon.svg::CompressedTexture2D::2314261738393069656::1774927105::1774930260::1::::<><><>0<>0<>6e3e225139f9e373f44a80413714ced5<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+ItemData.gd::GDScript::2233771417939085723::1774927105::0::1::::ItemData<>Resource<><>0<>0<><>::
+Jumpsacre.gd::GDScript::6047535241582880855::1774940543::0::1::::<>Control<><>0<>0<><>::
+NextNight_fixed.png::::-1::1774930157::1774930157::0::::<><><>0<>0<>372d3e938857067e4440734d10905f1d<>::
+record_row.gd::GDScript::7095228097659390033::1774927105::0::1::::<>HBoxContainer<><>0<>0<><>::
+saveManager.gd::GDScript::7751689132127497124::1774927105::0::1::::<>Node<><>0<>0<><>::
+sfx.gd::GDScript::4415882688144315278::1774927105::0::1::::<>Node<><>0<>0<><>::
+SFX.tscn::PackedScene::3297438684928202924::1774927105::0::1::::<><><>0<>0<><>::uid://b36c7b1c5s2he::::res://sfx.gd<>uid://blvaxbbbq167t::::res://Asset/mouse-click.mp3
+Slip1.png::CompressedTexture2D::2499749463347966358::1774927105::1774930260::1::::<><><>0<>0<>c8b1109411be4ca95908f3e24d9a9e36<>res://.godot/imported/Slip1.png-ac36007eaf4fde0ac8a56609d2ef472d.ctex::
+Slip2.png::CompressedTexture2D::5542331306093069862::1774927105::1774930260::1::::<><><>0<>0<>200ba56a5440f45b327504e27942ae5e<>res://.godot/imported/Slip2.png-4863e7fdc5181966473a65aa1b869083.ctex::
+Slip3.png::CompressedTexture2D::3478786049428760390::1774927105::1774930260::1::::<><><>0<>0<>696b1a3b668896a1deb838f7c478e443<>res://.godot/imported/Slip3.png-46ef8cec30a6cebc7cf32c9645ddeacd.ctex::
+Slip4.png::CompressedTexture2D::2846896633402058962::1774927105::1774930260::1::::<><><>0<>0<>93c7b3364d62d177fb21cfe468f9bbba<>res://.godot/imported/Slip4.png-d043ab6958cfef6961dfff3b2cc9ab51.ctex::
+slip_1.tscn::PackedScene::5069955867122201219::1774927105::0::1::::<><><>0<>0<><>::
+slip_2.tscn::PackedScene::8655745298109270247::1774927105::0::1::::<><><>0<>0<><>::uid://ck70nfhn1xm67::::res://Slip2.png
+slip_3.tscn::PackedScene::3691876361065396209::1774927105::0::1::::<><><>0<>0<><>::uid://bptfdli5kt14m::::res://Slip3.png
+slip_4.tscn::PackedScene::8803447479415988229::1774927105::0::1::::<><><>0<>0<><>::uid://bgtb8bgmsn3vq::::res://Slip4.png
+to_main.gd::GDScript::5761793858534783851::1774939540::0::1::::<>Button<><>0<>0<><>::
+to_main_lose..gd::GDScript::6403950975428182842::1774940434::0::1::::<>Button<><>0<>0<><>::
+To_nextnight.gd::GDScript::2722000357461442407::1774927105::0::1::::<>Node<><>0<>0<><>::
+::res://Asset/::1774941220
+arrow-back.png::CompressedTexture2D::6392865707469583648::1774927105::1774930261::1::::<><><>0<>0<>8c867914cd2315359fba1aa1d031a8e8<>res://.godot/imported/arrow-back.png-32c35e15e9fcfd50f360983d103aaa15.ctex::
+Book3 bright .png::CompressedTexture2D::2867992532799152188::1774927105::1774930262::1::::<><><>0<>0<>d5a67c8b98ed4af46469518d394f53e1<>res://.godot/imported/Book3 bright .png-231513cdd34dc809cbc1ea5be8e53c03.ctex::
+Book3 normal.png::CompressedTexture2D::6868624437144013988::1774927105::1774930262::1::::<><><>0<>0<>e898983c9879d7fdd6060eaa1cbf263a<>res://.godot/imported/Book3 normal.png-b4d1a6dfb8f45a5201698838c016d21d.ctex::
+Boxnor.png::CompressedTexture2D::4891178395801490931::1774927105::1774930261::1::::<><><>0<>0<>e3660342cdafbd52421998db4beab67c<>res://.godot/imported/Boxnor.png-f632e205dbd0c057d14da4f6048900f9.ctex::
+Button_and_book1.png::CompressedTexture2D::684111399758798318::1774927105::1774930262::1::::<><><>0<>0<>0fe7ffb3f59de5fed3c79433f89c1d23<>res://.godot/imported/Button_and_book1.png-584cdda556027c8ddc3279e72da2b598.ctex::
+Button_and_book2.png::CompressedTexture2D::7412558329027992143::1774927105::1774930262::1::::<><><>0<>0<>8f4d3277c245563d2b946ba4c3169118<>res://.godot/imported/Button_and_book2.png-1e9ba815148287789968a8dbe432d047.ctex::
+Button_and_book.png::CompressedTexture2D::8604809171030346932::1774927105::1774930261::1::::<><><>0<>0<>ce4de42b82fafdae4e963735202c5953<>res://.godot/imported/Button_and_book.png-cfa15de0243e209bcad91e629ccd0c45.ctex::
+Car&door bright.png::CompressedTexture2D::8109436798423392666::1774927105::1774930261::1::::<><><>0<>0<>1c9c78e2c7bde8653f1e16f076bbe7f0<>res://.godot/imported/Car&door bright.png-65d25dda1bd37efd763e46a00b38f2cd.ctex::
+Car.png::CompressedTexture2D::5336856687253886636::1774927105::1774930261::1::::<><><>0<>0<>448211de0900581a60f735b96979cb65<>res://.godot/imported/Car.png-ca9681c504abeff2760972f1a4010547.ctex::
+Dark event box1.png::CompressedTexture2D::6276032436252371524::1774927105::1774930261::1::::<><><>0<>0<>70cff4e651cd202122afd25236aeac40<>res://.godot/imported/Dark event box1.png-17cdb1d3d863fa9c3db319e8f08522ed.ctex::
+Dark event box2.png::CompressedTexture2D::3904148401437672618::1774927105::1774930261::1::::<><><>0<>0<>140d5511106042de165e9589a44ccb92<>res://.godot/imported/Dark event box2.png-efabebb9ce78517a588e20076634aa67.ctex::
+Door.png::CompressedTexture2D::5956417645153212569::1774927105::1774930261::1::::<><><>0<>0<>5f7afb17fcd000258f9285bc84eef4fe<>res://.godot/imported/Door.png-bc90da302bc8c9eed5e17fabcee026ee.ctex::
+Final win page.jpg::CompressedTexture2D::6003300614560192380::1774927105::1774930261::1::::<><><>0<>0<>9b65b9dd8bbafeb951221a7cb8d21782<>res://.godot/imported/Final win page.jpg-6bbbc7fa8af063a9f3d6582cc0c2ccf7.ctex::
+ghost1.jpg::CompressedTexture2D::2640018796834443066::1774941220::1774941220::1::::<><><>0<>0<>38f21aa7e127eb943bff2a9182d9ccb4<>res://.godot/imported/ghost1.jpg-9c0da87a07accdaa780eb87caf6c6b09.ctex::
+Loose page1.jpg::CompressedTexture2D::5718136225525225814::1774927105::1774930261::1::::<><><>0<>0<>8791d0c696e9d788efc3993040b4cc4b<>res://.godot/imported/Loose page1.jpg-1acb8e39ac9c19da978221ce6dc7b4fb.ctex::
+Main_game1.jpg::CompressedTexture2D::8888215361023842439::1774927105::1774930957::1::::<><><>0<>0<>a89ba9df67f70cdd1a0395838f2751f1<>res://.godot/imported/Main_game1.jpg-72f9ff37c32f4c3377ca53a05ff76e0e.ctex::
+Main_game_2.jpg::CompressedTexture2D::6030507001818500444::1774927105::1774930957::1::::<><><>0<>0<>760e45ddf190bdeadaeaadfd51029553<>res://.godot/imported/Main_game_2.jpg-a575c53ee455647047c1ca43537d446b.ctex::
+Menu_page.jpg::CompressedTexture2D::4455508793224982121::1774927105::1774930261::1::::<><><>0<>0<>99bd9b1e4ef6ae6410000dab2f1db8a5<>res://.godot/imported/Menu_page.jpg-10bc1523346c654309f0dc46a28eb6ca.ctex::
+mouse-click.mp3::AudioStreamMP3::3201891023942555391::1774927105::1774930260::1::::<><><>0<>0<>a7db0a5480a129ed8fd0bd9df4521207<>res://.godot/imported/mouse-click.mp3-39f28e7f96f4f345cfd0735a67460cad.mp3str::
+NextNight1.PNG::CompressedTexture2D::293268668690711184::1774927105::1774930261::1::::<><><>0<>0<>1f23a70b56db6019089ea2d18ab5296d<>res://.godot/imported/NextNight1.PNG-7c2e209cd4b7953bc62e1958c009694f.ctex::
+NextNight2.PNG::CompressedTexture2D::6270074245713988498::1774927105::1774930261::1::::<><><>0<>0<>b453c67b5343d756b0396504d01941e7<>res://.godot/imported/NextNight2.PNG-ba18a1fa802948b95a2022bb73769688.ctex::
+NextNight.jpg::CompressedTexture2D::4457514156982189947::1774930388::1774930562::1::::<><><>0<>0<>5f6a1905d120a61c0842a709f75b5047<>res://.godot/imported/NextNight.jpg-8e59a814fce964211c44d33845f5f00c.ctex::
+NextNight_fixed.png::CompressedTexture2D::773163594470177829::1774930169::1774930260::0::::<><><>0<>0<>130438e40de17fa73d2a67c4941eb511<>::
+setting-icon-2.png::CompressedTexture2D::7730120705707780335::1774927105::1774930260::1::::<><><>0<>0<>88fc542f81e659205522e337550b7cf7<>res://.godot/imported/setting-icon-2.png-cb26371e3be069464ceb25a2dac55319.ctex::
+Setting_page.jpg::CompressedTexture2D::6905277654045569119::1774927105::1774930261::1::::<><><>0<>0<>8fe8cd2085ac8a9460fcaf6fea90eb0a<>res://.godot/imported/Setting_page.jpg-121f8f8bfc26bd014488459ab7c0b93a.ctex::
+setting_page.tscn::PackedScene::6334449524340452323::1774927105::0::1::::<><><>0<>0<><>::uid://4ikdax4d8x6c::::res://setting_page.gd<>uid://c5m76cxlj2rel::::res://Setting_page.jpg<>uid://cc20nnpci4dbp::::res://simplesound-horror-trailer-443327.mp3
+simplesound-horror-trailer-443327.mp3::AudioStreamMP3::4970499100240129061::1774927105::1774930260::1::::<><><>0<>0<>216d6f28e9ebe13bd3ed6e734dc06012<>res://.godot/imported/simplesound-horror-trailer-443327.mp3-068019c5414c9b41c4ada48fa163a260.mp3str::
+::res://Asset/Fonts/::1774941092
+Caveat-VariableFont_wght.ttf::FontFile::4649733231335341410::1774927105::1774930260::1::::<><><>0<>0<>f17d91d8fec7d839645ee98fa42330e8<>res://.godot/imported/Caveat-VariableFont_wght.ttf-547c7daa1d42cd5a1622e4606ad46a39.fontdata::
+::res://scenes/::1774945864
+book.gd::GDScript::2693402326066104816::1774927105::0::1::::<>BaseButton<><>0<>0<><>::
+button.gd::GDScript::1446198681437669214::1774927105::0::1::::<>Button<><>0<>0<><>::
+camera_2d.gd::GDScript::580051218204960763::1774942001::0::1::::<>Camera2D<><>0<>0<><>::
+canvas_layer.tscn::PackedScene::3289379781719351337::1774945339::0::1::::<><><>0<>0<><>::uid://bgsbq82728ntb::::res://scenes/Jumpscare.gd<>uid://bdu3yu2cuoa1w::::res://Asset/ghost1.jpg
+continue.gd::GDScript::5042004815188134496::1774927105::0::1::::<>Button<><>0<>0<><>::
+control.gd::GDScript::5215023708962587122::1774927105::0::1::::<>Control<><>0<>0<><>::
+control.tscn::PackedScene::3567706063778752234::1774927105::0::1::::<><><>0<>0<><>::uid://bsjb6y05east::::res://Asset/Main_game_2.jpg
+exit.gd::GDScript::6919997595606527248::1774927105::0::1::::<>Button<><>0<>0<><>::
+game_menu.gd::GDScript::6515221489854908916::1774927105::0::1::::<>Control<><>0<>0<><>::
+game_menu.tscn::PackedScene::6382904080197025442::1774939775::0::1::::<><><>0<>0<><>::uid://b4qjtxf1b4s2t::::res://Asset/Menu_page.jpg<>uid://duuh7kbvq1wfc::::res://Asset/Button_and_book.png<>uid://ddux0ud01cro6::::res://Asset/Button_and_book2.png<>uid://uusxfhw2epny::::res://scenes/button.gd<>uid://dier7ugk12cqp::::res://Asset/setting-icon-2.png<>uid://b4l8obq6qyarn::::res://scenes/setting.gd<>uid://cq4llfulsrt3n::::res://Asset/Door.png<>uid://dnsjieueonejq::::res://Asset/Car&door bright.png<>uid://c5udl4433uxto::::res://scenes/exit.gd
+goBack.gd::GDScript::7840160405935278948::1774927105::0::1::::<>Button<><>0<>0<><>::
+Jumpscare.gd::GDScript::2844803611261217459::1774945864::0::1::::<>CanvasLayer<><>0<>0<><>::
+maim.tscn::PackedScene::6890248683976166862::1774927105::0::1::::<><><>0<>0<><>::uid://cy3a0mo3lhc1q::::res://scenes/game_menu.gd<>uid://b4qjtxf1b4s2t::::res://Asset/Menu_page.jpg<>uid://duuh7kbvq1wfc::::res://Asset/Button_and_book.png<>uid://ddux0ud01cro6::::res://Asset/Button_and_book2.png<>uid://uusxfhw2epny::::res://scenes/button.gd<>uid://dier7ugk12cqp::::res://Asset/setting-icon-2.png<>uid://b4l8obq6qyarn::::res://scenes/setting.gd<>uid://cq4llfulsrt3n::::res://Asset/Door.png<>uid://c5udl4433uxto::::res://scenes/exit.gd
+main2.gd::GDScript::1651437991294117002::1774928683::0::1::::<>Control<><>0<>0<><>::
+main+continue.tscn::PackedScene::3364474987289192821::1774927105::0::1::::<><><>0<>0<><>::uid://b4qjtxf1b4s2t::::res://Asset/Menu_page.jpg<>uid://duuh7kbvq1wfc::::res://Asset/Button_and_book.png<>uid://ddux0ud01cro6::::res://Asset/Button_and_book2.png<>uid://uusxfhw2epny::::res://scenes/button.gd<>uid://dier7ugk12cqp::::res://Asset/setting-icon-2.png<>uid://b4l8obq6qyarn::::res://scenes/setting.gd<>uid://cq4llfulsrt3n::::res://Asset/Door.png<>uid://c5udl4433uxto::::res://scenes/exit.gd<>uid://egcdeq6vdvwi::::res://Asset/NextNight1.PNG<>uid://cvljhbanvdvm5::::res://Asset/NextNight2.PNG<>uid://cd3nc2s4tldx5::::res://scenes/continue.gd
+main_1.tscn::PackedScene::4489564230416886649::1774927105::0::1::::<><><>0<>0<><>::uid://n1aofed78lo6::::res://Asset/Main_game1.jpg<>uid://duuh7kbvq1wfc::::res://Asset/Button_and_book.png<>uid://ddux0ud01cro6::::res://Asset/Button_and_book2.png<>uid://bemx7b41wenuu::::res://scenes/book.gd
+main_game1.tscn::PackedScene::3947238903691112205::1774938981::0::1::::<><><>0<>0<><>::uid://c44higs0dbr1u::::res://Asset/Book3 normal.png<>uid://dyvruxlaiuaix::::res://Asset/Main_game1.jpg<>uid://bg4johg6o2js3::::res://Asset/Book3 bright .png<>uid://bemx7b41wenuu::::res://scenes/book.gd<>uid://dier7ugk12cqp::::res://Asset/setting-icon-2.png<>uid://cibhiq5v2unls::::res://Asset/Car.png<>uid://b4l8obq6qyarn::::res://scenes/setting.gd<>uid://dnsjieueonejq::::res://Asset/Car&door bright.png<>uid://e75twd6j3ldd::::res://scenes/to_main_menu.gd
+main_game2.tscn::PackedScene::5910746281289706124::1774939016::0::1::::<><><>0<>0<><>::uid://j0nhkkwpn30u::::res://Asset/Button_and_book1.png<>uid://xr77bpura035::::res://scenes/main2.gd<>uid://ddux0ud01cro6::::res://Asset/Button_and_book2.png<>uid://cr6htmb40hq41::::res://Asset/Main_game_2.jpg<>uid://cibhiq5v2unls::::res://Asset/Car.png<>uid://dnsjieueonejq::::res://Asset/Car&door bright.png<>uid://341wgq1w3x15::::res://scenes/pause.gd<>uid://bs3gj0m48ovg8::::res://scenes/record_row.tscn<>uid://bqfrpsv0b70eq::::res://scenes/receipt.gd<>uid://b7imoruigicyk::::res://Asset/Fonts/Caveat-VariableFont_wght.ttf<>uid://bvvg0vmd6rhbu::::res://Asset/Dark event box2.png<>uid://cvoflp5wo5ms7::::res://Asset/Dark event box1.png
+master.gd::GDScript::2578816598308130033::1774927105::0::1::::<>HSlider<><>0<>0<><>::
+music.gd::GDScript::3472950170104022217::1774927105::0::1::::<>HSlider<><>0<>0<><>::
+next_night.gd::GDScript::2032954032535022447::1774942470::0::1::::<>Button<><>0<>0<><>::
+pause.gd::GDScript::2026772847079295982::1774928942::0::1::::<>Button<><>0<>0<><>::
+receipt.gd::GDScript::3520824025457225452::1774927105::0::1::::<>Control<><>0<>0<><>::
+record_row.tscn::PackedScene::3708004153376808289::1774927105::0::1::::<><><>0<>0<><>::uid://c8c8mt5c7k57j::::res://record_row.gd<>uid://b7imoruigicyk::::res://Asset/Fonts/Caveat-VariableFont_wght.ttf
+setting.gd::GDScript::4446634045037703791::1774928057::0::1::::<>Control<><>0<>0<><>::
+setting.tscn::PackedScene::4104045084721852033::1774927105::0::1::::<><><>0<>0<><>::uid://b4l8obq6qyarn::::res://scenes/setting.gd<>uid://n1aofed78lo6::::res://Asset/Main_game1.jpg<>uid://cibhiq5v2unls::::res://Asset/Car.png<>uid://djx3kcwwbmm1q::::res://scenes/goBack.gd<>uid://bc0gy55jrwnob::::res://scenes/master.gd<>uid://bpqk8ncqvtnmv::::res://scenes/music.gd<>uid://tacd2q7s6ltn::::res://scenes/sound_effect.gd
+setting_page.gd::GDScript::2052604051698259220::1774927105::0::1::::<>Control<><>0<>0<><>::
+Sliplong.gd::GDScript::1946355969069300637::1774927105::0::1::::<>Control<><>0<>0<><>::
+sound_effect.gd::GDScript::1333716264816406871::1774927105::0::1::::<>HSlider<><>0<>0<><>::
+to_main.gd::GDScript::3775423154391678806::1774927314::0::1::::<>Button<><>0<>0<><>::
+to_main_menu.gd::GDScript::348672064118984229::1774929020::0::1::::<>Button<><>0<>0<><>::
+victory.tscn::PackedScene::940382460039091701::1774944713::0::1::::<><><>0<>0<><>::uid://crsbqpsi4d26k::::res://Asset/Final win page.jpg
+you_lose.tscn::PackedScene::5945637941249316966::1774941271::0::1::::<><><>0<>0<><>::uid://cxieewke8mk2m::::res://to_main_lose..gd<>uid://cnp54rv5t420a::::res://Asset/Loose page1.jpg
+you_win.tscn::PackedScene::8267094283304276575::1774930562::0::1::::<><><>0<>0<><>::uid://b4riuvufy54wl::::res://Asset/NextNight.jpg<>uid://codb5x6e2fwwp::::res://to_main.gd<>uid://371praukrhx4::::res://scenes/next_night.gd
+>>>>>>> 18beb62faf279da2e88ebc9e3666064592b7b851

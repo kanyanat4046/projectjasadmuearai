@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://nnr7x0wcmrbp"]
+
+[ext_resource type="Texture2D" uid="uid://crsbqpsi4d26k" path="res://Asset/Final win page.jpg" id="1_le47n"]
+
+[node name="Control" type="Control" unique_id=1710110215]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FinalWinPage" type="Sprite2D" parent="." unique_id=1647853350]
+position = Vector2(965, 542)
+texture = ExtResource("1_le47n")
