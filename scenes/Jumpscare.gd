@@ -58,16 +58,28 @@ func apply_shake():
 	await tween.finished
 
 func apply_horror_flash():
-	jump_image.show()
-	var tween = create_tween().set_loops(4)
-	tween.tween_property(flash_layer, "modulate:a", 0.7, 0.1)
-	tween.tween_property(flash_layer, "modulate:a", 0.0, 0.1)
-	
-	await get_tree().create_timer(1.5).timeout
 	jump_image.hide()
+	flash_layer.modulate.a = 0.0
+	
+	var tween = create_tween().set_loops(10)
+
+	tween.tween_callback(jump_image.show)
+	tween.tween_property(flash_layer, "modulate:a", 0.8, 0.05)
+
+	tween.tween_interval(0.05) 
+
+	tween.tween_callback(jump_image.hide)
+	tween.tween_property(flash_layer, "modulate:a", 0.0, 0.05)
+
+	tween.tween_interval(0.05)
+	await tween.finished
+	jump_image.show()
+	await get_tree().create_timer(0.8).timeout
+	jump_image.hide()
+	flash_layer.modulate.a = 0.0
 
 func apply_death():
 	jump_image.show()
 	print("YOU DIE!")
-	# รอสัก 1-2 วินาทีให้ผู้เล่นเห็นภาพความตายก่อนจะเปลี่ยนหน้า Lose
-	await get_tree().create_timer(2.0).timeout
+	await get_tree().create_timer(1.0).timeout
+	jump_image.hide()

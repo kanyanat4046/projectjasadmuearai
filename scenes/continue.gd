@@ -7,7 +7,7 @@ func _ready():
 func _on_pressed():
 	SaveManager.load_game() # ดึงค่าคืนล่าสุดมาจากไฟล์
 	
-	var night_path = "res://scenes/night_" + str(SaveManager.current_night) + ".tscn"
+	var night_path = "res://scenes/main_game1.tscn"
 	
 	# ตรวจสอบว่ามีไฟล์ Scene อยู่จริงไหมก่อนเปลี่ยนฉาก
 	if ResourceLoader.exists(night_path):

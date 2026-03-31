@@ -186,19 +186,31 @@ func generate_new_receipt():
 		label_total.text = "Total: " + str(final_correct_total + randi_range(10, 100))
 	else:
 		label_total.text = "Total: " + str(final_correct_total)
-
+@onready var jump_1 = $Jump1 
+@onready var jump_2 = $Jump2
 func check_answer(is_correct: bool):
 	if is_correct:
 		tasks_done += 1
 		update_task_ui()
 		if tasks_done >= max_tasks:
+			# ใช้ call_deferred เพื่อความปลอดภัยในการเปลี่ยนฉาก
 			get_tree().change_scene_to_file("res://scenes/you_win.tscn")
 	else:
 		mistakes += 1
 		print("ทำพลาดครั้งที่: ", mistakes)
-		if mistakes >= 3:
+		if mistakes == 1:
+			Jumpscare.jump_1.play()
+			await Jumpscare.apply_shake()
+			
+		elif mistakes == 2:
+			Jumpscare.jump_2.play()
+			await Jumpscare.apply_horror_flash()
+			
+		elif mistakes >= 3:
+			Jumpscare.jump_2.play()
+			await Jumpscare.apply_death()
+			# เปลี่ยนไปหน้า Lose ทันทีหลังจากทำ Death Animation เสร็จ
 			get_tree().change_scene_to_file("res://scenes/you_lose.tscn")
-			# ใส่โค้ดเปลี่ยนไปหน้า Game Over ที่นี่
 	
 	# เล่น Animation เปลี่ยนใบเสร็จ
 	slide_receipt()
@@ -285,29 +297,7 @@ func slide_receipt():
 		var lbl_target = item[1]
 		# ประกาศ tween_in ไว้ในฟังก์ชันเดียวกัน เย้! ตรงนี้จะไม่เออเร่อแล้ว
 		tween_in.tween_property(lbl_node, "position:x", lbl_target, 0.6).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
-	#old code
-	#var tween = create_tween()
-	# เลือกตัวที่จะเลื่อนออก (ตัวที่กำลังโชว์อยู่)
-	#var current_node = receipt_sprite if current_task_type == "receipt" else parcel_control
 	
-	# 1. เลื่อนออกทางซ้าย
-	#tween.tween_property(current_node, "position:x", -700, 0.3).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
-	
-	# 2. เมื่อเลื่อนออกเสร็จ
-	#tween.tween_callback(func():
-		# สุ่ม Task ใหม่ก่อน
-		#generate_new_task()
-		
-		# รีเซ็ตตำแหน่ง Node ทั้งสองอย่างให้ไปรอทางขวา (ข้างนอกจอ)
-		#receipt_sprite.position.x = 800
-		#parcel_control.position.x = 800
-		
-		# เลือก Node ตัวใหม่ที่จะเลื่อนเข้า
-		#var next_node = receipt_sprite if current_task_type == "receipt" else parcel_control
-		
-		# 3. เลื่อนกลับเข้ามาที่ตำแหน่งเดิม (x = 80)
-		#var tween_in = create_tween()
-		#tween_in.tween_property(next_node, "position:x", 80, 0.5).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
 func _ready() -> void:
 	# จดตำแหน่งที่วางไว้ใน Editor เก็บใส่ตัวแปรไว้
 	pos_receipt_default = receipt_sprite.position.x
@@ -324,11 +314,15 @@ func _ready() -> void:
 
 # เอาข้อมูลโชว์บนหนังสือ
 func add_record_to_book():
-	# สร้างแถวข้อมูล
+	# 1.สร้างแถวข้อมูล
 	var new_row = record_row_scene.instantiate()
 	record_list.add_child(new_row)
-	# เอาข้อมูลมา
-	new_row.set_data("Day 1", "Ingredients", actual_total, "VAT 7%", final_correct_total)
+	
+	# 2. สร้างข้อความ "Day X" โดยดึงตัวเลขมาจาก GameManager
+	# (สมมติว่า GameManager.current_night เก็บค่าเป็น 1, 2, 3)
+	var night_text = "Day " + str(GameManager.current_night)
+	# 3.เอาข้อมูลมา
+	new_row.set_data(night_text, "Ingredients", actual_total, "VAT 7%", final_correct_total)
 
 func _on_approve_pressed() -> void:
 	if current_task_type == "receipt":
