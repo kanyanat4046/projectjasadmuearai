@@ -4,6 +4,9 @@ extends CanvasLayer
 @onready var jump_image = $TextureRect
 @onready var flash_layer = $ColorRect
 
+func test_jump():
+	print("!!! JUMP CALLED SUCCESS !!!")
+
 func _ready():
 	# ซ่อนทุกอย่างตอนเริ่มเกม
 	jump_image.hide()
@@ -15,13 +18,14 @@ func _ready():
 func trigger_jumpscare():
 	# เช็คจำนวนพลาดจาก GameManager
 	var count = GameManager.mistakes
+	print("Jumpscare received mistake count: ", count)
 	
 	if count == 1:
-		apply_shake()
+		await apply_shake()
 	elif count == 2:
-		apply_horror_flash()
+		await apply_horror_flash()
 	elif count >= 3:
-		apply_death()
+		await apply_death()
 
 func apply_shake():
 	jump_image.show()
