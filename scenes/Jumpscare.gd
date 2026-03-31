@@ -10,7 +10,7 @@ func test_jump():
 	print("!!! JUMP CALLED SUCCESS !!!")
 
 func _ready():
-	# ซ่อนทุกอย่างตอนเริ่มเกม
+
 	jump_image.hide()
 	flash_layer.modulate.a = 0
 	# สำคัญ: ทำให้กดทะลุได้ ไม่ขวางเม้าส์
@@ -23,17 +23,17 @@ func trigger_jumpscare():
 	
 	if count == 1:
 		print("Playing Shake (Jump1)")
-		if jump_1: jump_1.play()
+		jump_1.play()
 		await apply_shake()
 		
 	elif count == 2:
 		print("Playing Flash (Jump2)")
-		if jump_2: jump_2.play()
+		jump_2.play()
 		await apply_horror_flash()
 		
 	elif count >= 3:
 		print("Playing Death Event")
-		if jump_2: jump_2.play()
+		jump_2.play()
 		await apply_death() # ใส่ await ตรงนี้ด้วย
 	
 	print("--- Jump System: Finished ---")

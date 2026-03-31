@@ -22,11 +22,11 @@ buses/default_bus_layout="uid://k7vulcy25cw8"
 
 [autoload]
 
-ScareManager="*uid://bm4nusye5p6n2"
 GameManager="*uid://bqgd348mvufr4"
 Bgm="*uid://cmnilmby4f1ul"
 Sfx="*uid://bm8kllnej1tq7"
 SaveManager="*uid://dio8gmylfkc2g"
+Jumpscare="*uid://bm4nusye5p6n2"
 
 [display]
 
