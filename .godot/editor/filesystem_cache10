@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1774930898
+::res://::1774931169
 BGM.tscn::PackedScene::5642450414474890707::1774927105::0::1::::<><><>0<>0<><>::uid://cc20nnpci4dbp::::res://Asset/simplesound-horror-trailer-443327.mp3
 default_bus_layout.tres::AudioBusLayout::769259879210604213::1774927105::0::1::::<><><>0<>0<><>::
 GameManager.gd::GDScript::3522062176363394851::1774927105::0::1::::<>Node<><>0<>0<><>::
@@ -21,7 +21,7 @@ slip_4.tscn::PackedScene::8803447479415988229::1774927105::0::1::::<><><>0<>0<><
 to_main.gd::GDScript::5761793858534783851::1774928405::0::1::::<>Button<><>0<>0<><>::
 to_main_lose..gd::GDScript::6403950975428182842::1774928405::0::1::::<>Button<><>0<>0<><>::
 To_nextnight.gd::GDScript::2722000357461442407::1774927105::0::1::::<>Node<><>0<>0<><>::
-::res://Asset/::1774930927
+::res://Asset/::1774930957
 arrow-back.png::CompressedTexture2D::6392865707469583648::1774927105::1774930261::1::::<><><>0<>0<>8c867914cd2315359fba1aa1d031a8e8<>res://.godot/imported/arrow-back.png-32c35e15e9fcfd50f360983d103aaa15.ctex::
 Book3 bright .png::CompressedTexture2D::2867992532799152188::1774927105::1774930262::1::::<><><>0<>0<>d5a67c8b98ed4af46469518d394f53e1<>res://.godot/imported/Book3 bright .png-231513cdd34dc809cbc1ea5be8e53c03.ctex::
 Book3 normal.png::CompressedTexture2D::6868624437144013988::1774927105::1774930262::1::::<><><>0<>0<>e898983c9879d7fdd6060eaa1cbf263a<>res://.godot/imported/Book3 normal.png-b4d1a6dfb8f45a5201698838c016d21d.ctex::
