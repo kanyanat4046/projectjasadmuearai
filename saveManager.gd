@@ -2,7 +2,7 @@ extends Node
 
 var last_scene_path: String = "res://scenes/maim.tscn"
 const SAVE_PATH = "user://save_game.dat"
-var current_night = 1
+var current_night = 0
 
 
 func save_game()-> bool:

@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1774977445
+::res://::1774978983
 BGM.tscn::PackedScene::5642450414474890707::1774927105::0::1::::<><><>0<>0<><>::uid://cc20nnpci4dbp::::res://Asset/simplesound-horror-trailer-443327.mp3
 Button2.png::CompressedTexture2D::3726348163727468124::1774968738::1774970952::1::::<><><>0<>0<>60db7ad63e8dd81e59182eaa1d4c9261<>res://.godot/imported/Button2.png-1d9cdc851b59723bc7ed90e874dfdb00.ctex::
 Button2Bright.png::CompressedTexture2D::2219715898843548090::1774968738::1774970952::1::::<><><>0<>0<>dcf0052bd25abc4ad622f5cd36974a44<>res://.godot/imported/Button2Bright.png-979087d01bd2a81351be9a1e4c5bbe3f.ctex::
@@ -22,8 +22,8 @@ slip_1.tscn::PackedScene::5069955867122201219::1774927105::0::1::::<><><>0<>0<><
 slip_2.tscn::PackedScene::8655745298109270247::1774927105::0::1::::<><><>0<>0<><>::uid://ck70nfhn1xm67::::res://Slip2.png
 slip_3.tscn::PackedScene::3691876361065396209::1774927105::0::1::::<><><>0<>0<><>::uid://bptfdli5kt14m::::res://Slip3.png
 slip_4.tscn::PackedScene::8803447479415988229::1774927105::0::1::::<><><>0<>0<><>::uid://bgtb8bgmsn3vq::::res://Slip4.png
-to_main.gd::GDScript::5761793858534783851::1774960517::0::1::::<>Button<><>0<>0<><>::
-to_main_lose..gd::GDScript::6403950975428182842::1774960628::0::1::::<>Button<><>0<>0<><>::
+to_main.gd::GDScript::5761793858534783851::1774978015::0::1::::<>Button<><>0<>0<><>::
+to_main_lose..gd::GDScript::6403950975428182842::1774978016::0::1::::<>Button<><>0<>0<><>::
 To_nextnight.gd::GDScript::2722000357461442407::1774927105::0::1::::<>Node<><>0<>0<><>::
 WinLose.png::CompressedTexture2D::976604740699428644::1774968738::1774970952::1::::<><><>0<>0<>28110661654b6a9ac6765d683d3ea98b<>res://.godot/imported/WinLose.png-1628544b5d588429298b4f8d1193f179.ctex::
 ::res://Asset/::1774970953

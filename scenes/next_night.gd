@@ -6,7 +6,7 @@ func _on_night_cleared():
 	SaveManager.save_game()
 
 func next_night():
-	if SaveManager.current_night > 4:
+	if SaveManager.current_night > 3:
 		# ส่งไปหน้าจบเกมแบบ Win ไปแก้พาส
 		get_tree().change_scene_to_file("res://scenes/victory.tscn")
 	else:
