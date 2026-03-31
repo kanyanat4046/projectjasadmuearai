@@ -4,6 +4,12 @@ extends Control
 @export var texture_blood: Texture2D
 @export var texture_veg: Texture2D
 @export var texture_organ: Texture2D
+# --- Export Nodes สำหรับพัสดุ ---
+@onready var parcel_control = $ParcelControl
+@onready var parcel_base = $ParcelControl/ParcelBase
+@onready var blood_overlay = $ParcelControl/BloodOverlay
+@onready var claw_overlay = $ParcelControl/ClawOverlay
+@onready var parcel_label = $ParcelControl/ParcelLabel
 
 #@onready var receipt_display = $ReceiptImage # ตัว TextureRect ที่ใช้แสดงผล ไม่ใช้ละ
 @onready var label_content = $ContentLabel # แสดงรายการสินค้า
@@ -36,20 +42,84 @@ var items_list = [
 			{"name": "Bacon", "price": 120.00},
 			{"name": "Egg", "price": 120.00}
 		] # โหลด ItemData เข้ามาที่นี่
-
+# ... ข้อมูล ของพัสดุ ...
+var parcel_correct_list = ["341A Malaron Senfilent Street"]
+var parcel_fake_list = ["340A Malaron Senfilent Street", 
+						"341A Malaron Senfilant Street", 
+						"666A Malaron Hellfilent Street", 
+						"013A 131313 131313131 131313"
+						]
+var current_task_type: String = "receipt" # "receipt" หรือ "parcel"
 var tasks_done: int = 0
 var max_tasks: int = 7
 var mistakes: int = 0
 var actual_total = 0.00
 var display_text = ""
 var final_correct_total
+
+# --- ระบบสลับ Task ---
+func generate_new_task():
+	if GameManager.is_game_over: return
+	
+	# ตัวอย่าง: คืนที่ 1 มีแต่ใบเสร็จ (โอกาสพัสดุ 0%)
+	# คืนที่ 2-3 ถึงจะมีพัสดุโผล่มา
+	var parcel_chance = 0.0
+	if GameManager.current_night == 2: parcel_chance = 0.3
+	if GameManager.current_night == 3: parcel_chance = 0.5
+	# สุ่ม 50/50 ว่าจะได้งานอะไร
+	if randf() > parcel_chance:
+		current_task_type = "receipt"
+		show_receipt_ui(true)
+		generate_new_receipt()
+	else:
+		current_task_type = "parcel"
+		show_receipt_ui(false)
+		generate_new_parcel()
+		
+func generate_new_parcel():
+	if not parcel_label is Label:
+		print("Error: parcel_label is not a Label anymore!")
+		return
+	# 1. จัดการ Overlay ตามความผิดพลาด
+	blood_overlay.visible = false
+	claw_overlay.visible = false
+	
+	if mistakes >= 1:
+		blood_overlay.visible = true
+	if mistakes >= 2:
+		claw_overlay.visible = true
+		
+	# 2. สุ่ม Fake (โอกาสเพิ่มตามความผิดพลาด)
+	# สุ่ม Fake
+	var fake_chance = 0.3 + (mistakes * 0.1)
+	is_fake = randf() < fake_chance
+	
+	# ดึงข้อความมาเก็บไว้ในตัวแปรชั่วคราว (Local Variable) ก่อน
+	var selected_text = ""
+	if is_fake:
+		selected_text = parcel_fake_list.pick_random()
+	else:
+		selected_text = parcel_correct_list.pick_random()
+	
+	# ส่งค่าเข้า Label (ต้องมี .text เสมอ!)
+	parcel_label.text = selected_text
+
+func show_receipt_ui(active: bool):
+	# เปิด/ปิด การแสดงผลของแต่ละชุด
+	receipt_sprite.visible = active
+	label_content.visible = active
+	label_vat.visible = active
+	label_total.visible = active
+	
+	parcel_control.visible = !active
+	
 func generate_new_receipt():
 	# ถ้าเกมจบแล้ว ไม่ต้องทำอะไรต่อ
 	if GameManager.is_game_over:
 		return
 	# 1. สุ่มรูปแบบใบเสร็จ (สลับรูปภาพ) เพิ่มโอกาสเจอ
 	# ตั้งค่าน้ำหนักเริ่มแรก
-	var weight_normal = 40.0
+	var weight_normal = 15.0
 	var weight_veg = 0.0
 	var weight_blood = 0.0
 	var weight_organ = 0.0
@@ -100,7 +170,7 @@ func generate_new_receipt():
 	#is_fake = randf() < fake_chance
 	
 	label_content.text = display_text
-	label_vat = "VAT 7%"
+	label_vat.text = "VAT 7%"
 	
 	if is_fake:
 		# สุ่มเลขมั่วๆ ให้ไม่ตรงกับความจริง
@@ -135,49 +205,63 @@ func update_task_ui():
 # --- ฟังก์ชัน Animation เลื่อนใบเสร็จ ---
 func slide_receipt():
 	var tween = create_tween()
+	# เลือกตัวที่จะเลื่อนออก (ตัวที่กำลังโชว์อยู่)
+	var current_node = receipt_sprite if current_task_type == "receipt" else parcel_control
+	
+	# 1. เลื่อนออกทางซ้าย
+	tween.tween_property(current_node, "position:x", -700, 0.3).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	
+	# 2. เมื่อเลื่อนออกเสร็จ
+	tween.tween_callback(func():
+		# สุ่ม Task ใหม่ก่อน
+		generate_new_task()
+		
+		# รีเซ็ตตำแหน่ง Node ทั้งสองอย่างให้ไปรอทางขวา (ข้างนอกจอ)
+		receipt_sprite.position.x = 800
+		parcel_control.position.x = 800
+		
+		# เลือก Node ตัวใหม่ที่จะเลื่อนเข้า
+		var next_node = receipt_sprite if current_task_type == "receipt" else parcel_control
+		
+		# 3. เลื่อนกลับเข้ามาที่ตำแหน่งเดิม (x = 80)
+		var tween_in = create_tween()
+		tween_in.tween_property(next_node, "position:x", 80, 0.5).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
+	#old code
+	#var tween = create_tween()
 	# 1. เลื่อนใบเสร็จเก่าออกไปทางซ้าย
-	tween.tween_property(receipt_sprite, "position:x", -600, 0.3).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
+	#tween.tween_property(receipt_sprite, "position:x", -600, 0.3).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
 	
 	# 2. เมื่อเลื่อนออกเสร็จ ให้สุ่มข้อมูลใหม่และวาร์ปไปรอทางขวา
-	tween.tween_callback(func():
-		generate_new_receipt()
-		receipt_sprite.position.x = 80 
+	#tween.tween_callback(func():
+	#	generate_new_task()
+		#generate_new_receipt()
+	#	receipt_sprite.position.x = 80 
 	)
 	
 	# 3. เลื่อนใบเสร็จใหม่ออกมาจากทางขวามาที่:ซ้ายจอ (สมมติกลางจอคือ x=270)
-	tween.tween_property(receipt_sprite, "position:x", 80, 0.5).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
+	#tween.tween_property(receipt_sprite, "position:x", 80, 0.5).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	update_task_ui()
 	# เริ่มต้นโดยการดึงใบเสร็จเข้ามาในจอ
+	update_task_ui()
 	setup_initial_position()
-	generate_new_receipt()
+	generate_new_task() # เปลี่ยนจากเรียกใบเสร็จอย่างเดียวเป็นสุ่ม Task
+	#generate_new_receipt()
+
 # เอาข้อมูลโชว์บนหนังสือ
 func add_record_to_book():
 	# สร้างแถวข้อมูล
 	var new_row = record_row_scene.instantiate()
 	record_list.add_child(new_row)
 	# เอาข้อมูลมา
-	var current_date = "Day 1"
-	var current_description =  "Ingredients"
-	var current_actual_total =  actual_total
-	var current_vat = "VAT 7%"
-	var current_final_total = final_correct_total
-	new_row.set_data(
-		current_date,
-		current_description,
-		actual_total,
-		current_vat,
-		final_correct_total
-	)
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-
+	new_row.set_data("Day 1", "Ingredients", actual_total, "VAT 7%", final_correct_total)
 
 func _on_approve_pressed() -> void:
-	add_record_to_book()
-	check_answer(not is_fake) # Replace with function body.
+	if current_task_type == "receipt":
+		add_record_to_book()
+	#add_record_to_book()
+	check_answer(not is_fake)
 
 
 func _on_reject_pressed() -> void:
-	check_answer(is_fake) # Replace with function body.
+	check_answer(is_fake)

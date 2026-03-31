@@ -1,4 +1,20 @@
 extends Node
+
+var current_night: int = 1
+var is_game_over: bool = false
+
+func next_night():
+	current_night += 1
+	if current_night > 3:
+		# ส่งไปหน้าจบเกมแบบ Win ไปแก้พาส
+		get_tree().change_scene_to_file("res://scenes/victory_screen.tscn")
+	else:
+		# ส่งไปหน้าเริ่มคืนใหม่ ไปแก้พาส
+		get_tree().change_scene_to_file("res://scenes/main_game.tscn")
+
+func reset_game():
+	current_night = 1
+	is_game_over = false
 signal task_updated(current, total)
 signal game_finished(status) # status: "win" หรือ "lose"
 
@@ -6,7 +22,7 @@ var total_tasks_goal: int = 7
 var current_tasks_done: int = 0
 var mistakes: int = 0
 var max_mistakes: int = 3
-var is_game_over: bool = false
+#var is_game_over: bool = false
 
 
 func record_success():
@@ -29,12 +45,3 @@ func finish_game(status):
 	if is_game_over: return # ถ้าจบไปแล้ว ไม่ต้องทำข้างล่างซ้ำ
 	is_game_over = true
 	game_finished.emit(status)
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass

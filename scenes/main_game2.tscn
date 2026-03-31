@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://bs3gj0m48ovg8" path="res://scenes/record_row.tscn" id="5_n7ofh"]
 [ext_resource type="Script" uid="uid://bqfrpsv0b70eq" path="res://scenes/receipt.gd" id="5_swft5"]
 [ext_resource type="FontFile" uid="uid://b7imoruigicyk" path="res://Asset/Fonts/Caveat-VariableFont_wght.ttf" id="6_n7ofh"]
+[ext_resource type="Texture2D" uid="uid://bvvg0vmd6rhbu" path="res://Asset/Dark event box2.png" id="7_i5dgx"]
+[ext_resource type="Texture2D" uid="uid://cvoflp5wo5ms7" path="res://Asset/Dark event box1.png" id="8_2s02s"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_3bsxj"]
 load_path = "res://.godot/imported/Main_game_2.jpg-8628f8590f45c88048d7692c9e02f6be.ctex"
@@ -37,6 +39,9 @@ load_path = "res://.godot/imported/Slip3.png-46ef8cec30a6cebc7cf32c9645ddeacd.ct
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2s02s"]
 load_path = "res://.godot/imported/Slip4.png-d043ab6958cfef6961dfff3b2cc9ab51.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_dhhna"]
+load_path = "res://.godot/imported/Boxnor.png-f632e205dbd0c057d14da4f6048900f9.ctex"
 
 [node name="main2" type="Control" unique_id=1422755513]
 layout_mode = 3
@@ -100,6 +105,7 @@ offset_top = 533.0
 offset_right = 431.0
 offset_bottom = 653.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.7529412)
 theme_override_fonts/font = ExtResource("6_n7ofh")
 theme_override_font_sizes/font_size = 31
 
@@ -110,6 +116,7 @@ offset_top = 825.0
 offset_right = 413.0
 offset_bottom = 878.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.7529412)
 theme_override_fonts/font = ExtResource("6_n7ofh")
 theme_override_font_sizes/font_size = 34
 
@@ -120,6 +127,7 @@ offset_top = 731.0
 offset_right = 420.0
 offset_bottom = 776.0
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.7529412)
 theme_override_fonts/font = ExtResource("6_n7ofh")
 theme_override_font_sizes/font_size = 34
 text = "VAT 7%"
@@ -134,6 +142,48 @@ offset_bottom = 952.0
 [node name="RecordList" type="VBoxContainer" parent="ReceiptControl/ScrollContainer" unique_id=1383555243]
 layout_mode = 2
 theme_override_constants/separation = 25
+
+[node name="ParcelControl" type="Control" parent="ReceiptControl" unique_id=1910601128]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PacelLabel" type="Label" parent="ReceiptControl/ParcelControl" unique_id=78611348]
+layout_mode = 0
+offset_left = 85.0
+offset_top = 799.0
+offset_right = 341.0
+offset_bottom = 902.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("6_n7ofh")
+
+[node name="ParcelBase" type="TextureRect" parent="ReceiptControl/ParcelControl" unique_id=641676116]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 466.0
+offset_right = 575.0
+offset_bottom = 960.0
+texture = SubResource("CompressedTexture2D_dhhna")
+expand_mode = 1
+
+[node name="ClawOverlay" type="TextureRect" parent="ReceiptControl/ParcelControl" unique_id=726305101]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 471.0
+offset_right = 534.0
+offset_bottom = 971.0
+texture = ExtResource("7_i5dgx")
+expand_mode = 1
+
+[node name="BloodOverlay" type="TextureRect" parent="ReceiptControl/ParcelControl" unique_id=232416966]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 448.0
+offset_right = 596.0
+offset_bottom = 950.0
+texture = ExtResource("8_2s02s")
+expand_mode = 1
 
 [node name="TaskLabel" type="Label" parent="." unique_id=729677077]
 layout_mode = 0

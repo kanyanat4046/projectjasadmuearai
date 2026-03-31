@@ -1,14 +1,13 @@
-Button
 Label
+TextureRect
+Control
+Button
 HSlider
 AudioStreamPlayer
 Node
 ColorRect
-Label
-TextureRect
 VBoxContainer
 ScrollContainer
 HBoxContainer
 Timer
-Control
 CanvasLayer
