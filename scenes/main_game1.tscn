@@ -1,13 +1,14 @@
 [gd_scene format=3 uid="uid://bwicph67vineb"]
 
 [ext_resource type="Texture2D" uid="uid://c44higs0dbr1u" path="res://Asset/Book3 normal.png" id="1_7n76i"]
+[ext_resource type="Texture2D" uid="uid://dyvruxlaiuaix" path="res://Asset/Main_game1.jpg" id="1_xva0j"]
 [ext_resource type="Texture2D" uid="uid://bg4johg6o2js3" path="res://Asset/Book3 bright .png" id="2_fv1uf"]
 [ext_resource type="Script" uid="uid://bemx7b41wenuu" path="res://scenes/book.gd" id="2_m4mrb"]
 [ext_resource type="Texture2D" uid="uid://dier7ugk12cqp" path="res://Asset/setting-icon-2.png" id="4_7n76i"]
+[ext_resource type="Texture2D" uid="uid://cibhiq5v2unls" path="res://Asset/Car.png" id="4_fwb8x"]
 [ext_resource type="Script" uid="uid://b4l8obq6qyarn" path="res://scenes/setting.gd" id="5_fv1uf"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0u35s"]
-load_path = "res://.godot/imported/Main_game1.jpg-69a7d470985f0b6c4f56f424de7583e4.ctex"
+[ext_resource type="Texture2D" uid="uid://dnsjieueonejq" path="res://Asset/Car&door bright.png" id="5_xva0j"]
+[ext_resource type="Script" uid="uid://e75twd6j3ldd" path="res://scenes/to_main_menu.gd" id="6_turw3"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7h0cx"]
 atlas = ExtResource("1_7n76i")
@@ -21,16 +22,28 @@ atlas = ExtResource("2_fv1uf")
 region = Rect2(1011.35583, 123.44504, 696.16077, 867.3478)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fhr2e"]
-texture = ExtResource("4_7n76i")
-region_rect = Rect2(187.30795, 108.49828, 238.09204, 247.10168)
+texture = ExtResource("4_fwb8x")
+region_rect = Rect2(525.09015, 179.86636, 742.80536, 756.1492)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fwb8x"]
-texture = ExtResource("4_7n76i")
-region_rect = Rect2(193.38593, 119.90009, 224.8858, 217.85815)
+texture = ExtResource("5_xva0j")
+region_rect = Rect2(21.485107, 179.71744, 725.0137, 729.4617)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xva0j"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_f2ox5"]
+texture = ExtResource("5_xva0j")
+region_rect = Rect2(0, 144.13394, 853.24927, 800.62866)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kifkt"]
 texture = ExtResource("4_7n76i")
-region_rect = Rect2(199.3086, 123.41393, 219.02939, 210.83047)
+region_rect = Rect2(140.2268, 54.349213, 329.14722, 351.38696)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_fpxpf"]
+texture = ExtResource("4_7n76i")
+region_rect = Rect2(141.95703, 63.1709, 338.0432, 333.5952)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ronx"]
+texture = ExtResource("4_7n76i")
+region_rect = Rect2(104.64493, 56.7977, 392.70563, 349.8339)
 
 [node name="main1" type="Control" unique_id=433361342]
 layout_mode = 3
@@ -45,7 +58,7 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("CompressedTexture2D_0u35s")
+texture = ExtResource("1_xva0j")
 stretch_mode = 6
 
 [node name="book" type="TextureButton" parent="." unique_id=1396651624]
@@ -59,17 +72,30 @@ texture_normal = SubResource("AtlasTexture_isuyx")
 texture_hover = SubResource("AtlasTexture_m4mrb")
 script = ExtResource("2_m4mrb")
 
-[node name="Setting" type="Button" parent="." unique_id=722508274]
+[node name="To_main" type="Button" parent="." unique_id=474406501]
 layout_mode = 0
-offset_left = 66.0
-offset_top = 34.0
-offset_right = 186.0
-offset_bottom = 151.0
+offset_left = 45.0
+offset_top = 937.0
+offset_right = 165.0
+offset_bottom = 1054.0
 theme_override_colors/font_color = Color(0.65891117, 1.9131974e-06, 5.2943824e-07, 1)
 theme_override_styles/normal = SubResource("StyleBoxTexture_fhr2e")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_fwb8x")
-theme_override_styles/hover = SubResource("StyleBoxTexture_xva0j")
+theme_override_styles/hover = SubResource("StyleBoxTexture_f2ox5")
+script = ExtResource("6_turw3")
+
+[node name="Setting" type="Button" parent="." unique_id=722508274]
+layout_mode = 0
+offset_left = 39.0
+offset_top = 38.0
+offset_right = 159.0
+offset_bottom = 155.0
+theme_override_colors/font_color = Color(0.65891117, 1.9131974e-06, 5.2943824e-07, 1)
+theme_override_styles/normal = SubResource("StyleBoxTexture_kifkt")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_fpxpf")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7ronx")
 script = ExtResource("5_fv1uf")
 
 [connection signal="pressed" from="book" to="book" method="_on_pressed"]
+[connection signal="pressed" from="To_main" to="To_main" method="_on_pressed"]
 [connection signal="pressed" from="Setting" to="Setting" method="_on_pressed"]

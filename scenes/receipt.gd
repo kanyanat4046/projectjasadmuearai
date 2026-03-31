@@ -9,7 +9,7 @@ extends Control
 @onready var parcel_base = $ParcelControl/ParcelBase
 @onready var blood_overlay = $ParcelControl/BloodOverlay
 @onready var claw_overlay = $ParcelControl/ClawOverlay
-@onready var parcel_label = $ParcelControl/ParcelLabel
+@onready var parcel_label = $PacelLabel
 
 #@onready var receipt_display = $ReceiptImage # ตัว TextureRect ที่ใช้แสดงผล ไม่ใช้ละ
 @onready var label_content = $ContentLabel # แสดงรายการสินค้า
@@ -43,11 +43,11 @@ var items_list = [
 			{"name": "Egg", "price": 120.00}
 		] # โหลด ItemData เข้ามาที่นี่
 # ... ข้อมูล ของพัสดุ ...
-var parcel_correct_list = ["341A Malaron Senfilent Street"]
-var parcel_fake_list = ["340A Malaron Senfilent Street", 
-						"341A Malaron Senfilant Street", 
-						"666A Malaron Hellfilent Street", 
-						"013A 131313 131313131 131313"
+var parcel_correct_list = [{"address": "341A Malaron Senfilent Street"}]
+var parcel_fake_list = [{"address":"340A Malaron Senfilent Street"}, 
+						{"address":"341A Malaron Senfilant Street"}, 
+						{"address":"666A Malaron Hellfilent Street"}, 
+						{"address":"013A 131313 131313131 131313"}
 						]
 var current_task_type: String = "receipt" # "receipt" หรือ "parcel"
 var tasks_done: int = 0
@@ -63,9 +63,9 @@ func generate_new_task():
 	
 	# ตัวอย่าง: คืนที่ 1 มีแต่ใบเสร็จ (โอกาสพัสดุ 0%)
 	# คืนที่ 2-3 ถึงจะมีพัสดุโผล่มา
-	var parcel_chance = 0.0
-	if GameManager.current_night == 2: parcel_chance = 0.3
-	if GameManager.current_night == 3: parcel_chance = 0.5
+	var parcel_chance = 0.3
+	#if GameManager.current_night == 2: parcel_chance = 0.3
+	#if GameManager.current_night == 3: parcel_chance = 0.5
 	# สุ่ม 50/50 ว่าจะได้งานอะไร
 	if randf() > parcel_chance:
 		current_task_type = "receipt"
@@ -77,9 +77,6 @@ func generate_new_task():
 		generate_new_parcel()
 		
 func generate_new_parcel():
-	if not parcel_label is Label:
-		print("Error: parcel_label is not a Label anymore!")
-		return
 	# 1. จัดการ Overlay ตามความผิดพลาด
 	blood_overlay.visible = false
 	claw_overlay.visible = false
@@ -96,10 +93,13 @@ func generate_new_parcel():
 	
 	# ดึงข้อความมาเก็บไว้ในตัวแปรชั่วคราว (Local Variable) ก่อน
 	var selected_text = ""
+	var random_address
 	if is_fake:
-		selected_text = parcel_fake_list.pick_random()
+		random_address = parcel_fake_list.pick_random()
+		selected_text += random_address.address
 	else:
-		selected_text = parcel_correct_list.pick_random()
+		random_address = parcel_correct_list.pick_random()
+		selected_text += random_address.address
 	
 	# ส่งค่าเข้า Label (ต้องมี .text เสมอ!)
 	parcel_label.text = selected_text
@@ -226,21 +226,7 @@ func slide_receipt():
 		# 3. เลื่อนกลับเข้ามาที่ตำแหน่งเดิม (x = 80)
 		var tween_in = create_tween()
 		tween_in.tween_property(next_node, "position:x", 80, 0.5).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
-	#old code
-	#var tween = create_tween()
-	# 1. เลื่อนใบเสร็จเก่าออกไปทางซ้าย
-	#tween.tween_property(receipt_sprite, "position:x", -600, 0.3).set_trans(Tween.TRANS_BACK).set_ease(Tween.EASE_IN)
-	
-	# 2. เมื่อเลื่อนออกเสร็จ ให้สุ่มข้อมูลใหม่และวาร์ปไปรอทางขวา
-	#tween.tween_callback(func():
-	#	generate_new_task()
-		#generate_new_receipt()
-	#	receipt_sprite.position.x = 80 
 	)
-	
-	# 3. เลื่อนใบเสร็จใหม่ออกมาจากทางขวามาที่:ซ้ายจอ (สมมติกลางจอคือ x=270)
-	#tween.tween_property(receipt_sprite, "position:x", 80, 0.5).set_trans(Tween.TRANS_QUINT).set_ease(Tween.EASE_OUT)
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	# เริ่มต้นโดยการดึงใบเสร็จเข้ามาในจอ
 	update_task_ui()
@@ -259,8 +245,9 @@ func add_record_to_book():
 func _on_approve_pressed() -> void:
 	if current_task_type == "receipt":
 		add_record_to_book()
-	#add_record_to_book()
-	check_answer(not is_fake)
+		check_answer(not is_fake)
+	else :
+		check_answer(not is_fake)
 
 
 func _on_reject_pressed() -> void:

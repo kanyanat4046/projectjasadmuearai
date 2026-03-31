@@ -7,7 +7,7 @@ func _on_night_cleared():
 	# ทำการบันทึกทันที
 	SaveManager.save_game()
 
-	get_tree().change_scene_to_file("res://scenes/main+continue.tscn")
+	get_tree().change_scene_to_file("res://scenes/main_game1.tscn")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

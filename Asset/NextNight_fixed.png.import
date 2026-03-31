@@ -2,16 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cr6htmb40hq41"
-path="res://.godot/imported/Main_game_2.jpg-a575c53ee455647047c1ca43537d446b.ctex"
-metadata={
-"vram_texture": false
-}
+uid="uid://lar5krf1n5yv"
+valid=false
 
 [deps]
 
-source_file="res://Asset/Main_game_2.jpg"
-dest_files=["res://.godot/imported/Main_game_2.jpg-a575c53ee455647047c1ca43537d446b.ctex"]
+source_file="res://Asset/NextNight_fixed.png"
 
 [params]
 
